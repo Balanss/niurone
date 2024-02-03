@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:'https://Balanss.github.io/niurone',
+  base:'/niurone/',
   plugins: [react()],
   assetsInclude: ['**/*.glb'],
 })
