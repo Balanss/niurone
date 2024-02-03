@@ -44,7 +44,6 @@ export default function Card({setModalShow,modalShow,setIcon,setTitle,setDescrip
         <motion.div className='grid grid-cols-1 shadow-shadow1 rounded-[20px]' key={index} transition={{ease:'easeIn',duration:0.7}}  style={{ rotateX:rotateX }} >
           <motion.li  
              style={{ listStyleType: 'none' }}
-            variants={fadeIn("right", "spring", index * 0.5, 0.75)} 
             onHoverStart={() => setHoveredIndex(index)}
             onHoverEnd={() => setHoveredIndex(null)}
             whileHover={{ scale: hoveredIndex === index ? 1.1 : 1 }}
@@ -55,7 +54,7 @@ export default function Card({setModalShow,modalShow,setIcon,setTitle,setDescrip
             <motion.h3 className='text-black text-[26px] mt-2 font-bold text-center' >
               {services.title}
             </motion.h3>
-            <motion.section  className='flex flex-col ' variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
+            <motion.section  className='flex flex-col '>
 
               <motion.p className='text-black text-sm mt-5' 
                initial={{ opacity: 0 ,scale:0.0}}

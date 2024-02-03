@@ -15,6 +15,7 @@ import ContactFunc from './ContactFunc';
 
 
 
+
 function Contact() {
 
   const [isHovering, setIsHovering] = useState(false);
@@ -34,12 +35,12 @@ and design.
             </motion.p>
 
 
-<div className='phones:flex phones:flex-col phones:justify-center phones:items-center mt-[80px] pc:items-start pc:justify-start pc:w-1/2'>
+<div className='phones:flex phones:flex-col phones:justify-center phones:items-center mt-[80px] pc:items-start pc:justify-start '>
 <p className='text-secondary text-4xl font-bold tracking-wider'>   Contact us today!</p>
-<div className='flex  mt-10  m-auto phones:w-screen'>
+<div className='flex flex-row mt-10  m-auto phones:w-screen'>
 <ContactFunc setIsHovering={setIsHovering} />
      
-                <section className='w-[20vw] pc:left-40  relative z-[1000000000] m-auto h-[300px]'>
+                <section className='w-[20vw] pc:left-100  relative z-[1000000000] m-auto h-[300px]'>
                   <Suspense fallback={<Loader />}>
                   <Canvas  gl={{ antialias: true, alpha: true }}  >
                     <directionalLight position={[400, 0, 10]} intensity={2} />
@@ -51,11 +52,17 @@ and design.
                     </Canvas>
                     </Suspense>
                 </section> 
+
+                
+
+            
 </div>
 
 
 </div>
            
+
+
 
 
            

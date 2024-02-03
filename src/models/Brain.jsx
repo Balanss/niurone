@@ -38,8 +38,10 @@ export function Brain({isMobile}) {
     }
   });
 
+  const mobile = isMobile? [0,-0,-1]:[-0.8, -0, -1];
+
   return (
-    <mesh  ref={spaceRef} position={[0, -0, -1]} rotation={[0,1,0]} scale={isMobile? 4:7}>
+    <mesh  ref={spaceRef} position={mobile} rotation={[0,1,0]} scale={isMobile? 4:6}>
       <directionalLight position={[100, 1000, 100]} intensity={2.5} />
       <primitive object={scene} />
     </mesh>

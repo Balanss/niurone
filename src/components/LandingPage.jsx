@@ -15,7 +15,7 @@ export default function LandingPage() {
   
 
 const [size, setSize] = useState(7);
-const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
+const [isMobile, setIsMobile] = useState(window.innerWidth <= 1020);
 
 useEffect(() => {
   const handleResize = () => {
@@ -36,7 +36,7 @@ useEffect(() => {
 
   return (
 <>
-<div className='flex flex-row justify-center items-center pt-[200px] phones:pt-[50px] phones:flex-col h-screen '>
+<div className='flex flex-row justify-center items-center pt-[200px] phones:pt-[50px] phones:flex-col pc:h-screen  '>
 
 <motion.div className='w-3/4 phones:w-screen '  style={{ opacity }}
               initial={{ opacity: 0.5 ,x:-1010,rotateX:-10}}
@@ -44,7 +44,7 @@ useEffect(() => {
               exit={{ opacity: 0.5}}
               transition={{ duration: 3 ,ease:'easeInOut'}}>
                 
-  <Canvas className='canvas' style={{height:'500px'}}   gl={{ antialias: false }}  dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: 50 }} >
+  <Canvas className='canvas xPc:!h-screen !h-[500px]' gl={{ antialias: false }}  dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: !isMobile ? 60 : 40 }} >
     <ambientLight intensity={0.5} />
     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
     <Suspense fallback={<Loader/>}>
