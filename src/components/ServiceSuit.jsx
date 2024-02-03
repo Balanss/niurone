@@ -1,0 +1,167 @@
+import React, { useRef } from 'react'
+import {motion, useScroll, useTransform,AnimatePresence,useViewportScroll} from 'framer-motion'
+import { fadeIn} from "../utils/Motion"
+import { SectionWrapper } from '../hoc'
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { services ,serviceMini} from '../constants/index';
+import Title from '../ServiceSuite/Title'
+import Card from '../ServiceSuite/Card';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+
+
+
+
+
+
+  function ServiceSuite() {
+
+
+const [ modalShow, setModalShow ] = useState(false);
+const [ title, setTitle ] = useState("");
+const [description, setDescription] = useState("");
+const [description2, setDescription2] = useState("");
+const [description3, setDescription3] = useState("");
+const [icon, setIcon] = useState("");
+
+
+
+
+
+
+
+
+
+useEffect(() => {
+  if (modalShow) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+}, [modalShow]);
+
+
+
+const ref =useRef(null);
+const { scrollYProgress } = useScroll({
+  target: ref,
+  offset:['0 6',"1.33 1"],
+});
+
+const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  window.addEventListener('resize', handleResize);
+  return () => {
+    window.removeEventListener('resize', handleResize);
+  };
+}, []);
+
+
+
+const scaleProgress = isMobile 
+    ? useTransform(scrollYProgress, [0, 1], [0.8, 1])
+    : useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+
+  const opacityProgress = isMobile 
+    ? useTransform(scrollYProgress, [0, 0.9], [0.8, 1])
+    : useTransform(scrollYProgress, [0, 0.9], [0.8, 1]);
+
+
+  
+    useEffect(() => {
+      if (modalShow) {
+        setTimeout(() => {
+          document.getElementById('contactButton').href = "#contact";
+        }, 500);
+ 
+      }
+    }, [modalShow]);
+
+
+  
+
+  return ( <> 
+    <motion.div className=' py-10 overflow-hidden  mt-[100px] flex xl:flex-col xl:items-center justify-center rounded-lg bg-bg'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}}>
+      <div className='flex p-[10px]  gap-[20px]  w-screen flex-wrap xl:flex-col justify-center '>
+       <Title/>
+  <div className='flex   flex-wrap flex-row  items-center justify-center m-auto gap-10  h-auto pb-10'>
+    <motion.div className=' grid pc:grid-cols-3  flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  '  initial={{ opacity: 0 ,x:-1000,scale:0.0}}
+          animate={{ opacity: 1 ,x:0 ,scale:1}}
+          exit={{ opacity: 1.5 }}
+          transition={{ duration: 1.5 }}>   
+  <Card 
+  setModalShow={setModalShow} 
+  modalShow={modalShow} 
+  setIcon={setIcon} 
+  setTitle={setTitle} 
+  setDescription={setDescription} 
+  setDescription2={setDescription2} 
+  setDescription3={setDescription3} 
+/>
+ </motion.div>  
+ </div>
+
+   </div>
+    </motion.div>
+
+<AnimatePresence>
+    {modalShow && ( 
+        <motion.div initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        exit={{ opacity: 0, scale: 0 }}
+         className='fixed  z-[10000000000000000000000000] top-0 left-0 w-screen pt-10 pb-10 overflow-y-scroll h-screen bg-black bg-opacity-50 flex items-center justify-center'>
+          <div className='bg-wg  p-10 phones:w-[95vw]  w-[50vw] m-auto  rounded-md'>
+{services.map((services,index) => (
+  <React.Fragment key={index}>
+    {title === services.title && (
+      <>  
+        <div className='phones:flex flex-col phones:mt-20 '>
+          <img src={icon} alt='web-development'  className='w-12 h-12 object-contain'/>
+          <h3 className='text-2xl text-black font-bold text-center mb-5'>{title}</h3>
+          <section className='flex flex-row gap-5 phones:flex-col'>
+            <div>
+            <LazyLoadImage
+            effect='blur'
+  alt='web-development'
+  src={services.img}
+  className=' object-fill'
+/> 
+            </div>
+            <div>
+              <ul className='list-disc list-inside leading-normal tracking-wide'>
+                <li className='text-sm mt-5  text-black'>{description}</li>
+                {description2 > "" ? <li className='text-sm mt-5 text-black'>{description2}</li> : null}
+                {description3 > "" ? <li className='text-sm mt-5 text-black'>{description3}</li> : null}
+              </ul>
+              <div className='flex justify-between'>
+                <button className='bg-primary text-white mt-5 p-2 rounded-md' onClick={() => setModalShow(false)}>Close</button>
+                <a  id="contactButton" onClick={() => setModalShow(false)} className='bg-primary text-white mt-5 p-2 rounded-md '>Contact us!!</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </>
+    )}
+  </React.Fragment>
+))}
+          </div>
+        </motion.div>
+      )
+    } 
+</AnimatePresence>
+
+
+ 
+
+    </>)
+}
+
+export default SectionWrapper(ServiceSuite,"services")
+

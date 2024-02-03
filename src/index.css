@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+
+body{
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+   margin: 0;
+   padding: 0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+  font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+  text-shadow: 7px 1px 15px #070a09;
+}
+
+h2{
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
+}
+
+button{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+a{
+  font-family: 'Rubik', sans-serif;
+}
+
+
+
+.green-pink-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg,  #6b61ff 5.9%, #120e16 97.5%);
+  background: -webkit-linear-gradient(-90.13deg,  #6b61ff 5.9%, #120e16 97.5%);
+}
+
+.bg-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #120e16 15.9%, #9e61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #120e16 15.9%, #6b61ff 97.5%);
+}
+
+
+.vertical-timeline-element-content{
+  background-color: transparent;
+  box-shadow: none;
+}
+.vertical-timeline.vertical-timeline--two-columns:before{
+  display: none;
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element-icon {
+  display: none
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content{
+  float: none;
+}
+
+
+
+
+@media screen and (max-width:1023px){
+  .vertical-timeline-element-content {
+    margin-left: 0px;
+    padding: 10px
+    
+}
+
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.wave {
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg, rgb(15, 76, 117), #fff);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+
+@keyframes reveal {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
+.animate-reveal {
+  animation: reveal 2s ease-out forwards;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
