@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import email from '../assets/email.png'
 import pin from '../assets/pin.png'
 import number from '../assets/number.png'
+import facebook from '../assets/facebook.png'
+import linkedin from '../assets/linkedin.png'
 
 export default function Footer() {
   const [showModal, setShowModal] = useState(false);
@@ -13,9 +15,11 @@ export default function Footer() {
   ]
 
   return (
-    <div className=' bg-wg text-black p-3 w-screen flex pc:gap-10 pc:justify-center pc:items-center phones:justify-center phones:items-center phones:flex-col pc:text-xs'>
+    <div className='  text-white p-3  flex pc:gap-10 pc:justify-center pc:items-center phones:justify-center phones:items-center phones:flex-col pc:text-xs'>
+      
       <h3 className='text-md pl-2 pt-2  pc:mr-auto'>Nuirone &copy; 2024 </h3>
-      <div className='pc:mr-10 flex gap-10 items-center phones:flex-col phones:justify-center phones:items-start phones:gap-3 phones:mt-2'>
+
+      <div className=' flex gap-y-1 flex-col  '>
       <section className='flex gap-2 items-center'>
       <img src={email} alt='email' className='w-4 h-4 inline-block '/>
         <p className='inline-block  text-sm'> go4niurone@gmail.com </p>
@@ -29,6 +33,16 @@ export default function Footer() {
       <section className='flex gap-2 items-center'>
       <img src={pin} alt='email' className='w-4 h-4 inline-block '/>
         <p className='inline-block  text-sm'> Agilalaan #79, Paramaribo, Suriname  </p>
+      </section>
+
+      <section>
+        <img src={facebook} alt='facebook' className='w-4 h-4 inline-block '/>
+        <a href="https://www.facebook.com/profile.php?id=61555833434358"> Facebook</a>
+      </section>
+
+      <section>
+        <img src={linkedin} alt='linkedin' className='w-4 h-4 inline-block '/>
+        <a href="https://www.linkedin.com/in/checker-niurone-4427b62b2/">LinkedIn</a>
       </section>
 
       

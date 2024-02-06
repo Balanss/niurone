@@ -38,7 +38,16 @@ export const navLinks = [
 
   export const projects = [
     {
+       title: "Products",
+      name: "Products",
+      bg: "bg-cyan-700",
+      company:"Squarelion Agency",
+      description:"We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience. ",
+    },
+    {
       title: "Product // 01",
+      img: web,
+      bg: "bg-cyan-800",
       name: "media Pilot",
       company:"Squarelion Agency",
       description:"WorcPilot is a system that is built to automate the process of project management and to make it easier for the agency to manage their projects and clients.",
@@ -57,6 +66,8 @@ export const navLinks = [
     },
      {
       title: "Product // 02",
+      img: web,
+      bg: "bg-cyan-900",
       Name : "Aimigo",
       company:"Squarelion Agency",
       description:"Aimigo is an automated AI tool in the form of a chatbot designed for businesses to automate redundant tasks, handle data, and assist customers, Fast and efficiently.",
@@ -76,6 +87,8 @@ export const navLinks = [
     {
       title: "Product",
       name:'Deal Stamps',
+      img: web,
+      bg: "bg-cyan-950",
       company:"Squarelion Agency",
       description:"more info coming soon! Work in progress",
       point1:'Point of sale system',

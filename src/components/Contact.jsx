@@ -12,24 +12,26 @@ import Select from 'react-select';
 import { getNames } from 'country-list';
 import bgContact from '../assets/bgContact.jpg';
 import ContactFunc from './ContactFunc';
+import Maps from './map/Maps';
+import Footer from './Footer';
 
 
 
 
 function Contact() {
 
-  const [isHovering, setIsHovering] = useState(false);
+  const [isHovering, setIsHovering] = useState();
 
 
   
 
 
     return (
-        <motion.div className=' bg-opacity-50 bg-black  p-10' >
+        <motion.div className=' bg-opacity-50 bg-black  p-10 mb-20' >
           <ToastContainer position='bottom-center' />
           <motion.p 
             variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2 phones:relative phones:right-2 text-white leading-tight phones:text-xl text-2xl phones:w-[90vw] w-[60vw]   phones:m-auto '>
-             Join is in shaping the future : Niurone invites you to join us on a journey where technology and design converge to create 
+             Join is in shaping the future : We invite you to join us on a journey where technology and design converge to create 
 extraordinary possibilities and discover how we can collaboratively shape the future of technology 
 and design. 
             </motion.p>
@@ -37,9 +39,8 @@ and design.
 
 <div className='phones:flex phones:flex-col phones:justify-center phones:items-center mt-[80px] pc:items-start pc:justify-start '>
 <p className='text-secondary text-4xl font-bold tracking-wider'>   Contact us today!</p>
-<div className='flex flex-row mt-10  m-auto phones:w-screen'>
+<div className='flex flex-row   mt-10  m-auto '>
 <ContactFunc setIsHovering={setIsHovering} />
-     
                 <section className='w-[20vw] pc:left-100  relative z-[1000000000] m-auto h-[300px]'>
                   <Suspense fallback={<Loader />}>
                   <Canvas  gl={{ antialias: true, alpha: true }}  >
@@ -53,10 +54,23 @@ and design.
                     </Suspense>
                 </section> 
 
-                
-
-            
+     <section onMouseEnter={() => setIsHovering('right')} onMouseLeave={() => setIsHovering('')} className='phones:hidden'>
+     <Maps />
+     <p className='text-white text-2xl'>Opening time : Mon - Fri || 10.00 AM - 06.00 PM</p>
+     <Footer />
+     </section> 
 </div>
+
+<section  className='pc:hidden mt-20'>
+     <Maps />
+    <p className='text-white text-2xl p-10'>
+      Opening time :<br />
+      Mon - Fri<br />
+      10.00 AM - 06.00 PM
+    </p>
+     <Footer />
+     </section>
+
 
 
 </div>

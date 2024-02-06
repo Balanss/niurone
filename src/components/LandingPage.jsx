@@ -4,6 +4,7 @@ import { AnimatePresence,useViewportScroll } from 'framer-motion';
 import { Brain } from '../models/Brain';
 import { Canvas } from '@react-three/fiber';
 import Loader from './Loader';
+import Particle from './Particle';
 
 
 export default function LandingPage() {
@@ -38,7 +39,7 @@ useEffect(() => {
 <>
 <div className='flex flex-row justify-center items-center pt-[200px] phones:pt-[50px] phones:flex-col pc:h-screen  '>
 
-<motion.div className='w-3/4 phones:w-screen '  style={{ opacity }}
+<motion.div className='w-3/4 phones:w-screen phones:h-screen flex flex-col items-center justify-center'  style={{ opacity }}
               initial={{ opacity: 0.5 ,x:-1010,rotateX:-10}}
               animate={{ opacity: 1 ,x:0 ,rotateX:0}}
               exit={{ opacity: 0.5}}
@@ -53,7 +54,9 @@ useEffect(() => {
   </Canvas>
 </motion.div>
 
-<section className='pc:relative phones:w-fit phones:px-10   pc:w-1/2 flex-col  pc:m-auto phones:flex phones:items-left phones:justify-center '> 
+<section className='pc:relative phones:w-fit phones:px-10   pc:w-1/2 xPc:w-screen flex-col  pc:m-auto phones:flex phones:items-left phones:justify-center '> 
+
+<Particle/>
           <AnimatePresence mode='wait'>
           <motion.h1
                         style={{ zIndex: 2 }} // Add this line
@@ -61,7 +64,7 @@ useEffect(() => {
                         animate={{ opacity: 1 ,x:0 ,scale:1,rotateX:0}}
                         exit={{ opacity: 0.5}}
                         transition={{ duration: 4 ,ease:'easeInOut'}}
-              className=' phones:text-5xl text-6xl  pc:w-[50vw] leading-[1.05em] line tracking-[2px]   pc:text-left font-bold text-white-100 shadow-sm mb-1 ' >
+              className=' phones:text-5xl text-6xl xPc:text-8xl   pc:w-[5npm install react-particles-js0vw] leading-[1.05em] line tracking-[2px]   pc:text-left font-bold text-white-100 shadow-sm mb-1 ' >
               HUMAN BRAIN.
               <br />
               <span className=' '>THE ULTIMATE</span>

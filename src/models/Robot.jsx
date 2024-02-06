@@ -30,15 +30,26 @@ export function Robot({isHovering}) {
         actions["sphere body|sphere bodyAction"].play();
     }, []);
 
+console.log(isHovering)
+
     useEffect(() => {
         let rotationInterval;
-        if (isHovering) {
+        if (isHovering === 'left') {
             rotationInterval = setInterval(() => {
                 if (robotRef.current.rotation.y > -2) {
                     robotRef.current.rotation.y -= 0.01; // adjust rotation speed as needed
                 }
             }, 5); // adjust interval as needed
-        } else {
+        } 
+         else if(isHovering === 'right') {
+            rotationInterval = setInterval(() => {
+                if (robotRef.current.rotation.y < 2) {
+                    robotRef.current.rotation.y += 0.01; // adjust rotation speed as needed
+                }
+            }, 5); // adjust interval as needed
+        }
+        
+        else {
             rotationInterval = setInterval(() => {
                 if (robotRef.current.rotation.y < 0) {
                     robotRef.current.rotation.y += 0.01; // adjust rotation speed as needed

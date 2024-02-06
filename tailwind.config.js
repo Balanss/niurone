@@ -8,6 +8,7 @@ module.exports = {
       rotate: {
         '90': '270deg',
       },
+      opacity: ['group-hover'],
       colors: {
         primary: "#003e34",
         secondary: "#0ff7d1",

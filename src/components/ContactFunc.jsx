@@ -32,11 +32,11 @@ export default function ContactFunc({setIsHovering}) {
 
 
     function handleMouseEnter() {
-      setIsHovering(true);
+      setIsHovering('left');
     }
   
     function handleMouseLeave() {
-      setIsHovering(false);
+      setIsHovering('');
     }
 
 

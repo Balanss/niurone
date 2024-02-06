@@ -110,7 +110,6 @@ const scale = useTransform(scrollYProgress, [1, 1, 1], [0, 1, 1]);
           <div className="relative z-[10000] " >
          <Suspense fallback={<div>Loading...</div>}>
          <Contact/>
-          <Footer/>
           </Suspense>
           </div>
 

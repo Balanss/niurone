@@ -24,7 +24,7 @@ export default function MiddleText() {
     exit={{ opacity: 1 }}
     transition={{ duration: 1.5 }}> 
         <h1 className='text-white phones:text-left' ref={textRef}>
-        Empowering tomorrow. One innovation at a time!
+        Where mind matters.
         </h1>
     </motion.div>
     </AnimatePresence>
