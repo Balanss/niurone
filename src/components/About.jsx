@@ -32,7 +32,7 @@ const opacityProgress= useTransform(scrollYProgress, [0, 0.9], [0, 1]);
 
 const [view, setView] = useState('01.')
   return (
-<motion.div  className='flex  flex-row gap-1  items-center phones:items-center px-10  pc:pl-20 overflow-hidden pb-[100px]  bg-background'  ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}} >
+<motion.div  className='flex  flex-row gap-1  items-center phones:items-center phones:pr-10 phones:pl-5   pc:pl-20 overflow-hidden pb-[100px]  bg-background'  ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}} >
   
   <motion.section ref={textRef} initial={{ opacity: 0, y: -50 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }} transition={{ delay: 0.5 }}
     className='flex flex-col'>

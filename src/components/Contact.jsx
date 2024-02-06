@@ -27,7 +27,7 @@ function Contact() {
 
 
     return (
-        <motion.div className=' bg-opacity-50 bg-black  p-10 mb-20' >
+        <motion.div className=' bg-opacity-50 bg-black  p-10 ' >
           <ToastContainer position='bottom-center' />
           <motion.p 
             variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2 phones:relative phones:right-2 text-white leading-tight phones:text-xl text-2xl phones:w-[90vw] w-[60vw]   phones:m-auto '>

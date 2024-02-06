@@ -12,6 +12,9 @@ import alma from '../assets/alma.gif'
 import worc from '../assets/worcpilot.gif'
 import botgif from '../assets/icons/botgif.gif'
 import chatpic from '../assets/cards/chatpic.jpg'
+import roadMapGif1 from '../assets/icons/roadmapgif1.gif'
+import roadMapGif2 from '../assets/icons/roadmapgif2.gif'
+import roadMapGif3 from '../assets/icons/roadmapgif3.gif'
 
 export const navLinks = [
     {
@@ -46,7 +49,7 @@ export const navLinks = [
     },
     {
       title: "Product // 01",
-      img: web,
+      img: roadMapGif1,
       bg: "bg-cyan-800",
       name: "media Pilot",
       company:"Squarelion Agency",
@@ -66,7 +69,7 @@ export const navLinks = [
     },
      {
       title: "Product // 02",
-      img: web,
+      img: roadMapGif2,
       bg: "bg-cyan-900",
       Name : "Aimigo",
       company:"Squarelion Agency",
@@ -85,12 +88,12 @@ export const navLinks = [
     },
 
     {
-      title: "Product",
+      title: `Product ${'🚧'}`,
       name:'Deal Stamps',
-      img: web,
+      img: roadMapGif3,
       bg: "bg-cyan-950",
       company:"Squarelion Agency",
-      description:"more info coming soon! Work in progress",
+      description:`More info coming soon! Work in progress `,
       point1:'Point of sale system',
       point2:'Inventory automation management',
       point3:'Deal Stamps',

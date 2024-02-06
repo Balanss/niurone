@@ -1,4 +1,4 @@
-import { useEffect, useRef, useReducer } from "react";
+import { useEffect, useRef, useReducer,useState } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import spaceScene from "../assets/3d/brain.glb";
@@ -27,17 +27,28 @@ export function Brain({isMobile}) {
   //   actions["Scene"].play();
   // }, [actions]);
 
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setStartAnimation(true);
+    }, 1500); // delay of 1.5 seconds
+  
+    return () => clearTimeout(timeoutId); // clear the timeout if the component unmounts
+  }, []);
+  
   useFrame(() => {
-    if (spaceRef.current) {
+    if (startAnimation && spaceRef.current) {
       if (spaceRef.current.position.y > 0) {
         dispatch({ type: 'SET_DIRECTION', payload: -1 });
       } else if (spaceRef.current.position.y < -0.5) {
         dispatch({ type: 'SET_DIRECTION', payload: 1 });
       }
       spaceRef.current.position.y += 0.001 * state.direction;
+      spaceRef.current.rotation.y += 0.0005; // rotate on Y-axis by 0.01 each frame
     }
   });
-
+  
   const mobile = isMobile? [0,-0,-1]:[-0.8, -0, -1];
 
   return (
