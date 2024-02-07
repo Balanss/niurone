@@ -43,7 +43,7 @@ export function Brain({isMobile}) {
   
   useFrame(() => {
     if (startAnimation && spaceRef.current) {
-      if (spaceRef.current.position.y > 0.2) {
+      if (spaceRef.current.position.y > 0.1) {
         dispatch({ type: 'SET_DIRECTION', payload: -1 });
       } else if (spaceRef.current.position.y < -0.2) {
         dispatch({ type: 'SET_DIRECTION', payload: 1 });
@@ -56,7 +56,7 @@ export function Brain({isMobile}) {
   const mobile = isMobile? [0,-0,-1]:[0 ,0, 0];
 
   return (
-    <mesh  ref={spaceRef} position={mobile} rotation={[0,1,0]}  scale={isMobile? 1:1}>
+    <mesh  ref={spaceRef} position={mobile} rotation={[0,1,0]}  scale={isMobile? 0.7:1}>
       <directionalLight position={[100, 1000, 100]} intensity={2.5} />
       <primitive object={scene} />
     </mesh>

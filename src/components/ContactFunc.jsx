@@ -89,7 +89,7 @@ export default function ContactFunc({setIsHovering}) {
     };
 
   return (
-    <div className='phones:w-2/4  '>
+    <div className='phones:w-3/4  '>
     <form onSubmit={handleSubmit} className="space-y-4   mt-5 text-black pc:flex pc:flex-col pc:items-start"  onMouseEnter={handleMouseEnter}  onMouseLeave={handleMouseLeave} >
      <section className='pc:flex flex-row gap-5'>
 <div>

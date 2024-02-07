@@ -81,10 +81,9 @@ const scale = useTransform(scrollYProgress, [1, 1, 1], [0, 1, 1]);
 // /> 
 //       <LoadingBar setIsLoading={setIsLoading} />
 //   </div> */}
-
    <motion.div className={` bg-backOne relative inset-0  z-50  bg-cover bg-no-repeat  overflow-x-hidden`}  initial={{ opacity: 0.9 }}
                      animate={{ opacity: 1 }}
-                     transition={{ duration: 2.9 ,ease:'easeInOut'}}>
+                     transition={{ duration: 0.2 ,ease:'easeInOut'}}>
         <Navbar status={status} setStatus={setStatus}/>
         
         <LazyLoadImage

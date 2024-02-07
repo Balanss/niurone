@@ -27,10 +27,10 @@ function Contact() {
 
 
     return (
-        <motion.div className=' bg-opacity-50  p-10 ' >
+        <motion.div className=' bg-opacity-50  p-4 pc:p-10 flex flex-col items-center ' >
           <ToastContainer position='bottom-center' />
           <motion.p 
-            variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2 phones:relative phones:right-2 text-white leading-tight phones:text-xl text-2xl phones:w-[90vw] w-[60vw]   phones:m-auto '>
+            variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2 phones:relative phones:right-2 text-white leading-tight phones:text-lg text-2xl phones:w-[95vw] w-[60vw]   phones:m-auto '>
              Join is in shaping the future : We invite you to join us on a journey where technology and design converge to create 
 extraordinary possibilities and discover how we can collaboratively shape the future of technology 
 and design. 
@@ -64,7 +64,7 @@ and design.
 
 <section  className='pc:hidden mt-20'>
      <Maps />
-    <p className='text-white text-2xl p-10'>
+    <p className='text-white text-xl p-10'>
       Opening time :<br />
       Mon - Fri<br />
       10.00 AM - 06.00 PM

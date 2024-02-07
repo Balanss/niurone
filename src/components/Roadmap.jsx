@@ -40,7 +40,7 @@ return (
         <div className='text-white relative '>
               <h2 className={`${style.sectionHeadText} text-left px-10 py-10 pc:!text-[14px]`}> {project.title}</h2>
               {project.img && <div className={`${project.bg} object-cover rounded-full pc:absolute left-[-30px] p-5 top-20`}>
-                 <LazyLoadImage src={project.img} alt={project.title} className={`bg-white rounded-full w-[50px] h-[50px] cursor-pointer hover:scale-105`}  onClick={() => setIsVisible(isVisible ? null : index)}/>
+                 <LazyLoadImage src={project.img} alt={project.title} className={`bg-white rounded-full w-[50px] h-[50px] cursor-pointer hover:scale-105 ${isVisible?'border-2 border-blue-500': ''}`}  onClick={() => setIsVisible(isVisible ? null : index)}/>
               </div>}
              
            </div>
