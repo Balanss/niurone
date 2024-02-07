@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
 import {motion, useScroll, useTransform,AnimatePresence,useViewportScroll} from 'framer-motion'
-import { fadeIn} from "../utils/Motion"
 import { SectionWrapper } from '../hoc'
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { services ,serviceMini} from '../constants/index';
+import { services } from '../constants/index';
 import Title from '../ServiceSuite/Title'
 import Card from '../ServiceSuite/Card';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 
 
@@ -83,6 +83,23 @@ const scaleProgress = isMobile
       }
     }, [modalShow]);
 
+    useEffect(() => {
+      const handleKeyDown = (e) => {
+        // Close the modal if the Esc key is pressed
+        if (e.key === 'Escape') {
+          setModalShow(false);
+        }
+      };
+    
+      // Add the event listener when the component mounts
+      window.addEventListener('keydown', handleKeyDown);
+    
+      // Remove the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }, []);
+
 
   
 
@@ -115,7 +132,12 @@ const scaleProgress = isMobile
         <motion.div initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        exit={{ opacity: 0, scale: 0 }}
+        exit={{ opacity: 0, scale: 0 }}     onClick={(e) => {
+          // Close the modal if the click is outside the modal content
+          if (e.target === e.currentTarget) {
+            setModalShow(false);
+          }
+        }}
          className='fixed  z-[10000000000000000000000000] top-0 left-0 w-screen pt-10 pb-10 overflow-y-scroll h-screen bg-black bg-opacity-50 flex items-center justify-center'>
           <div className='bg-wg  p-10 phones:w-[95vw]  w-[50vw] m-auto  rounded-md'>
 {services.map((services,index) => (

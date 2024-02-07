@@ -24,6 +24,7 @@ function App() {
 const [isLoading, setIsLoading] = useState(true);
   const [status, setStatus] = useState(false);
   const [bgTheme, setBgTheme] = useState('1');
+  const [contactSide, setContactSide] = useState(false);
 
 //add scroll to top when refresh
 useEffect(() => {
@@ -56,13 +57,18 @@ useEffect(() => {
 
 
 
+useEffect(() => {
+  setTimeout(() => {
+    setContactSide(true);
+  }
+  , 2000);
+}
+, []);
+
 
 const { scrollYProgress } = useViewportScroll();
 const opacity = useTransform(scrollYProgress, [0.9, 1, 1], [0.9, 1, 1]);
 const scale = useTransform(scrollYProgress, [1, 1, 1], [0, 1, 1]);
-//transition-all duration-2000 ease-in-out animate-reveal
-
-
 
   return (
    
@@ -81,12 +87,17 @@ const scale = useTransform(scrollYProgress, [1, 1, 1], [0, 1, 1]);
                      animate={{ opacity: 1 }}
                      transition={{ duration: 2.9 ,ease:'easeInOut'}}>
         <Navbar status={status} setStatus={setStatus}/>
-        <div className={` bg-test  opacity-50 w-screen h-screen bg-cover  fixed bg-no-repeat`}> </div>
+        
+        <LazyLoadImage
+  alt={'background image'}
+  src={bgImage} // replace with the path to your image
+  className={` w-screen h-screen fixed `}
+/> 
         <div  className="  overflow-hidden bg-hero-pattern bg-cover bg-no-repeat bg-center"  >
           <LandingPage status={status} setStatus={setStatus} />
         </div>
 
-        <motion.div   className="relative z-[10000] overflow-hidden  "   style={{ opacity, scale }} >
+        <motion.div    style={{ opacity, scale }} >
       
        <ServiceSuit />
        
@@ -108,9 +119,9 @@ const scale = useTransform(scrollYProgress, [1, 1, 1], [0, 1, 1]);
 
 
           <div className="relative z-[10000] " >
-         <Suspense fallback={<div>Loading...</div>}>
+        {contactSide &&  <Suspense fallback={<div>Loading...</div>}>
          <Contact/>
-          </Suspense>
+          </Suspense>}
           </div>
 
       

@@ -27,7 +27,7 @@ function Contact() {
 
 
     return (
-        <motion.div className=' bg-opacity-50 bg-black  p-10 ' >
+        <motion.div className=' bg-opacity-50  p-10 ' >
           <ToastContainer position='bottom-center' />
           <motion.p 
             variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2 phones:relative phones:right-2 text-white leading-tight phones:text-xl text-2xl phones:w-[90vw] w-[60vw]   phones:m-auto '>
@@ -54,9 +54,9 @@ and design.
                     </Suspense>
                 </section> 
 
-     <section onMouseEnter={() => setIsHovering('right')} onMouseLeave={() => setIsHovering('')} className='phones:hidden'>
+     <section onMouseEnter={() => setIsHovering('right')} onMouseLeave={() => setIsHovering('')} className='phones:hidden '>
      <Maps />
-     <p className='text-white text-2xl'>Opening time : Mon - Fri || 10.00 AM - 06.00 PM</p>
+     <p className='text-white text-2xl pt-2'>Opening time : Mon - Fri || 10.00 AM - 06.00 PM</p>
      <Footer />
      </section> 
 </div>
