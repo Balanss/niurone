@@ -18,7 +18,7 @@ function reducer(state, action) {
   }
 }
 
-export function Brain({isMobile}) {
+export function Brain({isMobile,sizePc}) {
   const spaceRef = useRef();
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -44,10 +44,10 @@ export function Brain({isMobile}) {
     }
   });
   
-  const mobile = isMobile? [0,-0,-1]:[0 ,0, 0];
+  const mobile = isMobile? [0,-0.35,-1]:[0 ,0, 0];
 
   return (
-    <mesh  ref={spaceRef} position={mobile} rotation={[0,1,0]}  scale={isMobile? 0.7:1}>
+    <mesh  ref={spaceRef} position={mobile} rotation={[0,1,0]}  scale={isMobile? 2:sizePc}>
       <directionalLight position={[100, 1000, 100]} intensity={2.5} />
       <primitive object={scene} />
     </mesh>

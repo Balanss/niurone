@@ -15,11 +15,22 @@ export default function LandingPage() {
   
 
 const [size, setSize] = useState(7);
-const [isMobile, setIsMobile] = useState(window.innerWidth <= 1020);
+const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
+const [isPc, setIsPc] = useState(window.innerWidth > 1023 && window.innerWidth <= 1439);
+const [isXPc, setIsXPc] = useState(window.innerWidth > 1440);
+const [sizePc, setSizePc] = useState( );
+
+
 
 useEffect(() => {
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 1023);
+
+if (window.innerWidth > 1023 && window.innerWidth <= 1439) {
+  setSizePc(1);
+  } else if (window.innerWidth > 1440) {
+    setSizePc(1.1);
+  }
   };
 
   window.addEventListener('resize', handleResize);
@@ -28,32 +39,33 @@ useEffect(() => {
   return () => {
     window.removeEventListener('resize', handleResize);
   };
-}, []);
+}, [sizePc,  isPc, isXPc]);
 
 
 
-
+console.log(sizePc)
 
   return (
 <>
-<div className='flex flex-row justify-center items-center  phones:pt-[50px] xPc:w-[90vw] phones:flex-col pc:h-screen  '>
+<div className='flex flex-row justify-center items-center  phones:flex-col-reverse phones:pt-[200px] xPc:w-[90vw]  pc:h-screen  '>
 
-<motion.div className='w-3/4 phones:w-screen phones:h-screen flex flex-col items-center justify-center'  style={{ opacity }}
-              initial={{ opacity: 0.5 ,x:-10}}
+<motion.div className='pc:w-3/4 phones:w-screen  flex flex-col items-center justify-center '  
+              initial={{ opacity: 1 ,x:-10}}
               animate={{ opacity: 1 ,x:0 ,rotateX:0}}
-              exit={{ opacity: 0.5}}
+              exit={{ opacity: 1}}
               transition={{ duration: 0.9 ,ease:'easeInOut'}}>
                 
-  <Canvas className='canvas xPc:!h-screen ' gl={{ antialias: false }}  dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: !isMobile ? 12 : 9 }} >
+  <Canvas className='canvas pc:!h-screen phones:!h-[200px] ' gl={{ antialias: false }}  dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: !isMobile ? 12: 12 }} >
     <ambientLight intensity={0.5} />
     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
     <Suspense fallback={<Loader/>}>
-      <Brain size={size} isMobile={isMobile}/>
+      <Brain size={size} isMobile={isMobile} sizePc={sizePc}/>
     </Suspense>
   </Canvas>
+
 </motion.div>
 
-<section className='pc:relative phones:w-fit phones:px-10   pc:w-1/2  flex-col  pc:m-auto phones:flex phones:items-left phones:justify-center '> 
+<section className='pc:relative phones:w-fit phones:px-10    pc:w-1/2  flex-col  pc:m-auto phones:flex phones:items-left phones:justify-center '> 
           <AnimatePresence mode='wait'>
           <motion.h1
                         style={{ zIndex: 2 ,opacity,scale}} // Add this line
@@ -61,7 +73,7 @@ useEffect(() => {
                         animate={{ opacity: 1 ,x:0 ,scale:1,rotateX:0}}
                         exit={{ opacity: 0.5}}
                         transition={{ duration: 0.9 ,ease:'easeInOut'}}
-              className=' phones:text-5xl text-[5rem]   leading-[1.05em] linetracking-[2px]   pc:text-left font-bold text-white-100 shadow-sm mb-1 ' >
+              className=' text-[3rem] xPc:text-[4.5rem] phones:text-[2.5rem] phones:mb-10   leading-[1.05em] linetracking-[2px]   pc:text-left font-bold text-white-100 shadow-sm mb-1 ' >
               HUMAN BRAIN.
               <br />
               <span className=' '>THE ULTIMATE</span>
@@ -71,7 +83,7 @@ useEffect(() => {
           </AnimatePresence>
 
           
-          <motion.h1  style={{opacity,scale}} className='pc:text-left font-extrabold pc:text-[1.7rem] text-white  shadow-sm phones:mt-1 '
+          <motion.h1  style={{opacity,scale}} className='pc:text-left phones:hidden font-extrabold pc:text-[1.7rem] text-white  shadow-sm phones:mt-1 '
   initial={{ opacity: 0.3 ,y:1000,scale:0.3,rotateY:10}}
   animate={{ opacity: 1 ,y:0 ,scale:1,rotateY:0}}
   exit={{ opacity: 1.5 }}

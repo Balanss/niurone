@@ -46,6 +46,8 @@ export default function Navbar() {
        </motion.li>
           ))}
         </ul>
+
+        
         <div className=' lg:hidden flex flex-1 justify-end items-center'>
           <img src={toggle ? menu:close} alt='menu' className='w-6 h-6 cursor-pointer' onClick={() => {setToggle(!toggle)}}/>
     

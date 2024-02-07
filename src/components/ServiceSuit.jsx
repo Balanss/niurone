@@ -104,11 +104,11 @@ const scaleProgress = isMobile
   
 
   return ( <> 
-    <motion.div className=' py-10 overflow-hidden   flex xl:flex-col xl:items-center justify-center rounded-lg bg-bg'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}}>
+    <motion.div className=' py-10   flex xl:flex-col xl:items-center justify-center rounded-lg bg-bg'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}}>
       <div className='flex p-[10px]  gap-[20px]  w-screen flex-wrap xl:flex-col justify-center '>
        <Title/>
   <div className='flex   flex-wrap flex-row  items-center justify-center m-auto gap-10  h-auto pb-10'>
-    <motion.div className=' grid pc:grid-cols-3  flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  '  initial={{ opacity: 0 ,x:-1000,scale:0.0}}
+    <motion.div className=' grid pc:grid-cols-3  flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  '  initial={{ opacity: 0 ,x:0,scale:0.8}}
           animate={{ opacity: 1 ,x:0 ,scale:1}}
           exit={{ opacity: 1.5 }}
           transition={{ duration: 1.5 }}>   
