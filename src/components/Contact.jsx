@@ -38,10 +38,11 @@ and design.
 
 
 <div className='phones:flex phones:flex-col phones:justify-center phones:items-center mt-[80px] pc:items-start pc:justify-start '>
-<p className='text-secondary text-4xl font-bold tracking-wider'>   Contact us today!</p>
-<div className='flex flex-row   mt-10  m-auto '>
+{/* <p className='text-secondary text-4xl font-bold tracking-wider'>   Contact us today!</p> */}
+<div className='flex flex-row  items-start justify-center gap-5 mt-10  m-auto '>
 <ContactFunc setIsHovering={setIsHovering} />
-                <section className='w-[20vw] pc:left-100  relative z-[1000000000] m-auto h-[300px]'>
+
+                {/* <section className='w-[20vw] pc:left-100  relative z-[1000000000] m-auto h-[300px]'>
                   <Suspense fallback={<Loader />}>
                   <Canvas  gl={{ antialias: true, alpha: true }}  >
                     <directionalLight position={[400, 0, 10]} intensity={2} />
@@ -52,7 +53,7 @@ and design.
                     </Suspense>
                     </Canvas>
                     </Suspense>
-                </section> 
+                </section>  */}
 
      <section onMouseEnter={() => setIsHovering('right')} onMouseLeave={() => setIsHovering('')} className='phones:hidden '>
      <Maps />

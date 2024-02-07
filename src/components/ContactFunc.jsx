@@ -99,14 +99,17 @@ export default function ContactFunc({setIsHovering}) {
                  <div>
                      <label htmlFor="email" className="block text-sm font-medium text-white"> <span className='text-red-500'>*</span> Email:</label>
                      <input type="email" id="email" name="email" required className="mt-1 block w-full py-2 px-3 border text-black border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  onChange={(e) => { setUserEmail(e.target.value);}} />
-
                  </div>
-         </section>
+
                  <div>
                      <label htmlFor="phone" className="block text-sm font-medium text-white">Phone:</label>
                      <input type="tel" id="phone" name="phone"  className="mt-1 block w-full py-2 px-3 border text-black border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  onChange={(e) => setUserPhone(e.target.value)}/>
                  </div>
-                 <div>
+         </section>
+
+         <section className='pc:flex flex-row gap-5'>
+
+         <div>
                      <label htmlFor="company" className="block text-sm font-medium text-white">Company:</label>
                      <input type="text" id="company" name="company"  className="mt-1 block w-full py-2 px-3 border text-black border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  onChange={(e) => setUserCompany(e.target.value)}/>
                  </div>
@@ -117,6 +120,10 @@ export default function ContactFunc({setIsHovering}) {
                        onChange={option => setSelectedCountry(option.value)} 
                      />
                  </div>
+
+         </section>
+
+                 
                  <div>
                  <select className='w-full font-medium p-2 text-black rounded-md' value={message} placeholder='Please select one' onChange={(e) => setMessage(e.target.value)}>
                    
