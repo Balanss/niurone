@@ -44,7 +44,7 @@ useEffect(() => {
               exit={{ opacity: 0.5}}
               transition={{ duration: 0.9 ,ease:'easeInOut'}}>
                 
-  <Canvas className='canvas xPc:!h-screen ' gl={{ antialias: false }}  dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: !isMobile ? 8 : 12 }} >
+  <Canvas className='canvas xPc:!h-screen ' gl={{ antialias: false }}  dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: !isMobile ? 12 : 9 }} >
     <ambientLight intensity={0.5} />
     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
     <Suspense fallback={<Loader/>}>

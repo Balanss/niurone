@@ -31,18 +31,9 @@ export function Brain({isMobile}) {
   //   actions["Scene"].play();
   // }, [actions]);
 
-  const [startAnimation, setStartAnimation] = useState(false);
 
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setStartAnimation(true);
-    }, 1500); // delay of 1.5 seconds
-  
-    return () => clearTimeout(timeoutId); // clear the timeout if the component unmounts
-  }, []);
-  
   useFrame(() => {
-    if (startAnimation && spaceRef.current) {
+    if ( spaceRef.current) {
       if (spaceRef.current.position.y > 0.1) {
         dispatch({ type: 'SET_DIRECTION', payload: -1 });
       } else if (spaceRef.current.position.y < -0.2) {

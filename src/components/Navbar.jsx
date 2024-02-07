@@ -6,6 +6,9 @@ import menu from '../assets/menu.png'
 import close from '../assets/close.png'
 import logo from '../assets/aitumeicon.png'
 import { motion } from 'framer-motion'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 export default function Navbar() {
 
     const [active,setActive] = useState('')
@@ -22,8 +25,13 @@ export default function Navbar() {
       <Link to='/' className='flex xm:flex-row items-center gap-2 xs:flex-col ' 
       onClick={() => {setActive('');
       window.scrollTo(0,0)}}>
-        <img src={logo} alt='logo' className='w-20 h-20 xs:w-12 phones:h-12 object-contain' />
-        <p className='text-black text-[18px] flex font-bold cursor-pointer phones:text-xs'>Niurone &nbsp; | Where mind matters</p>
+       <LazyLoadImage
+          src={logo}
+          alt='logo'
+          effect='blur'
+          className='w-16 h-16'
+        />
+        <p className='text-black text-sm flex font-bold cursor-pointer phones:text-xs'>Niurone &nbsp; | Where mind matters</p>
         </Link>
         <ul className='list-none phones:hidden sm:flex flex-row gap-10'>
           {navLinks.map((link,index) => (
@@ -34,7 +42,7 @@ export default function Navbar() {
          onClick={() => {setActive(link.title)}}
          whileHover={{ scale: 1.1 }}
        >
-         <a href={`#${link.id}`}> {link.title}</a>
+         <a className='text-sm' href={`#${link.id}`}> {link.title}</a>
        </motion.li>
           ))}
         </ul>
@@ -47,7 +55,7 @@ export default function Navbar() {
             <li key={index} className={`${active == link.title? "text-white underline" : "text-white "}
               font-medium cursor-pointer text-[16px]`}
               onClick={() => {setActive(link.title);setToggle(!toggle)}}>
-              <a href={`#${link.id}`}> {link.title}</a>
+              <a className='text-sm' href={`#${link.id}`}> {link.title}</a>
             </li>
           ))}
         </ul>

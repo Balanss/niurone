@@ -7,6 +7,9 @@ import {useScroll, useTransform,motion,AnimatePresence} from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 import {tech} from "../constants/index"
 import logo from '../assets/banner.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 
 
@@ -82,7 +85,12 @@ technology meets creative aesthetics to redefine possibilities and elevate user 
 
 
 <div className='phones:hidden hidden xl:block '>
-  <img src={logo} className=''/>
+  <LazyLoadImage
+    src={logo}
+    alt='logo'
+    effect='blur'
+    className=''
+  />
 </div>
 
 
