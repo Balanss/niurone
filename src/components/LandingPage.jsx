@@ -73,7 +73,7 @@ console.log(sizePc)
                         animate={{ opacity: 1 ,x:0 ,scale:1,rotateX:0}}
                         exit={{ opacity: 0.5}}
                         transition={{ duration: 0.9 ,ease:'easeInOut'}}
-              className=' text-[3rem] xPc:text-[4.5rem] phones:text-[2.5rem] phones:mb-10   leading-[1.05em] linetracking-[2px]   pc:text-left font-bold text-white-100 shadow-sm mb-1 ' >
+              className=' text-[3rem] xPc:text-[3.5rem] 2Xpc:text-[4.5rem] phones:text-[2.5rem] phones:mb-10   leading-[1.05em] linetracking-[2px]   pc:text-left font-bold text-white-100 shadow-sm mb-1 ' >
               HUMAN BRAIN.
               <br />
               <span className=' '>THE ULTIMATE</span>

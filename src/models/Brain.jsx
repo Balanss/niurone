@@ -33,18 +33,11 @@ export function Brain({isMobile,sizePc}) {
 
 
   useFrame(() => {
-    if ( spaceRef.current) {
-      if (spaceRef.current.position.y > 0.1) {
-        dispatch({ type: 'SET_DIRECTION', payload: -1 });
-      } else if (spaceRef.current.position.y < -0.2) {
-        dispatch({ type: 'SET_DIRECTION', payload: 1 });
-      }
-      spaceRef.current.position.y += 0.0001 * state.direction;
+      // spaceRef.current.position.y += 0.0001 * state.direction;
       spaceRef.current.rotation.y += 0.0005; // rotate on Y-axis by 0.01 each frame
-    }
   });
   
-  const mobile = isMobile? [0,-0.35,-1]:[0 ,0, 0];
+  const mobile = isMobile? [0,-0.35,-1]:[0 ,-0.2, 0];
 
   return (
     <mesh  ref={spaceRef} position={mobile} rotation={[0,1,0]}  scale={isMobile? 2:sizePc}>

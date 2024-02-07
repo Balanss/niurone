@@ -36,6 +36,7 @@ module.exports = {
         'phones':{'max':'1023px'},
         'pc': '1024px',
         'xPc': '1280px',
+        "2Xpc": "1440px",
       },
       backdropBlur: {
         'none': '0',
@@ -54,7 +55,6 @@ module.exports = {
         "backTwo": "url('/src/assets/bg2.jpg')",
         "backOne": "conic-gradient(at center top, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))",
         "background": "url('/src/assets/background.jpg')",
-      
         "bgBlob": "url('/src/assets/bgBlob.svg')",
         'wg': 'linear-gradient(to bottom, #ffffff, #f2f2f2)', // #e5e7eb is the color for grey-200 in Tailwind CSS
         'gradient-custom': 'radial-gradient(rgb(229, 231, 235), rgb(156, 163, 175), rgb(75, 85, 99))',

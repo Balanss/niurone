@@ -16,12 +16,12 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 const ProjectsCard = ({ project, isVisible, setIsVisible,index}) => {   
     
 
-   console.log(isVisible)
+
     
 
 return (
    <motion.div
-   className={`${project.bg} flex flex-row border-2 border-primary shadow-card mb-20 rounded-lg phones:!w-screen phones:!flex-col phones:!h-full`}
+   className={`${project.bg} flex flex-row border-2 border-primary bg-bgBlob shadow-card mb-20 rounded-lg phones:!w-screen phones:!flex-col phones:!h-full`}
    initial={{ scale: 1, width: '300px' }}
    animate={{
      scale: isVisible ? 1.03 : 1,
@@ -39,14 +39,14 @@ return (
    <motion.section className='flex phones:flex-col flex-col gap-10 text-white items-left phones:w-screens ' > 
         <div className='text-white relative '>
               <h2 className={`${style.sectionHeadText} text-left px-10 py-10 pc:!text-[14px]`}> {project.title}</h2>
-              {project.img && <div className={`${project.bg} object-cover rounded-full pc:absolute left-[-30px] p-5 top-20`}>
+              {project.img && <div className={`bg-[#001220] object-cover rounded-full pc:absolute left-[-30px] p-5 top-20`}>
                  <LazyLoadImage src={project.img} alt={project.title} className={`bg-white rounded-full w-[50px] h-[50px] cursor-pointer hover:scale-105 ${isVisible?'border-2 border-blue-500': ''}`}  onClick={() => setIsVisible(isVisible ? null : index)}/>
               </div>}
              
            </div>
    
            <div className='relative flex items-start flex-row phones:flex-col'>
-               <p className='text-sm phones:text-xl font-extrabold mb-10 pc:w-[250px] text-left xPc:w-[300px] phones:w-[90vw] phones:pl-4 pc:px-10'> {project.description}</p>
+               <p className='text-sm phones:text-xl  mb-10 pc:w-[250px] text-left xPc:w-[300px] phones:w-[90vw] phones:pl-4 pc:px-10'> {project.description}</p>
                <AnimatePresence>
                {isVisible && (
              <motion.section
