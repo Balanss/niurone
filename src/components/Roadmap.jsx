@@ -16,7 +16,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 const ProjectsCard = ({ project, isVisible, setIsVisible,index}) => {   
     
 
-
+ 
     
 
 return (
