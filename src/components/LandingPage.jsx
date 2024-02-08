@@ -47,7 +47,7 @@ console.log(sizePc)
 
   return (
 <>
-<div className='flex flex-row justify-center items-center  phones:flex-col-reverse phones:pt-[200px] xPc:w-[90vw]  pc:h-screen  '>
+<div className='flex flex-row justify-center items-center  phones:flex-col-reverse phones:pt-[200px] xPc:w-[90vw] pt-20 pc:h-screen  '>
 
 <motion.div className='pc:w-3/4 phones:w-screen  flex flex-col items-center justify-center '  
               initial={{ opacity: 1 ,x:-10}}

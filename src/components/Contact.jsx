@@ -3,14 +3,8 @@ import { fadeIn} from "../utils/Motion"
 import { SectionWrapper } from '../hoc'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {Robot } from '../models';
-import { Canvas } from '@react-three/fiber';
-import { Suspense, useRef,useState } from 'react';
-import {useScroll, useTransform} from 'framer-motion'
-import Loader from './Loader';
-import Select from 'react-select';
-import { getNames } from 'country-list';
-import bgContact from '../assets/bgContact.jpg';
+import { useState } from 'react';
+import bgContact from '../assets/bgContact.webp';
 import ContactFunc from './ContactFunc';
 import Maps from './map/Maps';
 import Footer from './Footer';
@@ -37,9 +31,9 @@ and design.
             </motion.p>
 
 
-<div className='phones:flex phones:flex-col phones:justify-center phones:items-center mt-[80px] pc:items-start pc:justify-start '>
+<div className='phones:flex phones:flex-col phones:justify-center phones:items-center mt-[80px] pc:items-start pc:justify-start g'>
 {/* <p className='text-secondary text-4xl font-bold tracking-wider'>   Contact us today!</p> */}
-<div className='flex flex-row  items-start justify-center gap-5 mt-10  m-auto '>
+<div className='flex flex-row  items-start justify-center gap-20 mt-10  m-auto '>
 <ContactFunc setIsHovering={setIsHovering} />
 
                 {/* <section className='w-[20vw] pc:left-100  relative z-[1000000000] m-auto h-[300px]'>

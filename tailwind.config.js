@@ -50,11 +50,11 @@ module.exports = {
       },
       backgroundImage: {
         "bg-style":'linear-gradient(to left bottom, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))',
-        "test": "url('/src/assets/bgpic.png')",
-        "bg": "url('/src/assets/bg.jpg')",
+        "test": "url('/src/assets/bgpic.webp')",
+        "bg": "url('/src/assets/bg.webp')",
         "backTwo": "url('/src/assets/bg2.jpg')",
         "backOne": "conic-gradient(at center top, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))",
-        "background": "url('/src/assets/background.jpg')",
+        "background": "url('/src/assets/background.webp')",
         "bgBlob": "url('/src/assets/bgBlob.svg')",
         'wg': 'linear-gradient(to bottom, #ffffff, #f2f2f2)', // #e5e7eb is the color for grey-200 in Tailwind CSS
         'gradient-custom': 'radial-gradient(rgb(229, 231, 235), rgb(156, 163, 175), rgb(75, 85, 99))',

@@ -2,7 +2,6 @@
 import { BrowserRouter } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import React,{ useState ,useEffect,useRef,Suspense} from "react";
 import Roadmap from "./components/Roadmap";
 import { motion,useTransform,useViewportScroll } from "framer-motion";
@@ -10,7 +9,7 @@ import MiddleText from "./components/MiddleText";
 import LoadingBar from "./components/LoadingBar";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import bgImage from './assets/bgpic.png';
+import bgImage from './assets/bgpic.webp';
 
 
 
@@ -91,7 +90,7 @@ const scale = useTransform(scrollYProgress, [1, 1, 1], [0, 1, 1]);
   src={bgImage} // replace with the path to your image
   className={` w-screen h-screen fixed `}
 /> 
-        <div  className="   bg-hero-pattern bg-cover bg-no-repeat bg-center"  >
+        <div  className=" "  >
           <LandingPage status={status} setStatus={setStatus} />
         </div>
 

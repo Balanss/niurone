@@ -1,8 +1,8 @@
-import webdev from '../assets/cards/web.jpg'
-import auto from '../assets/cards/auto.jpg'
-import worcpilot from '../assets/cards/worc.jpg'
+import webdev from '../assets/cards/web.webp'
+import auto from '../assets/cards/auto.webp'
+import worcpilot from '../assets/cards/worc.webp'
 import software from '../assets/icons/software.gif'
-import aml from '../assets/cards/aml.jpg'
+import aml from '../assets/cards/aml.webp'
 import firebase from '../assets/icons/fb.png'
 import bot from '../assets/icons/bot.png'
 import automation from '../assets/icons/automation.png'
@@ -11,7 +11,7 @@ import autom from '../assets/automation.gif'
 import alma from '../assets/alma.gif'
 import worc from '../assets/worcpilot.gif'
 import botgif from '../assets/icons/botgif.gif'
-import chatpic from '../assets/cards/chatpic.jpg'
+import chatpic from '../assets/cards/chatpic.webp'
 import roadMapGif1 from '../assets/icons/roadmapgif1.gif'
 import roadMapGif2 from '../assets/icons/roadmapgif2.gif'
 import roadMapGif3 from '../assets/icons/roadmapgif3.gif'
@@ -40,13 +40,6 @@ export const navLinks = [
 
 
   export const projects = [
-    {
-       title: "Products",
-      name: "Products",
-      bg: "bg-cyan-700",
-      company:"Squarelion Agency",
-      description:"We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience. ",
-    },
     {
       title: "Product // 01",
       img: roadMapGif1,
@@ -138,101 +131,119 @@ export const tech = [{
 },
 ]
 
-export const  services = [ {
-  title: 'Web Development',
-  description:  " Corporate Websites: Design and develop professional, responsive websites that showcase your  brand identity and provide essential information.", 
-description2:'E-commerce Platforms: Build robust online shopping platforms with secure payment gateways, ensuring a seamless customer experience.',
-description3:' Web Applications: Develop customized web applications tailored to specific business needs,  enhancing user engagement and functionality.',
-  icon : web,
-  service: 1,
-  img: webdev
+export const  services = [ 
 
-},
-{
-  title: 'Ui/Ux Design',
-  description: 'Performance Optimization: Ensure fast loading times and resource efficiency for seamless user experiences across devices, platforms, and browsers.',
-  description2:'Enhanced Visual Communication: Utilize 3D technology for richer visual storytelling, making complex information more engaging and understandable.',
-  icon : worc,
-  service: 6,
-  img: worcpilot
-},
-{
-  title: 'Automation Solutions',
-  description: 'Workflow Optimization: Design and implement automated processes to streamline workflows, allowing employees to focus on more strategic responsibilities. ',
-  description2:'Chatbot Development: Conversational AI: Build intelligent chatbots for websites or applications, enhancing customer interaction and support services. ',
-  icon : autom,
-  service: 2,
-  img: auto
-},
+  {
+    title: 'Custom Software Development',
+    description: 'Bespoke Software Solutions: Develop custom software solutions that are tailored to your specific business needs. ',
+    description2:'Software Integration: Seamlessly integrate custom software with existing systems to create a cohesive and efficient IT infrastructure.',
+    icon : software,
+    service: 1,
+    img: auto
+  
+  },
+
+ 
 {
   title: 'Chatbot Development',
   description: 'Conversational AI: Build intelligent chatbots for websites or applications, enhancing customer interaction and support services. ',
   description2:'Custom Chatbot Development: Develop customized chatbots that are tailored to your specific business needs, providing automated support and customer engagement. ',
   icon : botgif,
-  service: 3,
+  service: 2,
   img: chatpic
 
 },
+
 {
-  title: 'Custom Software Development',
-  description: 'Bespoke Software Solutions: Develop custom software solutions that are tailored to your specific business needs. ',
-  description2:'Software Integration: Seamlessly integrate custom software with existing systems to create a cohesive and efficient IT infrastructure.',
-  icon : software,
-  service: 4,
+  title: 'Automation Solutions',
+  description: 'Workflow Optimization: Design and implement automated processes to streamline workflows, allowing employees to focus on more strategic responsibilities. ',
+  description2:'Chatbot Development: Conversational AI: Build intelligent chatbots for websites or applications, enhancing customer interaction and support services. ',
+  icon : autom,
+  service: 3,
   img: auto
+},
+
+
+{
+  title: 'Web Development',
+  description:  " Corporate Websites: Design and develop professional, responsive websites that showcase your  brand identity and provide essential information.", 
+description2:'E-commerce Platforms: Build robust online shopping platforms with secure payment gateways, ensuring a seamless customer experience.',
+description3:' Web Applications: Develop customized web applications tailored to specific business needs,  enhancing user engagement and functionality.',
+  icon : web,
+  service: 4,
+  img: webdev
 
 },
+
+{
+  title: 'Ui/Ux Design',
+  description: 'Performance Optimization: Ensure fast loading times and resource efficiency for seamless user experiences across devices, platforms, and browsers.',
+  description2:'Enhanced Visual Communication: Utilize 3D technology for richer visual storytelling, making complex information more engaging and understandable.',
+  icon : worc,
+  service: 5,
+  img: worcpilot
+},
+
 
   {
       title: 'Alma Mater Labs',
       description: 'Technology Consulting: Provide expert guidance on technology adoption, strategy, and digital  transformation.',
       description2:'Training Programs: Offer training sessions to empower clients with the skills and knowledge  required to leverage new technologies effectively.',
       icon : alma,
-      service: 5,
+      service: 6,
       img: aml
   },
 
 
 ]
 
-export const serviceMini=[{
-  title: 'Web Development',
-  description: 'We create and develop websites that are responsive, user-friendly, and visually appealing.  Our websites are designed to enhance your online presence and provide a seamless user  experience.',
-  icon : web,
-  service: 1,
-},
-{
-  title: 'Ui/Ux Design',
-  description:"Our focus in designing UI/UX-friendly websites revolves around creating platforms that seamlessly integrate client needs with cutting-edge technologies, ensuring user-friendly experiences and embracing innovative solutions.",
- icon : worc,
-  service: 6
-},
-{
-  title: 'Automation Solutions',
-  description: 'Business Process Automation (BPA): Develop solutions to automate end-to-end business processes for increased productivity. ',
- icon : autom,
-  service: 2
-},
+export const serviceMini=[
+
+  {
+    title:'Custom Software Development',
+    description:'We develop custom software solutions that are tailored to your specific business needs. Our  software is designed to enhance productivity, efficiency, and overall business performance.',
+    icon : software,
+    service: 1,
+    img: auto
+  },
+
+
 {
   title:'Chatbot Development',
   description:'Aimigo is an intelligent chatbot that is designed to automate customer interactions and support  services. Aimigo is customized to suit your business needs and enhance customer  engagement.',
   icon : botgif,
-  service: 3,
+  service: 2,
   img: auto
 
 },
+
 {
-  title:'Custom Software Development',
-  description:'We develop custom software solutions that are tailored to your specific business needs. Our  software is designed to enhance productivity, efficiency, and overall business performance.',
-  icon : software,
-  service: 4,
-  img: auto
+  title: 'Automation Solutions',
+  description: 'Business Process Automation (BPA): Develop solutions to automate end-to-end business processes for increased productivity. ',
+ icon : autom,
+  service: 3
 },
+
+
+{
+  title: 'Web Development',
+  description: 'We create and develop websites that are responsive, user-friendly, and visually appealing.  Our websites are designed to enhance your online presence and provide a seamless user  experience.',
+  icon : web,
+  service: 4,
+},
+
+{
+  title: 'Ui/Ux Design',
+  description:"Our focus in designing UI/UX-friendly websites revolves around creating platforms that seamlessly integrate client needs with cutting-edge technologies, ensuring user-friendly experiences and embracing innovative solutions.",
+ icon : worc,
+  service: 5
+},
+
   {
       title: 'Alma Mater Labs project',
       description: 'The Applied Computing onboarding project is crafted to offer a wide-ranging support system, assisting individuals in need with fundamental principles and advanced guidance. Our initiative aims to empower participants. ',
       icon : alma,
-      service: 5
+      service: 6
 },
 
 
