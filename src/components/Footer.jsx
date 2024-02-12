@@ -22,7 +22,7 @@ export default function Footer() {
       <div className=' flex gap-y-1 flex-col  '>
       <section className='flex gap-2 items-center'>
       <img src={email} alt='email' className='w-4 h-4 inline-block '/>
-        <p className='inline-block  text-sm'> go4niurone@gmail.com </p>
+        <p className='inline-block  text-sm'> niurone@shaananportfolio.com </p>
       </section>
 
       <section className='flex gap-2 items-center'>

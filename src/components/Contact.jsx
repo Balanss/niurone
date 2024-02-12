@@ -25,7 +25,7 @@ function Contact() {
           <ToastContainer position='bottom-center' />
           <motion.p 
             variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2 phones:relative phones:right-2 text-white leading-tight phones:text-lg text-2xl phones:w-[95vw] w-[60vw]   phones:m-auto '>
-             Join is in shaping the future : We invite you to join us on a journey where technology and design converge to create 
+             Join us in shaping the future. We invite you to join us on a journey where technology and design converge to create 
 extraordinary possibilities and discover how we can collaboratively shape the future of technology 
 and design. 
             </motion.p>

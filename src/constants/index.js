@@ -21,7 +21,7 @@ import roadMapGif3 from '../assets/icons/roadmapgif3.gif'
 export const navLinks = [
     {
       id: "services",
-      title: "Niurone Suite",
+      title: "Service Suite",
     },
     {
       id: "about",
@@ -82,18 +82,18 @@ export const navLinks = [
 
     },
 
-    {
-      title: `Product ${'🚧'}`,
-      name:'Deal Stamps',
-      img: roadMapGif3,
-      bg: "bg-cyan-950",
-      company:"Squarelion Agency",
-      description:`More info coming soon! Work in progress `,
-      point1:'Point of sale system',
-      point2:'Inventory automation management',
-      point3:'Deal Stamps',
+    // {
+    //   title: `Product ${'🚧'}`,
+    //   name:'Deal Stamps',
+    //   img: roadMapGif3,
+    //   bg: "bg-cyan-950",
+    //   company:"Squarelion Agency",
+    //   description:`More info coming soon! Work in progress `,
+    //   point1:'Point of sale system',
+    //   point2:'Inventory automation management',
+    //   point3:'Deal Stamps',
 
-    },
+    // },
 
   ];
 
@@ -116,9 +116,9 @@ export const tech = [{
   // icon:[ html,css,javascript,react,three,tailwind,vite,electron]
 },
 {
-  title:'Bespoke Software Tailored to You',
+  title:'Customer Centricity',
   number:'04',
-  description:'Recognizing the uniqueness of every business, our custom software solutions are meticulously crafted to meet your specific needs. We go beyond functionality, focusing on creating software that reflects your brand essence and streamlines your operations.',
+  description:'Customer centricity is our core component driving our services and solutions. This approach allows us to prioritize the needs, preferences and satisfaction of customers at the core of all descision-making processes. It involves aligning products, services and strategies with the goal of creating positive and meaningfull experiences for customers.',
   // icon:[ html,css,javascript,react,three,tailwind,vite,electron]
 },
 {
@@ -139,6 +139,7 @@ export const  services = [
     title: 'Custom Software Development',
     description: 'Bespoke Software Solutions: Develop custom software solutions that are tailored to your specific business needs. ',
     description2:'Software Integration: Seamlessly integrate custom software with existing systems to create a cohesive and efficient IT infrastructure.',
+    end:"With Niurone as your trusted technology partner, you can elevate your business to new heights of success. Experience the difference that tailor-made software solutions can make – contact us today to discuss your project requirements and embark on a journey to digital transformation.",
     icon : software,
     service: 1,
     img: worcpilot
@@ -151,6 +152,7 @@ export const  services = [
   description: 'Conversational AI Mastery: With Aimigo by your side, you will harness the power of cutting- edge conversational AI technology to revolutionize your customer interactions. Whether it is  on your website or within your applications, Aimigo effortlessly engages with your audience,  providing instant assistance and support whenever they need it.  ',
   description2:'Tailored to Perfection: At Niurone, we understand that every business is different. That is why  Aimigo is not a one-size-fits-all solution – it is a customizable powerhouse that adapts to your  specific needs. Our team of experts works closely with you to develop a bespoke chatbot  that aligns perfectly with your business objectives, ensuring that every interaction leaves a  lasting impression.  ',
   description3:'Experience the Future of Customer Engagement: Say goodbye to tedious support queues  and hello to seamless, personalized interactions with Aimigo. Whether it is answering FAQs,  guiding users through processes, or resolving issues in real-time, Aimigo empowers your  business to deliver unparalleled customer experiences, 24/7. ',
+  end:"Ready to revolutionize your customer engagement strategy? Let us lead the way. Contact us today to learn more about our Conversational AI and Custom Chatbot Development services, and embark on a journey to enhanced customer satisfaction and business success.",
   icon : botgif,
   service: 2,
   img: chatpic
@@ -161,7 +163,7 @@ export const  services = [
   title: 'Automation Solutions',
   description: 'Business Process Automation (BPA): Say goodbye to manual tasks and hello to streamlined  efficiency. Our BPA solutions are tailor-made to automate end-to-end business processes, freeing up  valuable time and resources while minimizing errors. For example, imagine a manufacturing company automating its order processing system. With BPA, orders can be automatically received,  processed, and tracked, reducing the need for manual intervention and ensuring faster order  fulfillment.  ',
   description2:'Workflow Optimization: Efficiency is at the heart of everything we do. With our Workflow Optimization  services, we will help you design and implement automated processes that streamline workflows,  allowing your employees to focus on what truly matters – driving innovation and growth. For  instance, a marketing agency can automate its content approval process, ensuring that content  moves seamlessly through each stage from creation to publication, reducing delays and improving  time-to-market. ',
-  description3:'Experience the power of automation and unleash the full potential of your business. Contact us today to learn more about our Automation Solutions and discover how we can help you achieve your  goals. ',
+  end:'Experience the power of automation and unleash the full potential of your business. Contact us today to learn more about our Automation Solutions and discover how we can help you achieve your  goals. ',
   icon : autom,
   service: 3,
   img: auto
@@ -173,10 +175,10 @@ export const  services = [
   description: "Corporate Websites: Your online storefront deserves the utmost professionalism and elegance. Our team specializes in designing and developing corporate websites that reflect your brand identity with precision. From sleek aesthetics to intuitive navigation, we ensure your website is a true reflection of your business values and offerings.", 
   description2: "E-commerce Platforms: Ready to take your online sales to the next level? Our e-commerce platforms are built to deliver a seamless shopping experience for your customers, from browsing products to completing transactions. With robust security measures and user-friendly interfaces, we'll help you create an online store that keeps customers coming back for more.",
   description3: "Web Applications: Sometimes, off-the-shelf solutions just don't cut it. That's where our custom web applications come in. Whether you need a customer portal, project management tool, or anything in between, we'll work closely with you to develop a tailored solution that meets your unique business needs, enhances user engagement, and boosts productivity.",
+  end: 'At Niurone, we believe that your online presence should be as unique as your business. Let us help you stand out from the crowd with expert website development services. Contact us today to learn more about how we can elevate your online presence and drive success for your business.',
   icon : web,
   service: 4,
   img: webdev
-
 },
 
 {
@@ -184,7 +186,7 @@ export const  services = [
   description: "At Niurone, we believe that great design is more than just aesthetics – it's about creating meaningful connections between users and technology. Our UI/UX design services are meticulously crafted to deliver seamless experiences that blend client needs with the latest innovations in technology.",
   description1: "Performance Optimization: We understand the importance of speed and efficiency in today's digital landscape. That's why our UI/UX design process includes performance optimization measures to ensure lightning-fast loading times and resource efficiency. From optimizing code to leveraging caching techniques, we prioritize performance to deliver seamless experiences across devices, platforms, and browsers.",
   description2: "Enhanced Visual Communication: In a world inundated with information, visual storytelling is key to capturing and retaining audience attention. Our UI/UX designers leverage cutting-edge 3D technology to create immersive visual experiences that go beyond flat graphics. Whether it's showcasing products or explaining complex concepts, we use 3D visuals to make information more engaging, understandable, and memorable.",
-  description3: "At Niurone, we're not just designing websites – we're crafting experiences that inspire, engage, and delight. Contact us today to learn more about our UI/UX design services and discover how we can help elevate your digital presence with innovative solutions tailored to your unique needs.",
+  end: "At Niurone, we're not just designing websites – we're crafting experiences that inspire, engage, and delight. Contact us today to learn more about our UI/UX design services and discover how we can help elevate your digital presence with innovative solutions tailored to your unique needs.",
   icon : worc,
   service: 5,
   img: ui
@@ -193,10 +195,11 @@ export const  services = [
 
 
   {
-      title: 'Alma Mater Labs',
-      description: 'Through the Alma Mater Labs project, we offer a wide range of resources and support systems  designed to empower participants with the knowledge and skills they need to succeed. From  foundational learning principles to advanced skill development, our programs are tailored to meet the diverse needs and aspirations of each individual. ',
-      description2:'Technology Consulting: Expert guidance on technology adoption, strategy, and digital transformation to help participants navigate the complexities of the modern workforce. ',
-      description3:'Training Programs: Comprehensive training sessions and workshops aimed at equipping participants with practical skills and knowledge to excel in various fields. At Niurone, we believe that everyone deserves access to quality education and opportunities for personal and professional growth. Join us in our mission to empower school dropouts and unlock their full potential. Together, we can build a brighter future for all. ',
+      title: 'Learning Systems',
+      description: 'Three Pillars of Growth: The key feature of one of the program is to build a strong thinker and social contributor and hence we use the three pillars of growth in the learning process, namely, skilling, productive hobby development, and improving sociocultural intelligence.   ',
+      description2:'Design Thinking: One of the program uses problem solving as method of learning of advanced learners to develop technology development skills or graphic design capabilities.  ',
+      end:'Team Niurone is passionate about developing good learning habits in young minds.We want to see  more productive citizens and develop the passion of problem solving. For information please download e-brochure here by clicking on this link:',
+      link:'Here',
       icon : alma,
       service: 6,
       img: aml
@@ -208,8 +211,8 @@ export const  services = [
 export const serviceMini=[
 
   {
-    title:'Custom Software Development',
-    description:'We develop custom software solutions that are tailored to your specific business needs. Our  software is designed to enhance productivity, efficiency, and overall business performance.',
+    title:'Custom Software ',
+    description:'We develop custom software solutions that are tailored to your specific business needs. Our software is designed to enhance productivity, efficiency, and overall business performance.',
     icon : software,
     service: 1,
     img: auto
@@ -217,7 +220,7 @@ export const serviceMini=[
 
 
 {
-  title:'Chatbot Development',
+  title:'Chatbot Solutions',
   description:'Meet Aimigo – the ultimate customer interaction chatbot. A intelligent virtual assistant meticulously crafted to cater to your unique  business requirements and enhance customer engagement like never before. ',
   icon : botgif,
   service: 2,
@@ -226,8 +229,8 @@ export const serviceMini=[
 },
 
 {
-  title: 'Automation Solutions',
-  description:'In today fast-paced world, efficiency is everything. That is where our Automation Solutions come in, designed to revolutionize the way you do business and unlock new levels of productivity and  performance.',
+  title: 'Automation & Intergration',
+  description:'In today fast-paced world, efficiency is everything. That is where our automation & intergration comes in, designed to revolutionize the way you do business and unlock new levels of productivity and  performance.',
  icon : autom,
   service: 3
 },
@@ -248,8 +251,8 @@ export const serviceMini=[
 },
 
   {
-      title: 'Alma Mater Labs',
-      description: 'Welcome to the Alma Mater Labs Project – Empowering School Dropouts to Embrace Learning and  Skill Development! we are proud to spearhead the Alma Mater Labs project. ',
+      title: 'Learning Systems',
+      description: 'We are keen on developing responsible global talent for the future. As a part of our global vision we are funding the project called Alma Maters Labs, which aims to catch brains at an early age and evolve such young talent into responsible contributors to the society.',
       icon : alma,
       service: 6
 },

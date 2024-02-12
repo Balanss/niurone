@@ -31,7 +31,7 @@ export default function Navbar() {
           effect='blur'
           className='w-16 h-16'
         />
-        <p className='text-black text-sm flex font-bold cursor-pointer phones:text-xs'>Niurone &nbsp; | Where mind matters</p>
+        <p className='text-black text-sm flex  cursor-pointer phones:text-xs'>Niurone &nbsp; | Where mind matters</p>
         </Link>
         <ul className='list-none phones:hidden sm:flex flex-row gap-10'>
           {navLinks.map((link,index) => (

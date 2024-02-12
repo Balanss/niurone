@@ -33,7 +33,7 @@ const opacityProgress= useTransform(scrollYProgress, [0, 0.9], [0, 1]);
 
 
 
-const [view, setView] = useState('01.')
+const [view, setView] = useState('01')
   return (
 <motion.div  className='flex  flex-row gap-1  items-center phones:items-center phones:pr-10 phones:pl-5   pc:pl-20 overflow-hidden pb-[100px]  bg-background bg-cover bg-no-repeat'  ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}} >
   

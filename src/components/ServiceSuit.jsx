@@ -7,6 +7,7 @@ import { services } from '../constants/index';
 import Title from '../ServiceSuite/Title'
 import Card from '../ServiceSuite/Card';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import pdf from '../assets/pdf.pdf'
 
 
 
@@ -108,7 +109,7 @@ const scaleProgress = isMobile
       <div className='flex p-[10px]  gap-[20px]  w-screen flex-wrap xl:flex-col justify-center '>
        <Title/>
   <div className='flex   flex-wrap flex-row  items-center justify-center m-auto gap-10  h-auto pb-10'>
-    <motion.div className=' grid pc:grid-cols-3  flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  ' >   
+    <motion.div className=' grid pc:grid-cols-3 mt-2  flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  ' >   
   <Card 
   setModalShow={setModalShow} 
   modalShow={modalShow} 
@@ -158,6 +159,8 @@ const scaleProgress = isMobile
                 <li className='text-sm mt-5  text-black'>{description}</li>
                 {description2 > "" ? <li className='text-sm mt-5 text-black'>{description2}</li> : null}
                 {description3 > "" ? <li className='text-sm mt-5 text-black'>{description3}</li> : null}
+                <hr  className='mt-5'/>
+                <h2 className='text-sm mt-5 text-black'>{services.end}<span className={`${services.link > ""? "flex":'hidden'}`}> <a href={pdf} target="_blank"  className='text-blue-500 font-bold hover:cursor-pointer hover:scale-105 underline'>here</a> </span> </h2>
               </ul>
               <div className='flex justify-between'>
                 <button className='bg-primary text-white mt-5 p-2 rounded-md' onClick={() => setModalShow(false)}>Close</button>

@@ -8,7 +8,7 @@ import { useState , useEffect} from 'react';
 
 export default function Title() {
 
-    const title2 = `elcome to Niurone Suite`.split('')
+    const title2 = `elcome to our Service Suite`.split('')
 
     const [textRef, inView] = useInView({
         triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
@@ -48,7 +48,7 @@ export default function Title() {
        <motion.p ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
-          transition={{ delay:  0.05 }} className='font-semibold  phones:text-left phones:mb-3'> Where Tomorrow's Technology is Crafted Today! </motion.p>
+          transition={{ delay:  0.05 }} className='font-semibold  phones:text-left phones:mb-3'> Where technology design is the future. </motion.p>
 
 <motion.p ref={textRef}
           initial={{ opacity: 0, y: -50 }}
@@ -60,7 +60,7 @@ export default function Title() {
           burning desire to push boundaries and unlock new frontiers. 
            
           From crafting custom software solutions to designing cutting-edge AI algorithms, we don't just 
-          meet expectations – we shatter them. we're constantly 
+          meet expectations – we transcend them. we're constantly 
           pushing, iterating, and evolving to stay ahead of the curve </motion.p>
 
         

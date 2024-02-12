@@ -89,7 +89,7 @@ if (window.innerWidth > 1023 && window.innerWidth <= 1439) {
   exit={{ opacity: 1.5 }}
   transition={{ duration: 1.5 }}
 > TEAM NIURONE. <br />
-THE EXTENSION OF YOUR BRAIN.
+THE TECH SIDE OF YOUR BRAIN.
 </motion.h1>
 
 
