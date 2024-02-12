@@ -108,10 +108,7 @@ const scaleProgress = isMobile
       <div className='flex p-[10px]  gap-[20px]  w-screen flex-wrap xl:flex-col justify-center '>
        <Title/>
   <div className='flex   flex-wrap flex-row  items-center justify-center m-auto gap-10  h-auto pb-10'>
-    <motion.div className=' grid pc:grid-cols-3  flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  '  initial={{ opacity: 0 ,x:0,scale:0.8}}
-          animate={{ opacity: 1 ,x:0 ,scale:1}}
-          exit={{ opacity: 1.5 }}
-          transition={{ duration: 1.5 }}>   
+    <motion.div className=' grid pc:grid-cols-3  flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  ' >   
   <Card 
   setModalShow={setModalShow} 
   modalShow={modalShow} 
@@ -138,13 +135,13 @@ const scaleProgress = isMobile
             setModalShow(false);
           }
         }}
-         className='fixed  z-[10000000000000000000000000] top-0 left-0 w-screen pt-10 pb-10 overflow-y-scroll h-screen bg-black bg-opacity-50 flex items-center justify-center'>
+         className='fixed  z-[10000000000000000000000000] top-0 left-0 w-screen pt-10 pb-10 overflow-y-scroll h-screen  bg-black bg-opacity-50 flex items-center justify-center'>
           <div className='bg-wg  p-10 phones:w-[95vw]  w-[50vw] m-auto  rounded-md'>
 {services.map((services,index) => (
   <React.Fragment key={index}>
     {title === services.title && (
       <>  
-        <div className='phones:flex flex-col phones:mt-20 '>
+        <div className='phones:flex flex-col phones:mt-20  '>
           <img src={icon} alt='web-development'  className='w-12 h-12 object-contain'/>
           <h3 className='text-2xl text-black font-bold text-center mb-5'>{title}</h3>
           <section className='flex flex-row gap-5 phones:flex-col'>
@@ -153,11 +150,11 @@ const scaleProgress = isMobile
             effect='blur'
   alt='web-development'
   src={services.img}
-  className=' object-fill'
+  className='w-[250px] h-[250px] object-cover rounded-md'
 /> 
             </div>
             <div>
-              <ul className='list-disc list-inside leading-normal tracking-wide'>
+              <ul className='list-disc list-inside leading-normal tracking-wide pc:w-[30vw]'>
                 <li className='text-sm mt-5  text-black'>{description}</li>
                 {description2 > "" ? <li className='text-sm mt-5 text-black'>{description2}</li> : null}
                 {description3 > "" ? <li className='text-sm mt-5 text-black'>{description3}</li> : null}

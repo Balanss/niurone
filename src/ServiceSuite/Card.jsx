@@ -34,12 +34,12 @@ export default function Card({setModalShow,modalShow,setIcon,setTitle,setDescrip
             onHoverEnd={() => setHoveredIndex(null)}
             whileHover={{ scale: hoveredIndex === index ? 1.1 : 1 }}
             transition={{ type: "spring", stiffness: 200, damping: 10 ,mass:1.5}}  
-            className=' phones:[250px] w-[250px] h-[450px]  bg-wg  p-[20px] rounded-[20px] shadow-card '
+            className=' phones:[250px] w-[250px] h-[450px]  bg-wg  p-[20px] rounded-[20px] shadow-card flex flex-col justify-between '
           >
             <img src={services.icon} alt='web-development'  className='w-12 h-12 object-contain'/>
-            <motion.h3 className='text-black text-[26px] mt-2 font-bold text-center' >
+            <h3 className='text-black text-[26px] mt-2 font-bold text-center' >
               {services.title}
-            </motion.h3>
+            </h3>
             <motion.section  className='flex flex-col '>
 
               <motion.p className='text-black text-sm mt-5' 

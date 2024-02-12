@@ -43,7 +43,7 @@ if (window.innerWidth > 1023 && window.innerWidth <= 1439) {
 
 
 
-console.log(sizePc)
+
 
   return (
 <>

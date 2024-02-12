@@ -1,6 +1,6 @@
 import webdev from '../assets/cards/web.webp'
 import auto from '../assets/cards/auto.webp'
-import worcpilot from '../assets/cards/worc.webp'
+import worcpilot from '../assets/cards/worcpilot.webp'
 import software from '../assets/icons/software.gif'
 import aml from '../assets/cards/aml.webp'
 import firebase from '../assets/icons/fb.png'
@@ -11,10 +11,12 @@ import autom from '../assets/automation.gif'
 import alma from '../assets/alma.gif'
 import worc from '../assets/worcpilot.gif'
 import botgif from '../assets/icons/botgif.gif'
+import ui from '../assets/cards/uixu.webp'
 import chatpic from '../assets/cards/chatpic.webp'
 import roadMapGif1 from '../assets/icons/roadmapgif1.gif'
 import roadMapGif2 from '../assets/icons/roadmapgif2.gif'
 import roadMapGif3 from '../assets/icons/roadmapgif3.gif'
+
 
 export const navLinks = [
     {
@@ -139,15 +141,16 @@ export const  services = [
     description2:'Software Integration: Seamlessly integrate custom software with existing systems to create a cohesive and efficient IT infrastructure.',
     icon : software,
     service: 1,
-    img: auto
+    img: worcpilot
   
   },
 
  
 {
   title: 'Chatbot Development',
-  description: 'Conversational AI: Build intelligent chatbots for websites or applications, enhancing customer interaction and support services. ',
-  description2:'Custom Chatbot Development: Develop customized chatbots that are tailored to your specific business needs, providing automated support and customer engagement. ',
+  description: 'Conversational AI Mastery: With Aimigo by your side, you will harness the power of cutting- edge conversational AI technology to revolutionize your customer interactions. Whether it is  on your website or within your applications, Aimigo effortlessly engages with your audience,  providing instant assistance and support whenever they need it.  ',
+  description2:'Tailored to Perfection: At Niurone, we understand that every business is different. That is why  Aimigo is not a one-size-fits-all solution – it is a customizable powerhouse that adapts to your  specific needs. Our team of experts works closely with you to develop a bespoke chatbot  that aligns perfectly with your business objectives, ensuring that every interaction leaves a  lasting impression.  ',
+  description3:'Experience the Future of Customer Engagement: Say goodbye to tedious support queues  and hello to seamless, personalized interactions with Aimigo. Whether it is answering FAQs,  guiding users through processes, or resolving issues in real-time, Aimigo empowers your  business to deliver unparalleled customer experiences, 24/7. ',
   icon : botgif,
   service: 2,
   img: chatpic
@@ -156,8 +159,9 @@ export const  services = [
 
 {
   title: 'Automation Solutions',
-  description: 'Workflow Optimization: Design and implement automated processes to streamline workflows, allowing employees to focus on more strategic responsibilities. ',
-  description2:'Chatbot Development: Conversational AI: Build intelligent chatbots for websites or applications, enhancing customer interaction and support services. ',
+  description: 'Business Process Automation (BPA): Say goodbye to manual tasks and hello to streamlined  efficiency. Our BPA solutions are tailor-made to automate end-to-end business processes, freeing up  valuable time and resources while minimizing errors. For example, imagine a manufacturing company automating its order processing system. With BPA, orders can be automatically received,  processed, and tracked, reducing the need for manual intervention and ensuring faster order  fulfillment.  ',
+  description2:'Workflow Optimization: Efficiency is at the heart of everything we do. With our Workflow Optimization  services, we will help you design and implement automated processes that streamline workflows,  allowing your employees to focus on what truly matters – driving innovation and growth. For  instance, a marketing agency can automate its content approval process, ensuring that content  moves seamlessly through each stage from creation to publication, reducing delays and improving  time-to-market. ',
+  description3:'Experience the power of automation and unleash the full potential of your business. Contact us today to learn more about our Automation Solutions and discover how we can help you achieve your  goals. ',
   icon : autom,
   service: 3,
   img: auto
@@ -166,9 +170,9 @@ export const  services = [
 
 {
   title: 'Web Development',
-  description:  " Corporate Websites: Design and develop professional, responsive websites that showcase your  brand identity and provide essential information.", 
-description2:'E-commerce Platforms: Build robust online shopping platforms with secure payment gateways, ensuring a seamless customer experience.',
-description3:' Web Applications: Develop customized web applications tailored to specific business needs,  enhancing user engagement and functionality.',
+  description: "Corporate Websites: Your online storefront deserves the utmost professionalism and elegance. Our team specializes in designing and developing corporate websites that reflect your brand identity with precision. From sleek aesthetics to intuitive navigation, we ensure your website is a true reflection of your business values and offerings.", 
+  description2: "E-commerce Platforms: Ready to take your online sales to the next level? Our e-commerce platforms are built to deliver a seamless shopping experience for your customers, from browsing products to completing transactions. With robust security measures and user-friendly interfaces, we'll help you create an online store that keeps customers coming back for more.",
+  description3: "Web Applications: Sometimes, off-the-shelf solutions just don't cut it. That's where our custom web applications come in. Whether you need a customer portal, project management tool, or anything in between, we'll work closely with you to develop a tailored solution that meets your unique business needs, enhances user engagement, and boosts productivity.",
   icon : web,
   service: 4,
   img: webdev
@@ -177,18 +181,22 @@ description3:' Web Applications: Develop customized web applications tailored to
 
 {
   title: 'Ui/Ux Design',
-  description: 'Performance Optimization: Ensure fast loading times and resource efficiency for seamless user experiences across devices, platforms, and browsers.',
-  description2:'Enhanced Visual Communication: Utilize 3D technology for richer visual storytelling, making complex information more engaging and understandable.',
+  description: "At Niurone, we believe that great design is more than just aesthetics – it's about creating meaningful connections between users and technology. Our UI/UX design services are meticulously crafted to deliver seamless experiences that blend client needs with the latest innovations in technology.",
+  description1: "Performance Optimization: We understand the importance of speed and efficiency in today's digital landscape. That's why our UI/UX design process includes performance optimization measures to ensure lightning-fast loading times and resource efficiency. From optimizing code to leveraging caching techniques, we prioritize performance to deliver seamless experiences across devices, platforms, and browsers.",
+  description2: "Enhanced Visual Communication: In a world inundated with information, visual storytelling is key to capturing and retaining audience attention. Our UI/UX designers leverage cutting-edge 3D technology to create immersive visual experiences that go beyond flat graphics. Whether it's showcasing products or explaining complex concepts, we use 3D visuals to make information more engaging, understandable, and memorable.",
+  description3: "At Niurone, we're not just designing websites – we're crafting experiences that inspire, engage, and delight. Contact us today to learn more about our UI/UX design services and discover how we can help elevate your digital presence with innovative solutions tailored to your unique needs.",
   icon : worc,
   service: 5,
-  img: worcpilot
+  img: ui
+  
 },
 
 
   {
       title: 'Alma Mater Labs',
-      description: 'Technology Consulting: Provide expert guidance on technology adoption, strategy, and digital  transformation.',
-      description2:'Training Programs: Offer training sessions to empower clients with the skills and knowledge  required to leverage new technologies effectively.',
+      description: 'Through the Alma Mater Labs project, we offer a wide range of resources and support systems  designed to empower participants with the knowledge and skills they need to succeed. From  foundational learning principles to advanced skill development, our programs are tailored to meet the diverse needs and aspirations of each individual. ',
+      description2:'Technology Consulting: Expert guidance on technology adoption, strategy, and digital transformation to help participants navigate the complexities of the modern workforce. ',
+      description3:'Training Programs: Comprehensive training sessions and workshops aimed at equipping participants with practical skills and knowledge to excel in various fields. At Niurone, we believe that everyone deserves access to quality education and opportunities for personal and professional growth. Join us in our mission to empower school dropouts and unlock their full potential. Together, we can build a brighter future for all. ',
       icon : alma,
       service: 6,
       img: aml
@@ -210,7 +218,7 @@ export const serviceMini=[
 
 {
   title:'Chatbot Development',
-  description:'Aimigo is an intelligent chatbot that is designed to automate customer interactions and support  services. Aimigo is customized to suit your business needs and enhance customer  engagement.',
+  description:'Meet Aimigo – the ultimate customer interaction chatbot. A intelligent virtual assistant meticulously crafted to cater to your unique  business requirements and enhance customer engagement like never before. ',
   icon : botgif,
   service: 2,
   img: auto
@@ -219,7 +227,7 @@ export const serviceMini=[
 
 {
   title: 'Automation Solutions',
-  description: 'Business Process Automation (BPA): Develop solutions to automate end-to-end business processes for increased productivity. ',
+  description:'In today fast-paced world, efficiency is everything. That is where our Automation Solutions come in, designed to revolutionize the way you do business and unlock new levels of productivity and  performance.',
  icon : autom,
   service: 3
 },
@@ -227,21 +235,21 @@ export const serviceMini=[
 
 {
   title: 'Web Development',
-  description: 'We create and develop websites that are responsive, user-friendly, and visually appealing.  Our websites are designed to enhance your online presence and provide a seamless user  experience.',
+  description: 'In the digital age, your website is often the first impression your customers have of your  business. That is why at Niurone, we are dedicated to crafting websites that not only look  stunning but also drive results. ',
   icon : web,
   service: 4,
 },
 
 {
   title: 'Ui/Ux Design',
-  description:"Our focus in designing UI/UX-friendly websites revolves around creating platforms that seamlessly integrate client needs with cutting-edge technologies, ensuring user-friendly experiences and embracing innovative solutions.",
- icon : worc,
+  description: "We believe that great design is more than just aesthetics – it's about creating meaningful connections between users and technology. Our UI/UX design services are meticulously crafted to deliver seamless experiences that blend client needs with the latest innovations in technology.",
+  icon : worc,
   service: 5
 },
 
   {
-      title: 'Alma Mater Labs project',
-      description: 'The Applied Computing onboarding project is crafted to offer a wide-ranging support system, assisting individuals in need with fundamental principles and advanced guidance. Our initiative aims to empower participants. ',
+      title: 'Alma Mater Labs',
+      description: 'Welcome to the Alma Mater Labs Project – Empowering School Dropouts to Embrace Learning and  Skill Development! we are proud to spearhead the Alma Mater Labs project. ',
       icon : alma,
       service: 6
 },

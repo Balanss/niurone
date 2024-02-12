@@ -40,7 +40,7 @@ return (
    <motion.section className='flex phones:flex-col flex-col gap-10 text-white items-left justify-start phones:w-screens ' > 
         <div className='text-white relative '>
               <h2 className={`${style.sectionHeadText} text-left px-10 py-3 pc:!text-[14px]`}> {project.title}</h2>
-              {project.img && <div className={`bg-[#001220] object-cover rounded-full pc:absolute left-[-30px] p-5 top-20`}>
+              {project.img && <div className={`bg-[#001220] object-cover rounded-full pc:absolute left-[-40px] p-5 top-20`}>
                  <LazyLoadImage src={project.img} alt={project.title} className={`bg-white rounded-full relative z-10 w-[50px] h-[50px] cursor-pointer hover:scale-105 ${isVisible?'border-2 border-blue-500': ''}`}  onClick={() => setIsVisible(isVisible ? null : index)}/>
               </div>}
              
