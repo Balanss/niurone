@@ -33,7 +33,7 @@ const opacityProgress= useTransform(scrollYProgress, [0, 0.9], [0, 1]);
 
 
 
-const [view, setView] = useState('01')
+const [view, setView] = useState('')
   return (
 <motion.div  className='flex  flex-row gap-1  items-center phones:items-center phones:pr-10 phones:pl-5   pc:pl-20 overflow-hidden pb-[100px]  bg-background bg-cover bg-no-repeat'  ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}} >
   
@@ -54,8 +54,8 @@ technology meets creative aesthetics to redefine possibilities and elevate user 
               <motion.div key={index} className='flex flex-col gap-1'>
                 <div className='text-black  text-[12px] max-w-3xl leading-[30px]' >
                   <span className='flex border-t-2 mt-2 phones:justify-center items-center border-black'>
-                    <p className={`${view === service.number ? 'bg-black p-2 text-white ' : "text-black"} flex flex-end rounded-br-lg`}>{service.number}</p>
-                    <p className={`${style.heroSubText} phones:ml-[12px] ml-[40px] !text-xl !text-black !pt-2 cursor-pointer `} > {service.title} </p>
+                    <p className={`${view === service.number ? 'bg-black p-2 text-white ' : "text-black"} flex flex-end  cursor-pointer rounded-br-lg`} onClick={() => setView(view === ''? service.number : '')}>{service.number}</p>
+                    <p className={`${style.heroSubText} phones:ml-[12px] ml-[40px] !text-xl !text-black !pt-2 cursor-pointer `} onClick={() => setView(view === ''? service.number : '')}> {service.title} </p>
                   </span>
                 </div>
 
@@ -65,9 +65,9 @@ technology meets creative aesthetics to redefine possibilities and elevate user 
               </motion.div>
             )
           } else {
-            return <div key={index}  className='text-black phones:text-center text-[17px] max-w-3xl leading-[30px] mt-1' >
+            return <div key={index}  className='text-black phones:text-center  text-[17px] max-w-3xl leading-[30px] mt-1' >
             <span className='flex border-t-2 mt-5 gap-3 items-center border-black phones:flex-col'>
-              <p className={`${!view ? 'bg-black p-2 text-white ' : "text-black"} flex flex-end rounded-br-lg`}>{service.number}</p>
+              <p className={`${!view ? 'bg-black p-2 text-white ' : "text-black"} flex flex-end cursor-pointer p-2 hover:bg-primary hover:text-white rounded-br-lg`} onClick={() => setView(service.number)}> {service.number}</p>
               <p className={`${style.heroSubText} !text-black !pt-2  cursor-pointer`} onClick={() => setView(service.number)}> {service.title} </p>
             </span>
           </div>

@@ -68,7 +68,7 @@ console.log(sizePc)
 
 </motion.div>
 
-<section className='pc:relative phones:w-fit phones:px-10    pc:w-1/2  flex-col  pc:m-auto phones:flex phones:items-left phones:justify-center '> 
+<section className='relative phones:w-fit phones:px-10    pc:w-1/2  flex-col  pc:m-auto phones:flex phones:items-left phones:justify-center '> 
           <AnimatePresence mode='wait'>
           <motion.h1
                         style={{ zIndex: 2 ,opacity,scale}} // Add this line
@@ -86,13 +86,12 @@ console.log(sizePc)
           </AnimatePresence>
 
           
-          <motion.h1  style={{opacity,scale}} className='pc:text-left phones:hidden font-extrabold pc:text-[1.7rem] text-white  shadow-sm phones:mt-1 '
-  initial={{ opacity: 0.3 ,y:1000,scale:0.3,rotateY:10}}
+          <motion.h1  style={{opacity,scale}} className='pc:text-left phones:text-[13px] font-extrabold pc:text-[1.7rem] text-white  shadow-sm phones:mt-1 '
+  initial={{ opacity: 0.3 ,y:-30,scale:0.3,rotateY:10}}
   animate={{ opacity: 1 ,y:0 ,scale:1,rotateY:0}}
   exit={{ opacity: 1.5 }}
   transition={{ duration: 1.5 }}
-> TEAM NIURONE. <br />
-THE TECH SIDE OF YOUR BRAIN.
+> TEAM NIURONE. <br className='phones:hidden'/>THE TECH SIDE OF YOUR BRAIN.
 </motion.h1>
 
 
