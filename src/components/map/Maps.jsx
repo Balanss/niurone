@@ -27,7 +27,7 @@ function Maps() {
     const currentYear = new Date().getFullYear();
   
     return (
-        <MapContainer center={position} zoom={20} scrollWheelZoom={false} dragging={false}  className=' xPc:w-[50vw] phones:w-[80vw] phones:h-[400px] phones:m-auto pc:h-[550px]'>
+        <MapContainer center={position} zoom={20} scrollWheelZoom={false} dragging={false}  className=' xPc:w-[550px] phones:w-[80vw] phones:h-[400px] phones:m-auto pc:h-[550px]'>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
