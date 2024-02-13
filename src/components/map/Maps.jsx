@@ -34,7 +34,7 @@ function Maps() {
             />
             <Marker position={position}>
                 <Popup>
-                    Nuirone © {currentYear}
+                    Niurone © {currentYear}
                 </Popup>
             </Marker>
         </MapContainer>
