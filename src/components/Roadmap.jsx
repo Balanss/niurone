@@ -127,7 +127,7 @@ return (
 <div className='flex flex-col items-center justify-center'>
     <section className='pc:w-1/2 m-auto'>
     <span className='text-[80px] phones:text-[70px] relative left-5 text-white font-extrabold'>P    {title2.map((el, i) => ( 
-          <motion.span className={` relative left-[-15px] ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
+          <motion.span className={` relative left-[-20px] ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
           transition={{ delay: i * 0.05 }}  > 
