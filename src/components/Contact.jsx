@@ -40,7 +40,7 @@ function Contact() {
           </motion.span>
         ))}</span>
          
-
+   
 
           <motion.p 
             variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2  phones:relative  text-white leading-tight phones:text-lg text-[18px] phones:w-[80vw] w-[60vw]   phones:m-auto '>
