@@ -39,7 +39,7 @@ return (
    >
    
    
-   <motion.section className='flex phones:flex-col hover:cursor-pointer flex-col gap-10 text-white items-left justify-start phones:w-screens ' onClick={() => setIsVisible(isVisible ? null : index)} > 
+   <motion.section className='flex phones:flex-col phones:m-auto hover:cursor-pointer flex-col gap-10 text-white items-left justify-start phones:w-screens ' onClick={() => setIsVisible(isVisible ? null : index)} > 
    
         <div className='text-white relative '>
               <h2 className={`${style.sectionHeadText} text-left px-10 py-3 pc:!text-[14px]`}> {project.title}</h2>
@@ -125,8 +125,8 @@ return (
 
 
 <div className='flex flex-col items-center justify-center'>
-    <section className='pc:w-1/2 m-auto'>
-    <span className='text-[80px] phones:text-[70px] relative left-5 text-white font-extrabold'>P    {title2.map((el, i) => ( 
+    <section className='pc:w-1/2 m-auto pc:text-center'>
+    <span className='text-[80px] phones:text-[70px]  relative phones:left-10 text-slate-400 font-extrabold'>P    {title2.map((el, i) => ( 
           <motion.span className={` relative left-[-20px] ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
@@ -134,7 +134,7 @@ return (
             {el}{""}
           </motion.span>
         ))}</span>
-      <p className='text-white text-left px-10 py-2'>We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience.</p>
+      <p className='text-white phones:text-left pc:text-center pc:w-2/3 pc:m-auto px-10  py-2'>We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience.</p>
     </section>
 
     <motion.div className='pt-20 flex flex-row phones:flex-col pc:w-screen pc:items-stretch pc:justify-center xPc:flex-nowrap'>

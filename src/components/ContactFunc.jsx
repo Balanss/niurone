@@ -143,15 +143,16 @@ export default function ContactFunc({setIsHovering}) {
                  <select className='w-full font-medium p-2 text-black rounded-md' value={message} placeholder='Please select one' onChange={(e) => setMessage(e.target.value)}>
                    <option >Please pick one of the options below</option>
        <option >You  need your business processes to be automated?</option>
-       <option >Interested in a meeting with us?</option>
-       <option >Want to enroll for partner project or software training ?</option>
+       <option >Want to enroll in our partner project for software training ?</option>
        <option >Do you want a new website or revamp an old one?</option>
        <option >You want to book us for a free technology literacy session with your team?</option>
-      <option >You want help to identify, manage technology vendors and your technology budget?</option>
-      <option >Want to develop a new indigenous product of your company?</option>
+      <option >You want help to identify and manage your technology budget and vendors?</option>
+      <option >Do you need help to develop a new indigenous product for your company?</option>
       <option >Want our AI chatbot services custom built for your internal or external enviroment?</option>
-      <option >Want our in house Aimigo bot for automating your business or personal requirements on your website or webshop?</option>
+      <option >Want our in house Aimigo chatbot for automating your business or personal requirements on your website or webshop?</option>
       <option >Want to invest in our business?</option>
+      <option >Want a free career counselling session with us?</option>
+      <option >Want to join our team?</option>
                     </select>
                  </div>
 

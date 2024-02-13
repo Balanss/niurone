@@ -251,7 +251,7 @@ export const serviceMini=[
 
   {
       title: 'Learning Systems',
-      description: 'We are keen on developing responsible global talent for the future. As a part of our global vision we are funding the project called Alma Maters Labs, which aims to catch brains at an early age and evolve such young talent into responsible contributors to the society.',
+      description: 'We are keen on developing responsible global talent for the future. As a part of our global vision we are funding project "Alma Maters Labs", which aims to spot talent at an early age and evolve them  into responsible contributors to the society.',
       icon : alma,
       service: 6
 },

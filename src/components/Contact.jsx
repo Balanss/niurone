@@ -8,6 +8,8 @@ import bgContact from '../assets/bgContact.webp';
 import ContactFunc from './ContactFunc';
 import Maps from './map/Maps';
 import Footer from './Footer';
+import { useInView } from 'react-intersection-observer';
+import { style } from '../style'
 
 
 
@@ -17,15 +19,32 @@ function Contact() {
   const [isHovering, setIsHovering] = useState();
 
 
-  
+  const title2 = `ontact us`.split('')
+
+  const [textRef, inView] = useInView({
+      triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+    });
 
 
     return (
-        <motion.div className=' bg-opacity-50  p-4 pc:p-10 flex flex-col items-center ' >
+        <motion.div className=' bg-opacity-50  p-4 pc:p-10 flex flex-col items-start ' >
           <ToastContainer position='bottom-center' />
+          
+         
+                      <span className='text-[80px] phones:text-[70px] relative left-3 text-secondary font-extrabold'>C {title2.map((el, i) => ( 
+          <motion.span className={` relative left-[-15px] ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
+          transition={{ delay: i * 0.05 }}  > 
+            {el}{""}
+          </motion.span>
+        ))}</span>
+         
+
+
           <motion.p 
-            variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2 phones:relative phones:right-2 text-white leading-tight phones:text-lg text-2xl phones:w-[95vw] w-[60vw]   phones:m-auto '>
-             Join us in shaping the future. We invite you to join us on a journey where technology and design converge to create 
+            variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2  phones:relative  text-white leading-tight phones:text-lg text-2xl phones:w-[80vw] w-[60vw]   phones:m-auto '>
+             We invite you to join us on a journey where technology and design converge to create 
 extraordinary possibilities and discover how we can collaboratively shape the future of technology 
 and design. 
             </motion.p>
