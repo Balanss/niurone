@@ -26,6 +26,7 @@
     "framer-motion": "^10.16.16",
     "google-map-react": "^2.2.1",
     "leaflet": "^1.9.4",
+    "leaflet-defaulticon-compatibility": "^0.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-lazy-load-image-component": "^1.6.0",

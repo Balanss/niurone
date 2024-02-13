@@ -15,14 +15,14 @@ export default function Footer() {
   ]
 
   return (
-    <div className='  text-white p-3  flex pc:gap-10 pc:justify-center pc:items-center phones:justify-center phones:items-center phones:flex-col pc:text-xs'>
+    <div className='  text-white p-3  flex pc:inline-flex pc:gap-10 pc:justify-center pc:items-start phones:justify-center phones:items-center phones:flex-col pc:text-xs'>
       
-      <h3 className='text-md pl-2 pt-2  pc:mr-auto'>Nuirone &copy; 2024 </h3>
+      <h3 className='text-md pl-2 pt-2  pc:mr-auto'>Niurone &copy; {new Date().getFullYear()} </h3>
 
-      <div className=' flex gap-y-1 flex-col  '>
+      <div className=' flex gap-y-3 flex-col  '>
       <section className='flex gap-2 items-center'>
       <img src={email} alt='email' className='w-4 h-4 inline-block '/>
-        <p className='inline-block  text-sm'> go4niurone@gmail.com </p>
+        <p className='inline-block  text-sm'> niurone@shaananportfolio.com </p>
       </section>
 
       <section className='flex gap-2 items-center'>
@@ -35,12 +35,12 @@ export default function Footer() {
         <p className='inline-block  text-sm'> Agilalaan #79, Paramaribo, Suriname  </p>
       </section>
 
-      <section>
+      <section className='flex gap-2 items-center'>
         <img src={facebook} alt='facebook' className='w-4 h-4 inline-block '/>
         <a href="https://www.facebook.com/profile.php?id=61555833434358"> Facebook</a>
       </section>
 
-      <section>
+      <section className='flex gap-2 items-center'>
         <img src={linkedin} alt='linkedin' className='w-4 h-4 inline-block '/>
         <a href="https://www.linkedin.com/in/checker-niurone-4427b62b2/">LinkedIn</a>
       </section>

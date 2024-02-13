@@ -18,7 +18,7 @@ export default function Navbar() {
 
 
 //bg-[#050816]
- 
+ //&nbsp; 
     return (
         <nav className={`${style.paddingX} w-screen flex items-center py-5 fixed top-0 bg-white backdrop-blur-md  rounded-lg z-[100000]`}>
     <div className='w-full flex items-center justify-between max-w-7xl mx-auto'>
@@ -31,7 +31,7 @@ export default function Navbar() {
           effect='blur'
           className='w-16 h-16'
         />
-        <p className='text-black text-sm flex font-bold cursor-pointer phones:text-xs'>Niurone &nbsp; | Where mind matters</p>
+        <p className='text-black text-sm flex  cursor-pointer phones:text-xs'>Niurone | Where mind matters</p>
         </Link>
         <ul className='list-none phones:hidden sm:flex flex-row gap-10'>
           {navLinks.map((link,index) => (

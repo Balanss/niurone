@@ -6,6 +6,7 @@ import { SectionWrapper } from '../hoc'
 import {motion , AnimatePresence} from 'framer-motion'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { useInView } from 'react-intersection-observer';
 
 
 
@@ -16,6 +17,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 const ProjectsCard = ({ project, isVisible, setIsVisible,index}) => {   
     
 
+ const [ pulse, setPulse] = useState(false)
  
     
 
@@ -33,16 +35,25 @@ return (
      padding: isVisible ? '20px' : '0px',
    }}
    whileHover={{ scale: 1.1 }}
-   transition={{ duration: 0.2, ease: 'easeIn', type: 'spring', stiffness: 90, damping: 10 }}
+   transition={{ duration: 0.4, ease: 'easeIn', type: 'spring', stiffness: 90, damping: 10 }}
    >
    
    
-   <motion.section className='flex phones:flex-col flex-col gap-10 text-white items-left justify-start phones:w-screens ' > 
+   <motion.section className='flex phones:flex-col phones:m-auto hover:cursor-pointer flex-col gap-10 text-white items-left justify-start phones:w-screens ' onClick={() => setIsVisible(isVisible ? null : index)} > 
+   
         <div className='text-white relative '>
               <h2 className={`${style.sectionHeadText} text-left px-10 py-3 pc:!text-[14px]`}> {project.title}</h2>
-              {project.img && <div className={`bg-[#001220] object-cover rounded-full pc:absolute left-[-30px] p-5 top-20`}>
-                 <LazyLoadImage src={project.img} alt={project.title} className={`bg-white rounded-full relative z-10 w-[50px] h-[50px] cursor-pointer hover:scale-105 ${isVisible?'border-2 border-blue-500': ''}`}  onClick={() => setIsVisible(isVisible ? null : index)}/>
-              </div>}
+              {project.img && <motion.div className={`bg-[#001220] object-cover rounded-full pc:absolute left-[-40px] p-5 top-20`}  
+               animate={pulse ? { 
+                initial: { scale: 1 },
+    scale: 1,
+    transition: {
+      duration: 1,
+      yoyo: Infinity
+    }
+  } : {}}  >
+                 <LazyLoadImage src={project.img} alt={project.title} className={`bg-white rounded-full relative z-[10000000] w-[50px] h-[50px] cursor-pointer hover:scale-105 ${isVisible?'border-2 border-blue-500': ''} `}  onClick={() => setIsVisible(isVisible ? null : index)}/>
+              </motion.div>}
              
            </div>
    
@@ -58,9 +69,18 @@ return (
                  scale: 1,
                  width: isVisible ? '550px' : '500px',
                  height: isVisible ? '650px' : '600px',
+
                }}
-               exit={{ opacity: 0, scale: !isVisible ? 1 : 1, position: !isVisible ? 'relative' : 'static' }}
-               transition={{ duration: 0.2, ease: 'easeIn' }}
+               exit={{ opacity: 0,
+                scale: !isVisible ? 1 : 1,
+                position: !isVisible ? 'relative' : 'relative',
+                top: !isVisible ? '0px' : '10px',
+                right: !isVisible ? '0px' : '40px',
+                width: !isVisible ? '300px' : '550px',
+                height: !isVisible ? '500px' : '650px',
+
+                                                         }}
+               transition={{ duration: 0.2, ease: 'easeOut' }}
              >
                   <ul className='flex flex-col flex-wrap  gap-y-2  phones:w-[90vw] text-sm phones:text-lg phones:px-4 '>
                   {project.point1 && <div className='inline-flex pc:w-3/4'><span className='text-cyan-400 mr-2'> - </span><li className="text-left pc:w-[200px]">{project.point1}</li></div>}
@@ -93,14 +113,28 @@ return (
   
    const [visibleProject, setVisibleProject] = useState(null);
 
+
+   const title2 = `roducts`.split('')
+
+   const [textRef, inView] = useInView({
+       triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+     });
+
    return (
      <div className='flex justify-center phones:px-[0] pc:flex-row phones:flex-col px-[250px] items-start gap-[30px] bg-gray-700 bg-opacity-50 overflow-hidden'>
 
 
 <div className='flex flex-col items-center justify-center'>
-    <section className='pc:w-1/2 m-auto'>
-      <h2 className={`${style.sectionHeadText} text-left px-10 pt-10 pb-2`}>Our Products</h2>
-      <p className='text-white text-left px-10 py-2'>We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience.</p>
+    <section className='pc:w-1/2 m-auto pc:text-center'>
+    <span className='text-[80px] phones:text-[70px]  relative phones:left-10 text-slate-400 font-extrabold'>P    {title2.map((el, i) => ( 
+          <motion.span className={` relative left-[-20px] ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
+          transition={{ delay: i * 0.05 }}  > 
+            {el}{""}
+          </motion.span>
+        ))}</span>
+      <p className='text-white phones:text-left pc:text-center pc:w-2/3 pc:m-auto px-10  py-2'>We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience.</p>
     </section>
 
     <motion.div className='pt-20 flex flex-row phones:flex-col pc:w-screen pc:items-stretch pc:justify-center xPc:flex-nowrap'>

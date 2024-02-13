@@ -59,6 +59,15 @@ module.exports = {
         'wg': 'linear-gradient(to bottom, #ffffff, #f2f2f2)', // #e5e7eb is the color for grey-200 in Tailwind CSS
         'gradient-custom': 'radial-gradient(rgb(229, 231, 235), rgb(156, 163, 175), rgb(75, 85, 99))',
       },
+      keyframes: {
+        pulse: {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0.5 },
+        }
+      },
+      animation: {
+        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
     },
   },
   variants: {

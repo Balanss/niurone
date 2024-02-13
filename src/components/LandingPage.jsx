@@ -12,13 +12,13 @@ export default function LandingPage() {
   const opacity = useTransform(scrollY, [300, 900], [1, 0]);
   const scale = useTransform(scrollY, [300, 900], [1, 0.8]);
 
-  
+
 
 const [size, setSize] = useState(7);
 const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
 const [isPc, setIsPc] = useState(window.innerWidth > 1023 && window.innerWidth <= 1439);
 const [isXPc, setIsXPc] = useState(window.innerWidth > 1440);
-const [sizePc, setSizePc] = useState( );
+const [sizePc, setSizePc] = useState(1 );
 
 
 
@@ -26,9 +26,12 @@ useEffect(() => {
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 1023);
 
-if (window.innerWidth > 1023 && window.innerWidth <= 1439) {
+if (window.innerWidth > 900 && window.innerWidth <= 1000) {
   setSizePc(1);
-  } else if (window.innerWidth > 1440) {
+  } else if (window.innerWidth > 1000 && window.innerWidth <= 1400) {
+    setSizePc(0.8);
+  }
+  else if (window.innerWidth > 1440) {
     setSizePc(1.1);
   }
   };
@@ -42,8 +45,8 @@ if (window.innerWidth > 1023 && window.innerWidth <= 1439) {
 }, [sizePc,  isPc, isXPc]);
 
 
-
 console.log(sizePc)
+
 
   return (
 <>
@@ -65,7 +68,7 @@ console.log(sizePc)
 
 </motion.div>
 
-<section className='pc:relative phones:w-fit phones:px-10    pc:w-1/2  flex-col  pc:m-auto phones:flex phones:items-left phones:justify-center '> 
+<section className='relative phones:w-fit phones:px-10    pc:w-1/2  flex-col  pc:m-auto phones:flex phones:items-left phones:justify-center '> 
           <AnimatePresence mode='wait'>
           <motion.h1
                         style={{ zIndex: 2 ,opacity,scale}} // Add this line
@@ -83,13 +86,12 @@ console.log(sizePc)
           </AnimatePresence>
 
           
-          <motion.h1  style={{opacity,scale}} className='pc:text-left phones:hidden font-extrabold pc:text-[1.7rem] text-white  shadow-sm phones:mt-1 '
-  initial={{ opacity: 0.3 ,y:1000,scale:0.3,rotateY:10}}
+          <motion.h1  style={{opacity,scale}} className='pc:text-left phones:text-[13px] font-extrabold pc:text-[1.7rem] text-white  shadow-sm phones:mt-1 '
+  initial={{ opacity: 0.3 ,y:-30,scale:0.3,rotateY:10}}
   animate={{ opacity: 1 ,y:0 ,scale:1,rotateY:0}}
   exit={{ opacity: 1.5 }}
   transition={{ duration: 1.5 }}
-> TEAM NIURONE. <br />
-THE EXTENSION OF YOUR BRAIN.
+> TEAM NIURONE. <br className='phones:hidden'/>THE TECH SIDE OF YOUR BRAIN.
 </motion.h1>
 
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 
 import { motion,useTransform,useViewportScroll } from 'framer-motion'
 import { style } from '../style'
@@ -7,7 +8,7 @@ import { useState , useEffect} from 'react';
 
 export default function Title() {
 
-    const title2 = `elcome to Niurone Suite`.split('')
+    const title2 = `ervice suite`.split('')
 
     const [textRef, inView] = useInView({
         triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
@@ -35,7 +36,7 @@ export default function Title() {
 
   return (<> 
     <motion.div  className=' px-5 phones:text-center phones:mb-20 text-center text-black  border-black'   style={isMobile ? {} : { opacity, scale }} >  
-    <span className='text-[100px] phones:text-[80px] relative left-1 text-primary font-extrabold'>W</span>
+    <span className='text-[100px] phones:text-[80px] relative left-0 text-primary font-extrabold'>S</span>
     {title2.map((el, i) => ( 
           <motion.span className={` relative ${style.heroHeadText} !text-black `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
@@ -47,14 +48,20 @@ export default function Title() {
        <motion.p ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
-          transition={{ delay:  0.05 }} className='font-semibold  phones:text-left phones:mb-3'> Where technology design is the future!</motion.p>
+          transition={{ delay:  0.05 }} className='font-semibold  phones:text-left phones:mb-3'> Where technology design is the future. </motion.p>
 
 <motion.p ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
-          transition={{ delay:  0.05 }} className='font-semibold w-1/3 phones:w-auto phones:text-left m-auto leading-loose  tracking-wider mt-2'> At Niurone, we specialize in cutting-edge technologies, focusing on Artificial Intelligence (AI), 
-          automation, website development, and custom software solutions. Our dedicated team of 
-          experts is driven by a passion for pushing the boundaries of what technology can achieve.</motion.p>
+          transition={{ delay:  0.05 }} className=' w-2/3 font-light phones:w-auto phones:text-left m-auto  mt-2'> At Niurone, we're not just another tech company. We're pioneers, dreamers, and architects of 
+          innovation, dedicated to sculpting a future where technology isn't just a tool – it's a 
+          transformative force.Here at Niurone, we're on a relentless quest to redefine what's possible. 
+          Our team isn't just skilled – we're passionate. We live and breathe technology, driven by a 
+          burning desire to push boundaries and unlock new frontiers. 
+           
+          From crafting custom software solutions to designing cutting-edge AI algorithms, we don't just 
+          meet expectations – we transcend them. we're constantly 
+          pushing, iterating, and evolving to stay ahead of the curve </motion.p>
 
         
      </motion.div>
