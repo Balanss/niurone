@@ -12,7 +12,7 @@ export default function LandingPage() {
   const opacity = useTransform(scrollY, [300, 900], [1, 0]);
   const scale = useTransform(scrollY, [300, 900], [1, 0.8]);
 
-  
+
 
 const [size, setSize] = useState(7);
 const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);

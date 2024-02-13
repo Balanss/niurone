@@ -26,6 +26,20 @@ export default function ContactFunc({setIsHovering}) {
 
 
 
+    const sendToZapier = async payload => {
+      const zapierURL = import.meta.env.VITE_SOME_ZAP_MAIL;
+      try {
+        const response = await fetch(zapierURL, {
+          method: "POST",
+          mode: "cors",
+          body: JSON.stringify(payload),
+        });
+        const resp = await response.json();
+        console.log(resp);
+      } catch (e) {
+        console.log(e);
+      }
+    };
 
 
 
@@ -47,20 +61,21 @@ export default function ContactFunc({setIsHovering}) {
       if (userEmail !== "" && userName !== "" && selectedCountry !== "" && message !== "") {
         // ... your form submission logic ...
 
-        emailjs.send(import.meta.env.VITE_SOME_APP_SERVICE, import.meta.env.VITE_SOME_APP_ID , {
-            from_name: userName,
-            from_email: userEmail,
-            from_phone: userPhone,
-            from_company: userCompany,
-            from_location: userLocation,
-            message: userMessage,
-            from_country: selectedCountry,
-            message_type: message
-            }, import.meta.env.VITE_SOME_APP_KEY)
-            .then(() => {
-                        toast.success("Email has been sent and we will be contacting you shortly. Thank you!");
-                         setIsHovering(false);
-                         setMessage('')
+      const leadData ={
+        name: userName,
+        email: userEmail,
+        phone: userPhone,
+        company: userCompany,
+        location: selectedCountry,
+        message: message,
+        userMessage: userMessage,
+      }
+
+      try{
+        sendToZapier(leadData);
+        toast.success("Email has been sent and we will be contacting you shortly. Thank you!");
+        setIsHovering(false);
+        setMessage('')
         setSelectedCountry('')
         setUserName('')
         setUserEmail('')
@@ -69,13 +84,11 @@ export default function ContactFunc({setIsHovering}) {
         setUserLocation('')
         setUserMessage('')
         setNotARobot(false);
-            },
-            (error) => {
-                toast.error("Error sending email. Please try again.");
-                console.log(error.text)
-            });
-       
-      } else {
+      } catch (error) {
+        toast.error("Error sending email. Please try again.");
+        console.log(error.text)
+      }
+    } else {
         toast.error("Error sending email. Please try again.");
         setMessage('')
         setSelectedCountry('')
@@ -128,15 +141,17 @@ export default function ContactFunc({setIsHovering}) {
                  
                  <div>
                  <select className='w-full font-medium p-2 text-black rounded-md' value={message} placeholder='Please select one' onChange={(e) => setMessage(e.target.value)}>
-                   
-       <option >Interested in a new website?</option>
-       <option >Interested in a ai automated chatbot?</option>
-       <option >Information for Alma Matter Labs?</option>
-       <option >Interested in updating a current website?</option>
+                   <option >Please pick one of the options below</option>
+       <option >You  need your business processes to be automated?</option>
        <option >Interested in a meeting with us?</option>
-       <option >Business collaboration</option>
-       <option >Student Advice</option>
-       <option >Career Guidance</option>
+       <option >Want to enroll for partner project or software training ?</option>
+       <option >Do you want a new website or revamp an old one?</option>
+       <option >You want to book us for a free technology literacy session with your team?</option>
+      <option >You want help to identify, manage technology vendors and your technology budget?</option>
+      <option >Want to develop a new indigenous product of your company?</option>
+      <option >Want our AI chatbot services custom built for your internal or external enviroment?</option>
+      <option >Want our in house Aimigo bot for automating your business or personal requirements on your website or webshop?</option>
+      <option >Want to invest in our business?</option>
                     </select>
                  </div>
 

@@ -31,6 +31,7 @@ const { scrollYProgress } = useScroll({
 const scaleProgress= useTransform(scrollYProgress, [0, 1], [0.9, 1]);
 const opacityProgress= useTransform(scrollYProgress, [0, 0.9], [0, 1]);
 
+const title2 = `hy us`.split('')
 
 
 const [view, setView] = useState('')
@@ -41,7 +42,16 @@ const [view, setView] = useState('')
     className='flex flex-col'>
   <div className=' flex flex-col flex-wrap  phones:justify-center justify-start gap-4 mt-5 h-auto pb-10'>
   <h2 className={`${style.heroHeadText} !text-4xl !text-black phones:text-left `}>Unlocking the Future: <span className='text-primary drop-shadow-md'>Where Technology Meets Design</span> </h2>
-  <h2 className='font-bold text-5xl mt-10'> Why us?</h2>
+
+  <span className='text-[100px] phones:text-[80px] relative left-0 text-primary font-extrabold'>W {title2.map((el, i) => ( 
+          <motion.span className={` relative left-[-27px] ${style.heroHeadText} !text-black `} key={i}  ref={textRef}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -10 }}
+          transition={{ delay: i * 0.05 }}  > 
+            {el}{""}
+          </motion.span>
+        ))}</span>
+
   < p className={`${style.heroSubText} !text-sm !text-black lg:!w-[50vw] phones:text-left`}> At Niurone, we believe in the transformative power of technology and its seamless integration 
 with captivating designs. Our approach is grounded in innovation, where cutting-edge 
 technology meets creative aesthetics to redefine possibilities and elevate user experiences.</p>
