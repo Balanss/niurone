@@ -43,7 +43,7 @@ function Contact() {
 
 
           <motion.p 
-            variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2  phones:relative  text-white leading-tight phones:text-lg text-2xl phones:w-[80vw] w-[60vw]   phones:m-auto '>
+            variants={fadeIn("","",0.1,1)}  className='pt-10 pc:w-1/2  phones:relative  text-white leading-tight phones:text-lg text-[18px] phones:w-[80vw] w-[60vw]   phones:m-auto '>
              We invite you to join us on a journey where technology and design converge to create 
 extraordinary possibilities and discover how we can collaboratively shape the future of technology 
 and design. 

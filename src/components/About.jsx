@@ -52,7 +52,7 @@ const [view, setView] = useState('')
           </motion.span>
         ))}</span>
 
-  < p className={`${style.heroSubText} !text-sm !text-black lg:!w-[50vw] phones:text-left`}> At Niurone, we believe in the transformative power of technology and its seamless integration 
+  < p className={`${style.heroSubText} !text-sm !text-black  lg:!w-[50vw] phones:text-left`}> At Niurone, we believe in the transformative power of technology and its seamless integration 
 with captivating designs. Our approach is grounded in innovation, where cutting-edge 
 technology meets creative aesthetics to redefine possibilities and elevate user experiences.</p>
   <div>
