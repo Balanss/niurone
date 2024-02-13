@@ -43,7 +43,7 @@ export const navLinks = [
 
   export const projects = [
     {
-      title: "Product // 01",
+      title: "Worcpilot // 01",
       img: roadMapGif1,
       bg: "bg-cyan-800",
       name: "media Pilot",
@@ -63,7 +63,7 @@ export const navLinks = [
       stylingLine:'border-b w-[400px] h-5 flex-grow',
     },
      {
-      title: "Product // 02",
+      title: "Aimigo // 02",
       img: roadMapGif2,
       bg: "bg-cyan-900",
       Name : "Aimigo",
