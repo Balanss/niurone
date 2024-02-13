@@ -221,11 +221,10 @@ export const serviceMini=[
 
 {
   title:'Chatbot Solutions',
-  description:'Meet Aimigo – the ultimate customer interaction chatbot. A intelligent virtual assistant meticulously crafted to cater to your unique  business requirements and enhance customer engagement like never before. ',
+  description:'Our custom chatbot solution will have your brand on the bot and will be built after a through due diligence after we do a proper needs analysis. Our chatbot solutions will be able to cater to your outdoor and indoor environments.   ',
   icon : botgif,
   service: 2,
   img: auto
-
 },
 
 {

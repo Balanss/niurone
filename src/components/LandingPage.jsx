@@ -18,7 +18,7 @@ const [size, setSize] = useState(7);
 const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
 const [isPc, setIsPc] = useState(window.innerWidth > 1023 && window.innerWidth <= 1439);
 const [isXPc, setIsXPc] = useState(window.innerWidth > 1440);
-const [sizePc, setSizePc] = useState( );
+const [sizePc, setSizePc] = useState(1 );
 
 
 
@@ -26,9 +26,12 @@ useEffect(() => {
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 1023);
 
-if (window.innerWidth > 1023 && window.innerWidth <= 1439) {
+if (window.innerWidth > 900 && window.innerWidth <= 1000) {
   setSizePc(1);
-  } else if (window.innerWidth > 1440) {
+  } else if (window.innerWidth > 1000 && window.innerWidth <= 1400) {
+    setSizePc(0.8);
+  }
+  else if (window.innerWidth > 1440) {
     setSizePc(1.1);
   }
   };
@@ -42,7 +45,7 @@ if (window.innerWidth > 1023 && window.innerWidth <= 1439) {
 }, [sizePc,  isPc, isXPc]);
 
 
-
+console.log(sizePc)
 
 
   return (

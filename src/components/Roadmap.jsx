@@ -38,7 +38,7 @@ return (
    >
    
    
-   <motion.section className='flex phones:flex-col flex-col gap-10 text-white items-left justify-start phones:w-screens ' onMouseEnter={() => setPulse(true)} onMouseLeave={() => setPulse(false)} > 
+   <motion.section className='flex phones:flex-col hover:cursor-pointer flex-col gap-10 text-white items-left justify-start phones:w-screens ' onClick={() => setIsVisible(isVisible ? null : index)} > 
    
         <div className='text-white relative '>
               <h2 className={`${style.sectionHeadText} text-left px-10 py-3 pc:!text-[14px]`}> {project.title}</h2>
@@ -51,7 +51,7 @@ return (
       yoyo: Infinity
     }
   } : {}}  >
-                 <LazyLoadImage src={project.img} alt={project.title} className={`bg-white rounded-full relative z-[10000000] w-[50px] h-[50px] cursor-pointer hover:scale-105 ${isVisible?'border-2 border-blue-500': ''} ${pulse? 'border-4 border-blue-700 animate-pulse' : ''} `}  onClick={() => setIsVisible(isVisible ? null : index)}/>
+                 <LazyLoadImage src={project.img} alt={project.title} className={`bg-white rounded-full relative z-[10000000] w-[50px] h-[50px] cursor-pointer hover:scale-105 ${isVisible?'border-2 border-blue-500': ''} `}  onClick={() => setIsVisible(isVisible ? null : index)}/>
               </motion.div>}
              
            </div>

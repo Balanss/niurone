@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <div className='  text-white p-3  flex pc:gap-10 pc:justify-center pc:items-center phones:justify-center phones:items-center phones:flex-col pc:text-xs'>
       
-      <h3 className='text-md pl-2 pt-2  pc:mr-auto'>Nuirone &copy; 2024 </h3>
+      <h3 className='text-md pl-2 pt-2  pc:mr-auto'>Niurone &copy; 2024 </h3>
 
       <div className=' flex gap-y-1 flex-col  '>
       <section className='flex gap-2 items-center'>

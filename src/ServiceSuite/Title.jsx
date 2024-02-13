@@ -8,7 +8,7 @@ import { useState , useEffect} from 'react';
 
 export default function Title() {
 
-    const title2 = `elcome to our Service Suite`.split('')
+    const title2 = `ervice suite`.split('')
 
     const [textRef, inView] = useInView({
         triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
@@ -36,7 +36,7 @@ export default function Title() {
 
   return (<> 
     <motion.div  className=' px-5 phones:text-center phones:mb-20 text-center text-black  border-black'   style={isMobile ? {} : { opacity, scale }} >  
-    <span className='text-[100px] phones:text-[80px] relative left-1 text-primary font-extrabold'>W</span>
+    <span className='text-[100px] phones:text-[80px] relative left-0 text-primary font-extrabold'>S</span>
     {title2.map((el, i) => ( 
           <motion.span className={` relative ${style.heroHeadText} !text-black `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
