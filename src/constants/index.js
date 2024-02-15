@@ -136,10 +136,11 @@ export const tech = [{
 export const  services = [ 
 
   {
-    title: 'Custom Software Development',
+    title: 'Custom Software',
     description: 'Bespoke Software Solutions: Develop custom software solutions that are tailored to your specific business needs. ',
     description2:'Software Integration: Seamlessly integrate custom software with existing systems to create a cohesive and efficient IT infrastructure.',
-    end:"With Niurone as your trusted technology partner, you can elevate your business to new heights of success. Experience the difference that tailor-made software solutions can make – contact us today to discuss your project requirements and embark on a journey to digital transformation.",
+    end:"With Niurone as your trusted technology partner, you can elevate your business to new heights of success. Experience the difference that tailor-made software solutions can make. Contact us today to discuss your project requirements and embark on a journey to digital transformation.",
+    end1:'Contact us today to discuss your project requirements and embark on a journey to digital transformation.',
     icon : software,
     service: 1,
     img: worcpilot
@@ -148,10 +149,10 @@ export const  services = [
 
  
 {
-  title: 'Chatbot Development',
-  description: 'Conversational AI Mastery: With Aimigo by your side, you will harness the power of cutting- edge conversational AI technology to revolutionize your customer interactions. Whether it is  on your website or within your applications, Aimigo effortlessly engages with your audience,  providing instant assistance and support whenever they need it.  ',
-  description2:'Tailored to Perfection: At Niurone, we understand that every business is different. That is why  Aimigo is not a one-size-fits-all solution – it is a customizable powerhouse that adapts to your  specific needs. Our team of experts works closely with you to develop a bespoke chatbot  that aligns perfectly with your business objectives, ensuring that every interaction leaves a  lasting impression.  ',
-  description3:'Experience the Future of Customer Engagement: Say goodbye to tedious support queues  and hello to seamless, personalized interactions with Aimigo. Whether it is answering FAQs,  guiding users through processes, or resolving issues in real-time, Aimigo empowers your  business to deliver unparalleled customer experiences, 24/7. ',
+  title: 'Chatbot Soloutions',
+  description: 'Unlock the Power of Conversational AI with Aimigo by Niurone. Aimigo revolutionizes customer interactions with cutting-edge conversational AI technology, providing instant assistance and support on your website or within your applications.',
+  description2:'Tailored to Your Business: Aimigo is not a one-size-fits-all solution – it is a customizable powerhouse that adapts to your specific needs. Our developers work closely with you to develop a bespoke chatbot aligned with your business objectives, ensuring every interaction leaves a lasting impression.',
+  description3:'Experience the Future of Customer Engagement: Say goodbye to tedious support queues  and hello to seamless, personalized interactions with Aimigo. From answering FAQs,  guiding users through processes, or resolving issues in real-time, Aimigo empowers your  business to deliver unparalleled customer experiences, 24/7. ',
   end:"Ready to revolutionize your customer engagement strategy? Let us lead the way. Contact us today to learn more about our Conversational AI and Custom Chatbot Development services, and embark on a journey to enhanced customer satisfaction and business success.",
   icon : botgif,
   service: 2,
@@ -160,10 +161,10 @@ export const  services = [
 },
 
 {
-  title: 'Automation Solutions',
-  description: 'Business Process Automation (BPA): Say goodbye to manual tasks and hello to streamlined  efficiency. Our BPA solutions are tailor-made to automate end-to-end business processes, freeing up  valuable time and resources while minimizing errors. For example, imagine a manufacturing company automating its order processing system. With BPA, orders can be automatically received,  processed, and tracked, reducing the need for manual intervention and ensuring faster order  fulfillment.  ',
-  description2:'Workflow Optimization: Efficiency is at the heart of everything we do. With our Workflow Optimization  services, we will help you design and implement automated processes that streamline workflows,  allowing your employees to focus on what truly matters – driving innovation and growth. For  instance, a marketing agency can automate its content approval process, ensuring that content  moves seamlessly through each stage from creation to publication, reducing delays and improving  time-to-market. ',
-  end:'Experience the power of automation and unleash the full potential of your business. Contact us today to learn more about our Automation Solutions and discover how we can help you achieve your  goals. ',
+  title: 'Automation & Intergration',
+  description: 'Business Process Automation (BPA): Wave goodbye to manual tasks and embrace streamlined efficiency. Our BPA solutions are tailor-made to automate end-to-end business processes, freeing up  valuable time and resources while minimizing errors.',
+  description2:'Workflow Optimization: Efficiency is at the heart of everything we do. With our Workflow Optimization  services, we will help you design and implement automated processes that streamline workflows,  allowing your employees to focus on what truly matters – driving innovation and growth.',
+  end:'Ready to unlock the full potential of your business? Contact us today to learn more about our Automation Solutions and schedule a consultation. Discover how we can tailor our services to your unique needs and drive your business forward.',
   icon : autom,
   service: 3,
   img: auto
@@ -175,8 +176,7 @@ export const  services = [
   description: "Corporate Websites: Your online storefront deserves the utmost professionalism and elegance. Our team specializes in designing and developing corporate websites that reflect your brand identity with precision. From sleek aesthetics to intuitive navigation, we ensure your website is a true reflection of your business values and offerings.", 
   description2: "E-commerce Platforms: Ready to take your online sales to the next level? Our e-commerce platforms are built to deliver a seamless shopping experience for your customers, from browsing products to completing transactions. With robust security measures and user-friendly interfaces, we'll help you create an online store that keeps customers coming back for more.",
   description3: "Web Applications: Sometimes, off-the-shelf solutions just don't cut it. That's where our custom web applications come in. Whether you need a customer portal, project management tool, or anything in between, we'll work closely with you to develop a tailored solution that meets your unique business needs, enhances user engagement, and boosts productivity.",
-  end: 'At Niurone, we believe that your online presence should be as unique as your business. Let us help you stand out from the crowd with expert website development services. Contact us today to learn more about how we can elevate your online presence and drive success for your business.',
-  icon : web,
+  end: 'At Niurone, we believe that your online presence should be as unique as your business. Let us help you stand out from the crowd with expert website development services. Contact us today to learn more about how we can elevate your online presence and drive success for your business.', icon : web,
   service: 4,
   img: webdev
 },
@@ -196,10 +196,9 @@ export const  services = [
 
   {
       title: 'Learning Systems',
-      description: 'Three Pillars of Growth: The key feature of one of the program is to build a strong thinker and social contributor and hence we use the three pillars of growth in the learning process, namely, skilling, productive hobby development, and improving sociocultural intelligence.   ',
-      description2:'Design Thinking: One of the program uses problem solving as method of learning of advanced learners to develop technology development skills or graphic design capabilities.  ',
-      end:'Team Niurone is passionate about developing good learning habits in young minds.We want to see  more productive citizens and develop the passion of problem solving. For information please download e-brochure here by clicking on this link:',
-      link:'Here',
+      description: 'Three Pillars of Growth: The key feature of one of the programs is to build strong thinkers and social contributors. Hence, we use the three pillars of growth in the learning process, namely, skilling, productive hobby development, and improving sociocultural intelligence.',
+      description2: 'Design Thinking: One of the programs uses problem-solving as a method of learning for advanced learners to develop technology development skills or graphic design capabilities.',
+      end: 'Team Niurone is passionate about developing good learning habits in young minds. We want to see more productive citizens and develop the passion for problem-solving. For more information, please download the e-brochure here by clicking on this link:', link:'Here',
       icon : alma,
       service: 6,
       img: aml
@@ -221,7 +220,7 @@ export const serviceMini=[
 
 {
   title:'Chatbot Solutions',
-  description:'Our custom chatbot solution will have your brand on the bot and will be built after a through due diligence after we do a proper needs analysis. Our chatbot solutions will be able to cater to your outdoor and indoor environments.   ',
+  description:'Our custom chatbot solution will feature your brand and will be developed after a thorough due diligence, following a proper needs analysis. Our chatbot solutions will be capable of catering to your outdoor and indoor environments.   ',
   icon : botgif,
   service: 2,
   img: auto
@@ -229,7 +228,7 @@ export const serviceMini=[
 
 {
   title: 'Automation & Intergration',
-  description:'In today fast-paced world, efficiency is everything. That is where our automation & intergration comes in, designed to revolutionize the way you do business and unlock new levels of productivity and  performance.',
+  description:'In today fast-paced world, efficiency is paramount. This is where our automation & intergration services comes in to play, designed to revolutionize the way you conduct business and unlock new levels of productivity and performance.',
  icon : autom,
   service: 3
 },

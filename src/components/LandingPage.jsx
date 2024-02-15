@@ -45,7 +45,6 @@ if (window.innerWidth > 900 && window.innerWidth <= 1000) {
 }, [sizePc,  isPc, isXPc]);
 
 
-console.log(sizePc)
 
 
   return (

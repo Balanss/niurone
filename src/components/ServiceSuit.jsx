@@ -161,10 +161,11 @@ const scaleProgress = isMobile
                 {description3 > "" ? <li className='text-sm mt-5 text-black'>{description3}</li> : null}
                 <hr  className='mt-5'/>
                 <h2 className='text-sm mt-5 text-black'>{services.end}<span className={`${services.link > ""? "flex":'hidden'}`}> <a href={pdf} target="_blank"  className='text-blue-500 font-bold hover:cursor-pointer hover:scale-105 underline'>here</a> </span> </h2>
+               {services.end1 > "" ? <h2 className='text-sm mt-5 text-black'>{services.end1}</h2> : null}
               </ul>
               <div className='flex justify-between'>
                 <button className='bg-primary text-white mt-5 p-2 rounded-md' onClick={() => setModalShow(false)}>Close</button>
-                <a  id="contactButton" onClick={() => setModalShow(false)} className='bg-primary text-white mt-5 p-2 rounded-md '>Contact us!!</a>
+                <a  id="contactButton" onClick={() => setModalShow(false)} className='bg-primary text-white mt-5 p-2 rounded-md '>Contact us!</a>
               </div>
             </div>
           </section>

@@ -55,13 +55,13 @@ export default function Title() {
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
           transition={{ delay:  0.05 }} className=' w-2/3 font-light phones:w-auto phones:text-left m-auto  mt-2'> At Niurone, we're not just another tech company. We're pioneers, dreamers, and architects of 
           innovation, dedicated to sculpting a future where technology isn't just a tool – it's a 
-          transformative force.Here at Niurone, we're on a relentless quest to redefine what's possible. 
+          transformative force. Here at Niurone, we're on a relentless quest to redefine what's possible. 
           Our team isn't just skilled – we're passionate. We live and breathe technology, driven by a 
           burning desire to push boundaries and unlock new frontiers. 
            
           From crafting custom software solutions to designing cutting-edge AI algorithms, we don't just 
-          meet expectations – we transcend them. we're constantly 
-          pushing, iterating, and evolving to stay ahead of the curve </motion.p>
+          meet expectations – we transcend them. We're constantly 
+          pushing, iterating, and evolving to stay ahead of the curve. </motion.p>
 
         
      </motion.div>
