@@ -75,22 +75,22 @@ if (window.innerWidth > 900 && window.innerWidth <= 1000) {
                         animate={{ opacity: 1 ,x:0 ,scale:1,rotateX:0}}
                         exit={{ opacity: 0.5}}
                         transition={{ duration: 0.9 ,ease:'easeInOut'}}
-              className=' text-[2.9rem] xPc:text-[3.2rem] 2Xpc:text-[4rem] phones:text-[2.5rem] phones:mb-10   leading-[1.05em] linetracking-[2px]   pc:text-left  text-white-100  mb-1 font-[300] ' >
+              className=' text-[2.9rem] xPc:text-[3.2rem] 2Xpc:text-[4rem] phones:text-[2.5rem] phones:mb-10   leading-[1.05em] linetracking-[2px]   pc:text-left  text-white-100  mb-1  font-[500] ' >
               HUMAN BRAIN
               <br />
-              <span className=' '>The ultimate</span>
-              <br />
-              command center
+              <span className='font-[200] '>The ultimate  <br />
+              command center</span>
+            
             </motion.h1>
           </AnimatePresence>
 
           
-          <motion.h1  style={{opacity,scale}} className='pc:text-left phones:text-[13px]  pc:text-[1.7rem] text-white  font-[300] phones:mt-1 '
+          <motion.h1  style={{opacity,scale}} className='pc:text-left phones:text-[13px]  pc:text-[1.7rem] text-white  font-[300] phones:mt-1 font-[500]'
   initial={{ opacity: 0.3 ,y:-30,scale:0.3,rotateY:10}}
   animate={{ opacity: 1 ,y:0 ,scale:1,rotateY:0}}
   exit={{ opacity: 1.5 }}
   transition={{ duration: 1.5 }}
-> TEAM NIURONE. <br className='phones:hidden'/>The tech side of your brain
+> TEAM NIURONE <br className='phones:hidden'/> <span className='font-[300]'> The tech side of your brain </span>
 </motion.h1>
 
 

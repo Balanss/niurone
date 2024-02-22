@@ -55,7 +55,7 @@ const [view, setView] = useState('')
   {/* < p className={`${style.heroSubText} !text-sm !text-black  lg:!w-[50vw] phones:text-left`}> At Niurone, we believe in the transformative power of technology and its seamless integration 
 with captivating designs. Our approach is grounded in innovation, where cutting-edge 
 technology meets creative aesthetics to redefine possibilities and elevate user experiences.</p> */}
- <h2 className={`${style.heroHeadText} !text-4xl !text-black phones:text-left !font-[300]  `}>Seamless intergration of design and technology for you and your customers </h2>
+ <h2 className={`${style.heroHeadText} !text-2xl !text-black phones:text-left !font-[300]  `}>Seamless intergration of design and technology for you and your customers </h2>
   <div>
 </div>
 
