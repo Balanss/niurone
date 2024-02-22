@@ -114,7 +114,7 @@ return (
    const [visibleProject, setVisibleProject] = useState(null);
 
 
-   const title2 = `roducts`.split('')
+   const title2 = `Products`.split('')
 
    const [textRef, inView] = useInView({
        triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
@@ -125,16 +125,19 @@ return (
 
 
 <div className='flex flex-col items-center justify-center'>
-    <section className='pc:w-1/2 m-auto pc:text-center'>
-    <span className='text-[80px] phones:text-[70px]  relative phones:left-10 text-slate-400 font-extrabold'>P    {title2.map((el, i) => ( 
-          <motion.span className={` relative left-[-20px] ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
+    <section className='pc:w-1/2  phones:w-[80vw] m-auto  pc:text-center'>
+      <div className=' px-10  py-2 tracking-widest pc:text-left  m-auto'>
+           {title2.map((el, i) => ( 
+          <motion.span className={` relative left-[-10px] ${style.heroHeadText} !text-white  `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
           transition={{ delay: i * 0.05 }}  > 
             {el}{""}
           </motion.span>
-        ))}</span>
-      <p className='text-white phones:text-left pc:text-center pc:w-2/3 pc:m-auto px-10  py-2'>We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience.</p>
+        ))}
+      </div>
+   
+      <p className='text-white phones:text-left pc:text-left   pc:m-auto px-10  py-2'>We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience.</p>
     </section>
 
     <motion.div className='pt-20 flex flex-row phones:flex-col pc:w-screen pc:items-stretch pc:justify-center xPc:flex-nowrap'>

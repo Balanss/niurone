@@ -33,11 +33,11 @@ export default function Card({setModalShow,modalShow,setIcon,setTitle,setDescrip
             onHoverStart={() => setHoveredIndex(index)}
             onHoverEnd={() => setHoveredIndex(null)}
             whileHover={{ scale: hoveredIndex === index ? 1.1 : 1 }}
-            transition={{ type: "spring", stiffness: 200, damping: 10 ,mass:1.5}}  
-            className=' phones:[250px] w-[250px] h-[450px]  bg-wg  p-[20px] rounded-[20px] shadow-card flex flex-col justify-between '
+            transition={{ type: "spring", stiffness: 50, damping: 10 ,mass:0.5}}  
+            className=' phones:[250px] w-[250px] h-[450px] items-center bg-wg  p-[20px] rounded-[20px] shadow-card flex flex-col justify-between'
           >
             <img src={services.icon} alt='web-development'  className='w-12 h-12 object-contain'/>
-            <h3 className='text-black text-[26px] mt-2 font-bold text-center' >
+            <h3 className='text-black text-[20px]  mt-2 font-bold text-center' >
               {services.title}
             </h3>
             <motion.section  className='flex flex-col '>
