@@ -35,11 +35,11 @@ export default function Title() {
 
 
   return (<> 
-    <motion.div  className=' px-5 phones:text-center phones:mb-20 pc:mb-10 text-center text-black  border-black'   style={isMobile ? {} : { opacity, scale }} >  
+    <motion.div  className=' px-5 phones:text-center phones:mb-20 pc:mb-10 text-center text-white  border-black'   style={isMobile ? {} : { opacity, scale }} >  
     {/* <span className='text-[100px] phones:text-[80px] relative left-0 text-primary font-extrabold'>S</span> */}
     <div className='text-left pc:w-[40vw]  m-auto'>
        {title2.map((el, i) => ( 
-          <motion.span className={` relative ml-1 ${style.heroHeadText} !text-black `} key={i}  ref={textRef}
+          <motion.span className={` relative ml-1 ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
           transition={{ delay: i * 0.05 }}  > 
