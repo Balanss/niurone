@@ -19,7 +19,7 @@ function Contact() {
   const [isHovering, setIsHovering] = useState();
 
 
-  const title2 = `ontact us`.split('')
+  const title2 = `Contact us`.split('')
 
   const [textRef, inView] = useInView({
       triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
@@ -31,7 +31,7 @@ function Contact() {
           <ToastContainer position='bottom-center' />
           
          
-                      <span className='text-[80px] phones:text-[70px] relative left-3 text-secondary font-extrabold'>C {title2.map((el, i) => ( 
+                      <span className='text-[80px] phones:text-[70px] relative left-3 text-secondary font-extrabold'> {title2.map((el, i) => ( 
           <motion.span className={` relative left-[-15px] ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}

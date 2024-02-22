@@ -31,7 +31,7 @@ const { scrollYProgress } = useScroll({
 const scaleProgress= useTransform(scrollYProgress, [0, 1], [0.9, 1]);
 const opacityProgress= useTransform(scrollYProgress, [0, 0.9], [0, 1]);
 
-const title2 = `Our core values`.split('')
+const title2 = `Why us`.split('')
 
 
 const [view, setView] = useState('')
@@ -41,7 +41,7 @@ const [view, setView] = useState('')
   <motion.section ref={textRef} initial={{ opacity: 0, y: -50 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }} transition={{ delay: 0.5 }}
     className='flex flex-col'>
   <div className=' flex flex-col flex-wrap  phones:justify-center justify-start gap-4 mt-5 h-auto pb-10'>
-  <h2 className={`${style.heroHeadText} !text-4xl !text-black phones:text-left `}>Unlocking the Future: Where Technology Meets Design </h2>
+  {/* <h2 className={`${style.heroHeadText} !text-4xl !text-black phones:text-left  `}>Unlocking the Future of innovation </h2> */}
 
   <span className='relative left-5   '> {title2.map((el, i) => ( 
           <motion.span className={` relative left-[-20px] phones:text-[20px] ${style.heroHeadText} !text-black ml-[1px] `} key={i}  ref={textRef}
