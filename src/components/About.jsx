@@ -41,7 +41,7 @@ const [view, setView] = useState('')
   <motion.section ref={textRef} initial={{ opacity: 0, y: -50 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }} transition={{ delay: 0.5 }}
     className='flex flex-col'>
   <div className=' flex flex-col flex-wrap  phones:justify-center justify-start gap-4 mt-5 h-auto pb-10'>
-  {/* <h2 className={`${style.heroHeadText} !text-4xl !text-black phones:text-left  `}>Unlocking the Future of innovation </h2> */}
+  {/* <h2 className={`${style.heroHeadText} !text-4xl !text-black phones:text-left !font-[300]  `}>Seamless intergration of design and technology for you and your customers </h2> */}
 
   <span className='relative left-5   '> {title2.map((el, i) => ( 
           <motion.span className={` relative left-[-20px] phones:text-[20px] ${style.heroHeadText} !text-black ml-[1px] `} key={i}  ref={textRef}
@@ -52,9 +52,10 @@ const [view, setView] = useState('')
           </motion.span>
         ))}</span>
 
-  < p className={`${style.heroSubText} !text-sm !text-black  lg:!w-[50vw] phones:text-left`}> At Niurone, we believe in the transformative power of technology and its seamless integration 
+  {/* < p className={`${style.heroSubText} !text-sm !text-black  lg:!w-[50vw] phones:text-left`}> At Niurone, we believe in the transformative power of technology and its seamless integration 
 with captivating designs. Our approach is grounded in innovation, where cutting-edge 
-technology meets creative aesthetics to redefine possibilities and elevate user experiences.</p>
+technology meets creative aesthetics to redefine possibilities and elevate user experiences.</p> */}
+ <h2 className={`${style.heroHeadText} !text-4xl !text-black phones:text-left !font-[300]  `}>Seamless intergration of design and technology for you and your customers </h2>
   <div>
 </div>
 
@@ -69,8 +70,8 @@ technology meets creative aesthetics to redefine possibilities and elevate user 
                   </span>
                 </div>
 
-                <motion.div className='text-black phones:text-center  max-w-3xl leading-[30px]'  initial={{opacity: 0, y: 0}} animate={{opacity: 1, y: 0}} transition={{duration: 1, ease: "easeOut"}}>
-                    <p className={`${style.heroSubText} !text-[13px] phones:text-left phones:p-2 phones:w-[90vw] phones:m-auto ml-[80px]` }>{service.description}</p>
+                <motion.div className='text-black phones:text-center  max-w-3xl leading-[30px]'  initial={{opacity: 0, y: 2}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5, ease: "easeOut"}}>
+                    <p className={`${style.heroSubText} !text-[13px]  phones:text-left phones:p-2 phones:w-[90vw] phones:m-auto ml-[80px]` }>{service.description}</p>
                 </motion.div>
               </motion.div>
             )
