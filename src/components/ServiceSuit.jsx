@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useRef } from 'react'
 import {motion, useScroll, useTransform,AnimatePresence,useViewportScroll} from 'framer-motion'
 import { SectionWrapper } from '../hoc'

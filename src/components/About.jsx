@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import {style} from '../style'
 import { SectionWrapper } from '../hoc'
@@ -43,14 +44,14 @@ const [view, setView] = useState('')
   <div className=' flex flex-col flex-wrap  phones:justify-center justify-start gap-4 mt-5 h-auto pb-10'>
   {/* <h2 className={`${style.heroHeadText} !text-4xl !text-black phones:text-left !font-[300]  `}>Seamless intergration of design and technology for you and your customers </h2> */}
 
-  <span className='relative left-5   '> {title2.map((el, i) => ( 
-          <motion.span className={` relative left-[-20px] phones:text-[20px] ${style.heroHeadText} !text-black ml-[1px] `} key={i}  ref={textRef}
+  <div className='relative left-5   '> {title2.map((el, i) => ( 
+          <motion.span className={` relative left-[-20px] ${style.heroHeadText} !text-black ml-[1px] `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -10 }}
           transition={{ delay: i * 0.05 }}  > 
             {el}{""}
           </motion.span>
-        ))}</span>
+        ))}</div>
 
   {/* < p className={`${style.heroSubText} !text-sm !text-black  lg:!w-[50vw] phones:text-left`}> At Niurone, we believe in the transformative power of technology and its seamless integration 
 with captivating designs. Our approach is grounded in innovation, where cutting-edge 

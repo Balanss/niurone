@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import {useState,useEffect} from 'react'
 import { style } from '../style'
 import 'react-vertical-timeline-component/style.min.css'
@@ -23,19 +25,19 @@ const ProjectsCard = ({ project, isVisible, setIsVisible,index}) => {
 
 return (
    <motion.div
-   className={`${project.bg} bg-cover flex flex-row border-2 border-primary bg-bgBlob shadow-card mb-20 rounded-lg phones:!w-screen phones:!flex-col phones:!h-full`}
+   className={` bg-cover flex flex-row border-2 border-primary bg-[#001220] shadow-card mb-20 rounded-lg phones:!w-screen phones:!flex-col phones:!h-full`}
    initial={{ scale: 1, width: '300px' }}
    animate={{
      scale: isVisible ? 1.03 : 1,
      zIndex: isVisible ? 1 : 0,
      boxShadow: isVisible ? '0px 0px 20px 0px rgba(0,0,0,0.5)' : '0px 0px 0px 0px rgba(0,0,0,0.5)',
      position: isVisible ? 'relative' : 'static',
-     width: isVisible ? '500px' : '300px',
-     height: isVisible ? '650px' : '500px',
+     width: isVisible ? '500px' : '350px',
+     height: isVisible ? '550px' : '550px',
      padding: isVisible ? '20px' : '0px',
    }}
-   whileHover={{ scale: 1.1 }}
-   transition={{ duration: 0.4, ease: 'easeIn', type: 'spring', stiffness: 90, damping: 10 }}
+   whileHover={{ scale: 1.05 }}
+   transition={{ duration: 0.4, ease: 'easeIn', type: 'spring', stiffness: 50, damping: 10 }}
    >
    
    
@@ -58,7 +60,7 @@ return (
            </div>
    
            <div className='relative flex items-start flex-row phones:flex-col'>
-               <p className='text-sm phones:text-xl  mb-10 pc:w-[250px] text-left xPc:w-[300px] phones:w-[90vw] phones:pl-4 pc:px-10'> {project.description}</p>
+               <p className='text-sm phones:text-lg   mb-10 pc:w-[250px] text-left xPc:w-[300px] phones:w-[80vw] phones:pl-4 pc:px-10'> {project.description}</p>
                <AnimatePresence>
                {isVisible && (
              <motion.section
@@ -68,7 +70,7 @@ return (
                  opacity: 1,
                  scale: 1,
                  width: isVisible ? '550px' : '500px',
-                 height: isVisible ? '650px' : '600px',
+                 height: isVisible ? 'auto' : 'auto',
 
                }}
                exit={{ opacity: 0,
@@ -77,12 +79,12 @@ return (
                 top: !isVisible ? '0px' : '10px',
                 right: !isVisible ? '0px' : '40px',
                 width: !isVisible ? '300px' : '550px',
-                height: !isVisible ? '500px' : '650px',
+                height: !isVisible ? 'auto' : 'auto',
 
                                                          }}
-               transition={{ duration: 0.2, ease: 'easeOut' }}
+               transition={{ duration: 0.04, ease: 'easeOut', }}
              >
-                  <ul className='flex flex-col flex-wrap  gap-y-2  phones:w-[90vw] text-sm phones:text-lg phones:px-4 '>
+                  <ul className='flex flex-col flex-wrap  gap-y-2  phones:w-[90vw] text-sm phones:text-md phones:px-4 '>
                   {project.point1 && <div className='inline-flex pc:w-3/4'><span className='text-cyan-400 mr-2'> - </span><li className="text-left pc:w-[200px]">{project.point1}</li></div>}
                   {project.point2 && <div className='inline-flex pc:w-3/4'><span className='text-cyan-400 mr-2'> - </span><li className="text-left pc:w-[200px]">{project.point2}</li></div>}
                   {project.point3 && <div className='inline-flex pc:w-3/4'><span className='text-cyan-400 mr-2'> - </span><li className="text-left pc:w-[200px]">{project.point3}</li></div>}
@@ -125,8 +127,8 @@ return (
 
 
 <div className='flex flex-col items-center justify-center'>
-    <section className='pc:w-1/2  phones:w-[80vw] m-auto  pc:text-center'>
-      <div className=' px-10  py-2 tracking-widest pc:text-left  m-auto'>
+    <section className='pc:w-1/2  phones:w-[80vw] m-auto   pc:text-center'>
+      <div className=' px-10  py-2 tracking-widest pc:text-left   m-auto'>
            {title2.map((el, i) => ( 
           <motion.span className={` relative left-[-10px] ${style.heroHeadText} !text-white  `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}

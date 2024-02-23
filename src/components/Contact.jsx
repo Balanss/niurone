@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {motion} from 'framer-motion'
 import { fadeIn} from "../utils/Motion"
 import { SectionWrapper } from '../hoc'
@@ -31,14 +32,14 @@ function Contact() {
           <ToastContainer position='bottom-center' />
           
          
-                      <span className='text-[80px] phones:text-[70px] relative left-3 text-secondary font-extrabold'> {title2.map((el, i) => ( 
+                      <div className=' relative left-3 '> {title2.map((el, i) => ( 
           <motion.span className={` relative left-[-15px] ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
           transition={{ delay: i * 0.05 }}  > 
             {el}{""}
           </motion.span>
-        ))}</span>
+        ))}</div>
          
    
 

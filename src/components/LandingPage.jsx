@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unknown-property */
 import{Suspense, useEffect, useState} from 'react'
 import { motion,useTransform } from 'framer-motion';
 import { AnimatePresence,useViewportScroll } from 'framer-motion';
@@ -49,7 +51,7 @@ if (window.innerWidth > 900 && window.innerWidth <= 1000) {
 
   return (
 <>
-<div className='flex flex-row justify-center items-center  phones:flex-col-reverse phones:pt-[200px] xPc:w-[90vw] pt-20 pc:h-screen  '>
+<div className='flex flex-row justify-center items-center  phones:flex-col-reverse phones:pt-[180px] xPc:w-[90vw] pt-20 pc:h-screen  '>
 
 <motion.div className='pc:w-3/4 phones:w-screen  flex flex-col items-center justify-center '  
               initial={{ opacity: 1 ,x:-10}}
@@ -90,7 +92,7 @@ if (window.innerWidth > 900 && window.innerWidth <= 1000) {
   animate={{ opacity: 1 ,y:0 ,scale:1,rotateY:0}}
   exit={{ opacity: 1.5 }}
   transition={{ duration: 1.5 }}
-> TEAM NIURONE <br className='phones:hidden'/> <span className='font-[300]'> The tech side of your brain </span>
+> TEAM NIURONE <br className=''/> <span className='font-[300]'> The tech side of your brain </span>
 </motion.h1>
 
 
