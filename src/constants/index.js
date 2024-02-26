@@ -150,9 +150,9 @@ export const  services = [
  
 {
   title: 'Chatbot Soloutions',
-  description: 'Unlock the Power of Conversational AI with Aimigo by Niurone. Aimigo revolutionizes customer interactions with cutting-edge conversational AI technology, providing instant assistance and support on your website or within your applications.',
-  description2:'Tailored to Your Business: Aimigo is not a one-size-fits-all solution – it is a customizable powerhouse that adapts to your specific needs. Our developers work closely with you to develop a bespoke chatbot aligned with your business objectives, ensuring every interaction leaves a lasting impression.',
-  description3:'Experience the Future of Customer Engagement: Say goodbye to tedious support queues  and hello to seamless, personalized interactions with Aimigo. From answering FAQs,  guiding users through processes, or resolving issues in real-time, Aimigo empowers your  business to deliver unparalleled customer experiences, 24/7. ',
+  description:  'Unlock the Power of Conversational AI with custom AI chatbot automation. Our AI chatbot solution revolutionizes customer interactions with cutting-edge conversational AI technology, providing instant assistance and support on your website or within your applications inside your organization.',
+  description2:'Tailored to Your Business: Our solution is  not a one-size-fits-all solution – it is a customizable powerhouse that adapts to your specific needs. Our developers work closely with you to develop a bespoke chatbot aligned with your business objectives, ensuring every interaction leaves a lasting impression.',
+  description3:'Experience the Future of Customer Engagement: Say goodbye to tedious support queues and hello to seamless, personalized interactions with our AI chatbot solutions.  From answering FAQs, guiding users through processes, or resolving issues in real-time, Niurone empowers your business to deliver unparalleled customer experiences, 24/7 through our chat bot solutions.',
   end:"Ready to revolutionize your customer engagement strategy? Let us lead the way. Contact us today to learn more about our Conversational AI and Custom Chatbot Development services, and embark on a journey to enhanced customer satisfaction and business success.",
   icon : botgif,
   service: 2,
