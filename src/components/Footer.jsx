@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import email from '../assets/email.png'
 import pin from '../assets/pin.png'
 import number from '../assets/number.png'
@@ -27,7 +27,7 @@ export default function Footer() {
 
       <section className='flex gap-2 items-center'>
       <img src={number} alt='email' className='w-4 h-4 inline-block '/>
-        <p className='inline-block  text-sm'> +597 819-7439 </p>
+        <p className='inline-block  text-sm'> +597 8550581 </p>
       </section>
 
       <section className='flex gap-2 items-center'>
