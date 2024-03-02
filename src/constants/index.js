@@ -15,7 +15,7 @@ import ui from '../assets/cards/uixu.webp'
 import chatpic from '../assets/cards/chatpic.webp'
 import roadMapGif1 from '../assets/icons/roadmapgif1.gif'
 import roadMapGif2 from '../assets/icons/roadmapgif2.gif'
-import roadMapGif3 from '../assets/icons/roadmapgif3.gif'
+
 
 
 export const navLinks = [

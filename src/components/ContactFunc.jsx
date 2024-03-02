@@ -1,10 +1,13 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+
 import { useState } from 'react';
 import { getNames } from 'country-list';
 import Select from 'react-select';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 export default function ContactFunc({setIsHovering}) {
 
@@ -58,7 +61,7 @@ export default function ContactFunc({setIsHovering}) {
       event.preventDefault();
      
 
-      if (userEmail !== "" && userName !== "" && selectedCountry !== "" && message !== "") {
+      if (userEmail !== "" && userName !== "" && selectedCountry !== "" && message !== "" && notARobot) {
         // ... your form submission logic ...
 
       const leadData ={
@@ -101,6 +104,10 @@ export default function ContactFunc({setIsHovering}) {
         setNotARobot(false);
 
       }
+    };
+
+    const handleCaptchaResponseChange = (response) => {
+      setNotARobot(response ? true : false);
     };
 
   return (
@@ -157,15 +164,12 @@ export default function ContactFunc({setIsHovering}) {
                  </div>
 
                  <textarea  cols="20" rows="6" className="w-full rounded-md p-2 text-black"  value={userMessage} placeholder='Please feel free to ask any other information and we will get back to you!' onChange={(e) => setUserMessage(e.target.value)}></textarea>
-                
+                 <ReCAPTCHA
+  sitekey={import.meta.env.VITE_SOME_KEY_CAP}
+  onChange={handleCaptchaResponseChange}
+/>
                  <button disabled={!notARobot?true:false} className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
              </form>
-
-             <div className='shadow-card shadow-shadow1 bg-wg mt-2 text-black p-5 rounded-md   '>
-               <label htmlFor="robot" className="block text-sm font-medium ">To confirm you are not a robot:</label>
-               <input  type="radio" id="notARobot" name="verification" value="notARobot" onChange={() => setNotARobot(true)} className='cursor-pointer'/>
-               <label htmlFor="notARobot">Click here</label>
-             </div>
 </div>
   )
 }

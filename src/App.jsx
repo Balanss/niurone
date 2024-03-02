@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import { BrowserRouter } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
@@ -6,7 +7,6 @@ import React,{ useState ,useEffect,useRef,Suspense} from "react";
 import Roadmap from "./components/Roadmap";
 import { motion,useTransform,useViewportScroll } from "framer-motion";
 import MiddleText from "./components/MiddleText";
-import LoadingBar from "./components/LoadingBar";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import bgImage from './assets/bgpic.webp';
@@ -74,14 +74,6 @@ const scale = useTransform(scrollYProgress, [1, 1, 1], [0, 1, 1]);
   return (
    
       <BrowserRouter>
-  {/* <div className="fixed inset-0 z-50 bg-slate-800 h-screen w-screen flex items-center justify-center">
-//             <LazyLoadImage
-//   alt={'background image'}
-//   src={bgImage} // replace with the path to your image
-//   className={`opacity-50 absolute  z-[1000000000000000] bg-no-repeat w-[100vw] h-[100vh] bg-cover bg-center`}
-// /> 
-//       <LoadingBar setIsLoading={setIsLoading} />
-//   </div> */}
    <motion.div className={`  relative inset-0  z-50  bg-cover bg-no-repeat  `}  initial={{ opacity: 0.9 }}
                      animate={{ opacity: 1 }}
                      transition={{ duration: 0.2 ,ease:'easeInOut'}}>
@@ -118,9 +110,9 @@ const scale = useTransform(scrollYProgress, [1, 1, 1], [0, 1, 1]);
 
 
           <div className="relative z-[10000] " >
-        {contactSide &&  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<div>Loading...</div>}>
          <Contact/>
-          </Suspense>}
+          </Suspense>
           </div>
 
         </motion.div>
