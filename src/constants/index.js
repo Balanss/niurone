@@ -68,7 +68,7 @@ export const navLinks = [
       bg: "bg-cyan-900",
       Name : "Aimigo",
       company:"Squarelion Agency",
-      description:"Aimigo is an automated AI tool in the form of a chatbot designed for businesses to automate redundant tasks, handle data, and assist customers, Fast and efficiently.",
+      description:"Aimigo is an automated AI tool in the form of a chatbot designed for businesses to automate redundant tasks, handle data, and assist customers, fast and efficiently.",
       point1:'Customized chatbot on websites',
       point2:" Customized chatbot on windows pc",
       point3:'Customized chatbot on mobile devices (WhatsApp)',
@@ -211,7 +211,7 @@ export const serviceMini=[
 
   {
     title:'Custom Software ',
-    description:'We develop custom software solutions that are tailored to your specific business needs. Our software is designed to enhance productivity, efficiency, and overall business performance.',
+    description:'We develop custom software solutions that are tailored to your specific business needs. Our software is designed to enhance productivity, efficiency, and overall business performance. We look into best practices, security and best user case scenarios to build the next amazing software for you.',
     icon : software,
     service: 1,
     img: auto
