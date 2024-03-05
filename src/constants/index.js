@@ -211,7 +211,7 @@ export const serviceMini=[
 
   {
     title:'Custom Software ',
-    description:'We develop custom software solutions that are tailored to your specific business needs. Our software is designed to enhance productivity, efficiency, and overall business performance. We look into best practices, security and best user case scenarios to build the next amazing software for you.',
+    description:'Your custom software will be designed to enhance productivity, efficiency, and overall business performance. We look into best practices, security and best user case scenarios to build the next amazing software for you.',
     icon : software,
     service: 1,
     img: auto
