@@ -161,7 +161,7 @@ export const  services = [
 },
 
 {
-  title: 'Automation & Intergration',
+  title: 'Automation & Integration',
   description: 'Business Process Automation (BPA): Wave goodbye to manual tasks and embrace streamlined efficiency. Our BPA solutions are tailor-made to automate end-to-end business processes, freeing up  valuable time and resources while minimizing errors.',
   description2:'Workflow Optimization: Efficiency is at the heart of everything we do. With our Workflow Optimization  services, we will help you design and implement automated processes that streamline workflows,  allowing your employees to focus on what truly matters – driving innovation and growth.',
   end:'Ready to unlock the full potential of your business? Contact us today to learn more about our Automation Solutions and schedule a consultation. Discover how we can tailor our services to your unique needs and drive your business forward.',
@@ -227,8 +227,8 @@ export const serviceMini=[
 },
 
 {
-  title: 'Automation & Intergration',
-  description:'In today fast-paced world, efficiency is paramount. This is where our automation & intergration services comes in to play, designed to revolutionize the way you conduct business and unlock new levels of productivity and performance.',
+  title: 'Automation & Integration',
+  description:'In today fast-paced world, efficiency is paramount. This is where our automation & integration services comes in to play, designed to revolutionize the way you conduct business and unlock new levels of productivity and performance.',
  icon : autom,
   service: 3
 },
