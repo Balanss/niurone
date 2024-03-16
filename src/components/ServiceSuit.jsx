@@ -11,6 +11,7 @@ import Title from '../ServiceSuite/Title'
 import Card from '../ServiceSuite/Card';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import pdf from '../assets/pdf.pdf'
+import { StarsBackgroundCard } from '../ui/StartsBackgroundCard';
 
 
 
@@ -108,11 +109,12 @@ const scaleProgress = isMobile
   //bg-bg bg-cover bg-no-repeat
 
   return ( <> 
-    <motion.div className=' py-10   flex xl:flex-col xl:items-center justify-center rounded-lg bg-bg bg-cover bg-no-repeat'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}}>
+    <motion.div className=' py-10   flex xl:flex-col xl:items-center justify-center rounded-lg pc:w-[80vw] m-auto'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}}>
       <div className='flex p-[10px]  gap-[20px]  w-screen flex-wrap xl:flex-col justify-center  '>
        <Title/>
-  <div className='flex   flex-wrap flex-row  items-center justify-center m-auto gap-10  h-auto pb-10'>
-    <motion.div className=' grid pc:grid-cols-3 mt-2  flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  ' >   
+
+  <div className='flex relative z-[10000000000000000000]  flex-wrap flex-row  items-center justify-center m-auto gap-10  h-auto pb-10'>
+    <motion.div className=' grid pc:grid-cols-3 mt-2  relative z-10 flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  ' >   
   <Card 
   setModalShow={setModalShow} 
   modalShow={modalShow} 

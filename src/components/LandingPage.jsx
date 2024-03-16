@@ -8,6 +8,7 @@ import { Canvas } from '@react-three/fiber';
 import Loader from './Loader';
 
 
+
 export default function LandingPage() {
 
   const { scrollY } = useViewportScroll();
@@ -58,7 +59,7 @@ if (window.innerWidth > 900 && window.innerWidth <= 1000) {
               animate={{ opacity: 1 ,x:0 ,rotateX:0}}
               exit={{ opacity: 1}}
               transition={{ duration: 0.9 ,ease:'easeInOut'}}>
-                
+                 
   <Canvas className='canvas pc:!h-screen phones:!h-[200px] ' gl={{ antialias: false }}  dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: !isMobile ? 12: 12 }} >
     <ambientLight intensity={0.5} />
     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />

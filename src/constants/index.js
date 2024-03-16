@@ -68,7 +68,7 @@ export const navLinks = [
       bg: "bg-cyan-900",
       Name : "Aimigo",
       company:"Squarelion Agency",
-      description:"Aimigo is an automated AI tool in the form of a chatbot designed for businesses to automate redundant tasks, handle data, and assist customers, Fast and efficiently.",
+      description:"Aimigo is an automated AI tool in the form of a chatbot designed for businesses to automate redundant tasks, handle data, and assist customers, fast and efficiently.",
       point1:'Customized chatbot on websites',
       point2:" Customized chatbot on windows pc",
       point3:'Customized chatbot on mobile devices (WhatsApp)',
@@ -161,7 +161,7 @@ export const  services = [
 },
 
 {
-  title: 'Automation & Intergration',
+  title: 'Automation & Integration',
   description: 'Business Process Automation (BPA): Wave goodbye to manual tasks and embrace streamlined efficiency. Our BPA solutions are tailor-made to automate end-to-end business processes, freeing up  valuable time and resources while minimizing errors.',
   description2:'Workflow Optimization: Efficiency is at the heart of everything we do. With our Workflow Optimization  services, we will help you design and implement automated processes that streamline workflows,  allowing your employees to focus on what truly matters – driving innovation and growth.',
   end:'Ready to unlock the full potential of your business? Contact us today to learn more about our Automation Solutions and schedule a consultation. Discover how we can tailor our services to your unique needs and drive your business forward.',
@@ -211,7 +211,7 @@ export const serviceMini=[
 
   {
     title:'Custom Software ',
-    description:'We develop custom software solutions that are tailored to your specific business needs. Our software is designed to enhance productivity, efficiency, and overall business performance.',
+    description:'Your custom software will be designed to enhance productivity, efficiency, and overall business performance. We look into best practices, security and best user case scenarios to build the next amazing software for you.',
     icon : software,
     service: 1,
     img: auto
@@ -227,8 +227,8 @@ export const serviceMini=[
 },
 
 {
-  title: 'Automation & Intergration',
-  description:'In today fast-paced world, efficiency is paramount. This is where our automation & intergration services comes in to play, designed to revolutionize the way you conduct business and unlock new levels of productivity and performance.',
+  title: 'Automation & Integration',
+  description:'In today fast-paced world, efficiency is paramount. This is where our automation & integration services comes in to play, designed to revolutionize the way you conduct business and unlock new levels of productivity and performance.',
  icon : autom,
   service: 3
 },

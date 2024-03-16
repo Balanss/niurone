@@ -112,7 +112,7 @@ export default function ContactFunc({setIsHovering}) {
 
   return (
     <div className='phones:w-3/4  '>
-    <form onSubmit={handleSubmit} className="space-y-4   mt-5 text-black pc:flex pc:flex-col pc:items-start"  onMouseEnter={handleMouseEnter}  onMouseLeave={handleMouseLeave} >
+    <form onSubmit={handleSubmit} className="space-y-4    text-black pc:flex pc:flex-col pc:items-start"  onMouseEnter={handleMouseEnter}  onMouseLeave={handleMouseLeave} >
      <section className='pc:flex flex-row gap-5'>
 <div>
                      <label htmlFor="name" className="block text-sm font-medium text-white"><span className='text-red-500'>*</span> Name:</label>
