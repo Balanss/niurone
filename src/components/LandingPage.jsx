@@ -6,6 +6,8 @@ import { AnimatePresence,useViewportScroll } from 'framer-motion';
 import { Brain } from '../models/Brain';
 import { Canvas } from '@react-three/fiber';
 import Loader from './Loader';
+import { TypewriterEffect } from '../ui/TypewriterEffect';
+
 
 
 
@@ -85,6 +87,7 @@ if (window.innerWidth > 900 && window.innerWidth <= 1000) {
               command center</span>
             
             </motion.h1>
+      
           </AnimatePresence>
 
           

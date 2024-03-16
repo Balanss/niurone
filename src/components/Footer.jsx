@@ -4,6 +4,7 @@ import pin from '../assets/pin.png'
 import number from '../assets/number.png'
 import facebook from '../assets/facebook.png'
 import linkedin from '../assets/linkedin.png'
+import Maps from './map/Maps'
 
 
 export default function Footer() {
@@ -23,10 +24,14 @@ export default function Footer() {
 
   return (
     <div className=' bg-white text-black px-6 py-3 w-screen  flex pc:inline-flex pc:gap-10 pc:justify-center pc:items-start phones:justify-center phones:items-center phones:flex-col pc:text-xs' >
-      
-      <h3 className='text-md pl-2 pt-2  pc:mr-auto'>Niurone &copy; 2024 </h3>
+      <div className='pl-2 pt-2 phones:mb-5 pc:mr-auto'>
+      <h3 className='text-md  '>Niurone &copy; 2024 </h3>
+      <p className='text-black pt-2 phones:text-xs'>Opening time : Mon - Fri || 10.00 AM - 06.00 PM</p> 
+      </div>
+     
 
-      <div className=' flex gap-y-3 gap-x-3 flex-row  '>
+  
+      <div className=' flex gap-y-5 gap-x-3  flex-col md:flex-row  '>
       <section className='flex gap-2 items-center'>
       <img src={email} alt='email' className='w-4 h-4 inline-block '/>
         <p className='inline-block  text-sm'> niurone@shaananportfolio.com </p>
@@ -51,6 +56,12 @@ export default function Footer() {
         <img src={linkedin} alt='linkedin' className='w-4 h-4 inline-block '/>
         <a href="https://www.linkedin.com/company/squarelion-agency/mycompany/" target='_black' rel='noopener noreferrer'>LinkedIn</a>
       </section>
+
+        
+     {/* <div ><Maps  /></div>
+     <p className='text-black  pt-2'>Opening time : Mon - Fri || 10.00 AM - 06.00 PM</p> */}
+     
+
 
       
         <button onClick={() => setShowModal(true)}  className='bg-blue-500 hover:bg-blue-700 text-white text-xs  py-1 px-1 rounded mt-1' > Resources

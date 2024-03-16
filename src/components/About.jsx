@@ -45,7 +45,7 @@ const [view, setView] = useState('')
 
 
   <span className='relative left-5   '> {title2.map((el, i) => ( 
-          <motion.span className={` relative left-[-20px] phones:text-[20px] ${style.heroHeadText} !text-white ml-[1px] `} key={i}  ref={textRef}
+          <motion.span className={` relative  phones:text-[40px] ${style.heroHeadText} !text-white ml-[1px] `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -10 }}
           transition={{ delay: i * 0.05 }}  > 

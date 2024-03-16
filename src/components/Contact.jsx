@@ -28,11 +28,11 @@ function Contact() {
 
 
     return (
-        <motion.div className=' bg-opacity-50  p-4 pc:p-10 flex flex-col items-start pc:w-[60vw] m-auto ' >
+        <motion.div className=' bg-opacity-50  px-5 pc:p-10 flex flex-col items-start pc:w-[60vw] md:m-auto mb-10 overflow-hidden' >
           <ToastContainer position='bottom-center' />
           
-                      <div className=' relative left-3 '> {title2.map((el, i) => ( 
-          <motion.span className={` relative left-[-15px] ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
+                      <div className=' relative left-3  '> {title2.map((el, i) => ( 
+          <motion.span className={` relative  ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
           transition={{ delay: i * 0.05 }}  > 
@@ -52,38 +52,11 @@ and design.
 
 <div className='phones:flex phones:flex-col phones:justify-center phones:items-center mt-[80px] pc:items-start pc:justify-start flex'>
 
-<div className='flex flex-row  items-start justify-center gap-20 mt-1 w-1/2  '>
+<div className='flex flex-row  items-start justify-center gap-20 mt-1  md:w-1/2 md:m-auto md:mb-5 '>
 <ContactFunc setIsHovering={setIsHovering} />
-
-                {/* <section className='w-[20vw] pc:left-100  relative z-[1000000000] m-auto h-[300px]'>
-                  <Suspense fallback={<Loader />}>
-                  <Canvas  gl={{ antialias: true, alpha: true }}  >
-                    <directionalLight position={[400, 0, 10]} intensity={2} />
-          <ambientLight intensity={1.5} />
-          <pointLight position={[10, 5, 1]} intensity={2} />
-          <Suspense fallback={<Loader/>}>
-                    <Robot isHovering={isHovering}/>
-                    </Suspense>
-                    </Canvas>
-                    </Suspense>
-                </section>  */}
-
-     {/* <section onMouseEnter={() => setIsHovering('right')} onMouseLeave={() => setIsHovering('')} className='phones:hidden  '>
-     <Maps />
-     <p className='text-white text-2xl pt-2'>Opening time : Mon - Fri || 10.00 AM - 06.00 PM</p>
-     <Footer />
-     </section>  */}
 </div>
 
-{/* <section  className='pc:hidden mt-20 '>
-     <Maps />
-    <p className='text-white text-xl p-10'>
-      Opening time :<br />
-      Mon - Fri<br />
-      10.00 AM - 06.00 PM
-    </p>
-     <Footer />
-     </section> */}
+
 
 
 

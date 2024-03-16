@@ -85,7 +85,7 @@ return (
                                                          }}
                transition={{ duration: 0.05, ease: 'easeOut', }}
              >
-                  <motion.ul className='flex flex-col flex-wrap  gap-y-2  phones:w-[90vw] text-sm phones:text-md phones:px-4 ' exit={{ opacity: 0,}}
+                  <motion.ul className='flex flex-col flex-wrap  gap-y-2  phones:w-[90vw] text-sm phones:text-md phones:px- ' exit={{ opacity: 0,}}
                transition={{ duration: 0.01, ease: 'easeOut', }}>
                   {project.point1 && <div className='inline-flex pc:w-3/4'><span className='text-cyan-400 mr-2'> - </span><li className="text-left pc:w-[200px]">{project.point1}</li></div>}
                   {project.point2 && <div className='inline-flex pc:w-3/4'><span className='text-cyan-400 mr-2'> - </span><li className="text-left pc:w-[200px]">{project.point2}</li></div>}
@@ -128,9 +128,9 @@ return (
      <div className='flex justify-center phones:px-[0] pc:flex-row phones:flex-col px-[250px] items-start gap-[30px]  overflow-hidden pc:w-[80vw] m-auto'>
 
 
-<div className='flex flex-col items-start justify-left'>
+<div className='flex flex-col items-start justify-left '>
     <section className=' phones:w-[80vw] m-auto   pc:text-center'>
-      <div className=' px-10  py-2 tracking-widest pc:text-left   m-auto'>
+      <div className=' md:px-10  py-2 tracking-widest pc:text-left   m-auto'>
            {title2.map((el, i) => ( 
           <motion.span className={` relative left-[-10px] ${style.heroHeadText} !text-white  `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
@@ -141,10 +141,10 @@ return (
         ))}
       </div>
    
-      <p className='text-white phones:text-left pc:text-left   pc:m-auto px-10  py-2'>We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience.</p>
+      <p className='text-white phones:text-left pc:text-left xPc:w-3/4 xPc:ml-10 pc:m-auto mod:px-10  py-2'>We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience.</p>
     </section>
 
-    <motion.div className='pt-20 flex flex-row phones:flex-col  pc:items-stretch '>
+    <motion.div className='pt-20 flex flex-row xPc:ml-10 phones:flex-col  pc:items-stretch'>
          {projects.map((project, index) => (
            <ProjectsCard
              key={index}

@@ -52,7 +52,7 @@ export const TextRevealCard = ({
             onMouseMove={mouseMoveHandler}
             ref={cardRef}
             className={cn(
-                " w-[60rem] m-auto rounded-lg p-8 relative overflow-hidden",
+                " tablet:w-[60rem] w-[80rem] m-auto rounded-lg p-8 relative overflow-hidden",
                 className
             )}
         >
@@ -77,7 +77,7 @@ export const TextRevealCard = ({
                 className="absolute z-20 rounded  will-change-transform"
             >
                <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-                    <p className=" sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-white">
+                    <p className=" sm:text-[3rem] xs:text-[20px] tablet:text-[30px] pc:text-5xl py-10 font-bold bg-clip-text text-transparent bg-white">
                       Niurone | Where mind matters
                     </p>
                     <MemoizedStars />
@@ -103,9 +103,9 @@ export const TextRevealCard = ({
                     opacity: isMouseOver ? 0 : 1
                  }}
                  transition={{ duration: 0.6 }}
-                 className="sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-white"
+                 className="sm:text-[3rem] xs:text-[30px] tablet:text-[30px]  pc:text-5xl py-10 font-bold bg-clip-text text-transparent bg-white"
                 >
-                        {isMouseOver ? '' : 'Where mind matters '}
+                      Where mind matters 
                             </motion.p>
                     <MemoizedStars />
                 </div>

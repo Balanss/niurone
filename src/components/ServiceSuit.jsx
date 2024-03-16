@@ -114,7 +114,7 @@ const scaleProgress = isMobile
        <Title/>
 
   <div className='flex relative z-[10000000000000000000]  flex-wrap flex-row  items-center justify-center m-auto gap-10  h-auto pb-10'>
-    <motion.div className=' grid pc:grid-cols-3 mt-2  relative z-10 flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  ' >   
+    <motion.div className=' grid  md:grid-cols-2  pc:grid-cols-3 mt-2  relative z-10 flex-wrap phones:gap-[4rem] justify-center gap-20 md:flex-2  desktop:flex-1 desktop:w-4/4 phones:p-0 p-10  ' >   
   <Card 
   setModalShow={setModalShow} 
   modalShow={modalShow} 

@@ -80,9 +80,9 @@ const gradients = {
       <LandingPage status={status} setStatus={setStatus} />
     </div>
 
-    <section className="relative" >
+    <section className="relative overflow-hidden" >
       
-      <SparklesCore id="sparkles" className="absolute background top-10  right-40 bottom-10 z-[-1] w-[10%]" />
+      <SparklesCore id="sparkles" className="absolute background top-10 hidden  tablet:flex  tablet:right-8 lg:right-20  xl:right-40 bottom-10 z-[-1] w-[10%]" />
       <motion.div style={{ opacity, scale }}>
         <ServiceSuit />
         <MiddleText/>

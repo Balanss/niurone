@@ -56,7 +56,7 @@ export default function Title() {
 <motion.p ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
-          transition={{ delay:  0.05 }} className=' w-2/3  phones:w-auto phones:text-left m-auto pc:w-[40vw] pc:text-left leading-8 font-[300]  text-white mt-2'> At Niurone, we're not just another tech company. We're pioneers, dreamers, and architects of 
+          transition={{ delay:  0.05 }} className=' w-2/3   phones:w-auto phones:text-left m-auto pc:w-[40vw] pc:text-left leading-8 font-[300]  text-white mt-2'> At Niurone, we're not just another tech company. We're pioneers, dreamers, and architects of 
           innovation, dedicated to sculpting a future where technology isn't just a tool – it's a 
           transformative force. Here at Niurone, we're on a relentless quest to redefine what's possible. 
           Our team isn't just skilled – we're passionate. We live and breathe technology, driven by a 
