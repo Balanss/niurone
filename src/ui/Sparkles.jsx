@@ -56,7 +56,7 @@ const SparklesCore = (props) => {
               enable: false,
               zIndex: 1,
             },
-            fpsLimit: 120,
+            fpsLimit: 30,
             interactivity: {
               events: {
                 onClick: {

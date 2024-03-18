@@ -79,7 +79,9 @@ const gradients = {
 
     <section className="relative overflow-hidden" >
       
+      <Suspense fallback={<div>Loading...</div>}>
       <SparklesCore id="sparkles" className="absolute background top-10 hidden  tablet:flex  tablet:right-8 lg:right-20  xl:right-40 bottom-10 z-[-1] w-[10%]" />
+      </Suspense>
       <motion.div style={{ opacity, scale }}>
         <ServiceSuit />
         <MiddleText/>
