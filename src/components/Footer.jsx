@@ -4,9 +4,17 @@ import pin from '../assets/pin.png'
 import number from '../assets/number.png'
 import facebook from '../assets/facebook.png'
 import linkedin from '../assets/linkedin.png'
+import Maps from './map/Maps'
+
 
 export default function Footer() {
   const [showModal, setShowModal] = useState(false);
+  const [changeBg, setChangeBg] = useState('new');
+
+  const gradients = {
+    newBg: 'radial-gradient(rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))',
+    new: 'radial-gradient(rgb(29, 34, 43), rgb(18, 22, 33), rgb(39, 50, 67))'
+  };
 
   const resources = [
     {url:'https://sketchfab.com/3d-models/360-sphere-robot-a0bd28b7133648848427a5c27975611b',name:'360 Sphere Robot'},
@@ -15,11 +23,15 @@ export default function Footer() {
   ]
 
   return (
-    <div className='  text-white p-3  flex pc:inline-flex pc:gap-10 pc:justify-center pc:items-start phones:justify-center phones:items-center phones:flex-col pc:text-xs'>
-      
-      <h3 className='text-md pl-2 pt-2  pc:mr-auto'>Niurone &copy; 2024 </h3>
+    <div className=' bg-white text-black px-6 py-3 w-screen  flex pc:inline-flex pc:gap-10 pc:justify-center pc:items-start phones:justify-center phones:items-center phones:flex-col pc:text-xs' >
+      <div className='pl-2 pt-2 phones:mb-5 pc:mr-auto'>
+      <h3 className='text-md  '>Niurone &copy; 2024 </h3>
+      <p className='text-black pt-2 phones:text-xs'>Opening time : Mon - Fri || 10.00 AM - 06.00 PM</p> 
+      </div>
+     
 
-      <div className=' flex gap-y-3 flex-col  '>
+  
+      <div className=' flex gap-y-5 gap-x-3  flex-col md:flex-row  '>
       <section className='flex gap-2 items-center'>
       <img src={email} alt='email' className='w-4 h-4 inline-block '/>
         <p className='inline-block  text-sm'> niurone@shaananportfolio.com </p>
@@ -35,15 +47,21 @@ export default function Footer() {
         <p className='inline-block  text-sm'> Agilalaan #79, Paramaribo, Suriname  </p>
       </section>
 
-      <section className='flex gap-2 items-center'>
+      <section className='flex gap-2 items-center hover:scale-[1.1]'>
         <img src={facebook} alt='facebook' className='w-4 h-4 inline-block '/>
-        <a href="https://www.facebook.com/profile.php?id=61555833434358"> Facebook</a>
+        <a href="https://www.facebook.com/squarelion/" target="_blank" rel="noopener noreferrer"> Facebook</a>
       </section>
 
-      <section className='flex gap-2 items-center'>
+      <section className='flex gap-2 items-center hover:scale-[1.1]'>
         <img src={linkedin} alt='linkedin' className='w-4 h-4 inline-block '/>
-        <a href="https://www.linkedin.com/in/checker-niurone-4427b62b2/">LinkedIn</a>
+        <a href="https://www.linkedin.com/company/squarelion-agency/mycompany/" target='_black' rel='noopener noreferrer'>LinkedIn</a>
       </section>
+
+        
+     {/* <div ><Maps  /></div>
+     <p className='text-black  pt-2'>Opening time : Mon - Fri || 10.00 AM - 06.00 PM</p> */}
+     
+
 
       
         <button onClick={() => setShowModal(true)}  className='bg-blue-500 hover:bg-blue-700 text-white text-xs  py-1 px-1 rounded mt-1' > Resources

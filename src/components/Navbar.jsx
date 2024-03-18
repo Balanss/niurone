@@ -4,7 +4,7 @@ import {style} from '../style'
 import {navLinks} from '../constants'
 import menu from '../assets/menu.png'
 import close from '../assets/close.png'
-import logo from '../assets/aitumeicon.png'
+import logo from '../assets/aitumeicon.webp'
 import { motion } from 'framer-motion'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
