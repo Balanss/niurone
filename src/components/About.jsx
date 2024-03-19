@@ -38,10 +38,10 @@ const title2 = `Why us`.split('')
 const [view, setView] = useState('')
   return (
 
-<motion.div  className='flex  flex-col gap-1   items-start phones:items-center phones:pr-10 phones:pl-5   pc:pl-20 overflow-hidden pb-[100px] rounded-lg pc:w-[60vw] m-auto'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}} > 
+<motion.div  className='flex  flex-col gap-1   items-start phones:items-center phones:pr-10 phones:pl-5    overflow-hidden pb-[100px] rounded-lg pc:w-[60vw] m-auto'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}} > 
 
 
-<div className='text-left xs:w-[80vw] pc:w-[65vw] m-auto'>
+<div className='text-left xs:w-[80vw] tablet:w-[60vw] pc:w-[40vw] m-auto'>
        {title2.map((el, i) => ( 
           <motion.span className={` relative ml-1 ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
@@ -52,7 +52,7 @@ const [view, setView] = useState('')
         ))}
     </div>
 
-        <div className='w-[80vw]'>
+        <div className='w-[80vw] tablet:w-[60vw] pc:w-[40vw] tablet:m-auto'>
         <motion.p ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
@@ -60,7 +60,7 @@ const [view, setView] = useState('')
         </div>
 
   <motion.section ref={textRef} initial={{ opacity: 0, y: -50 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }} transition={{ delay: 0.5 }}
-    className='flex flex-col'>
+    className='flex flex-col  tablet:w-[60vw] pc:w-[40vw] tablet:m-auto'>
   <div className=' w-[80vw] flex flex-col flex-wrap  phones:justify-center justify-start gap-4 mt-5 h-auto pb-10'>
         <div className='flex flex-col items-start'>
           {tech.map((service, index) => {

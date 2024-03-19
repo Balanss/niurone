@@ -28,7 +28,7 @@ function Contact() {
 
 
     return (
-        <motion.div className=' bg-opacity-50  px-5 pc:p-10 flex flex-col items-start pc:w-[60vw] md:m-auto mb-10 overflow-hidden' >
+        <motion.div className=' bg-opacity-50  px-5 pc:p-10 flex flex-col items-start tablet:w-[60vw] pc:w-[40vw] md:m-auto mb-10 overflow-hidden' >
           <ToastContainer position='bottom-center' />
           
                       <div className=' relative   '> {title2.map((el, i) => ( 

@@ -22,7 +22,7 @@ export default function MiddleText() {
       const title2 = `Where mind matters `.split('')
 
   return (<> 
-  <div className='pc:w-[60vw] pc:m-auto'>
+  <div className='pc:w-[40vw] pc:m-auto'>
   <AnimatePresence mode='wait'>
     {mobile && 
        <div className=" overflow-hidden text-center  [mask-image:linear-gradient(to_bottom,transparent,white,transparent)] mb-10">

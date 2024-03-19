@@ -125,14 +125,14 @@ return (
      });
 
    return (
-     <div className='flex justify-center phones:px-[0] pc:flex-row phones:flex-col px-[250px] items-start gap-[30px]  overflow-hidden pc:w-[80vw] m-auto'>
+     <div className='flex justify-center phones:px-[0] pc:flex-row phones:flex-col  items-start gap-[30px]  overflow-hidden tablet:w-[60vw] pc:w-[40vw] m-auto'>
 
 
-<div className='flex flex-col items-start justify-left tablet:px-10 pc:px-2 '>
+<div className='flex flex-col items-start justify-left tablet:px-4 pc:pl-10 xPc:pl-4 '>
     <section className=' phones:w-[80vw] m-auto   pc:text-center'>
       <div className='   py-2 tracking-widest pc:text-left   m-auto'>
            {title2.map((el, i) => ( 
-          <motion.span className={` relative left-[-10px] ${style.heroHeadText} !text-white  `} key={i}  ref={textRef}
+          <motion.span className={` relative   ${style.heroHeadText} !text-white  `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
           transition={{ delay: i * 0.05 }}  > 
@@ -141,10 +141,10 @@ return (
         ))}
       </div>
    
-      <p className='text-white phones:text-left pc:text-left   py-2'>We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience.</p>
+      <p className='text-white phones:text-left pc:text-left pc:pl-2 xPc:pl-0  py-2'>We are constantly working on new products to provide innovative solutions to our clients. Our products are designed to enhance business operations, automate redundant tasks, and provide a seamless user experience.</p>
     </section>
 
-    <motion.div className='pt-20 tablet:flex-col flex flex-row xPc:ml-10 xs:flex-col xs:px-3 tablet:px-0  pc:items-stretch'>
+    <motion.div className='pt-20 tablet:flex-col flex flex-row  xs:flex-col xs:px-3 tablet:px-8 relative   pc:items-stretch'>
          {projects.map((project, index) => (
            <ProjectsCard
              key={index}
