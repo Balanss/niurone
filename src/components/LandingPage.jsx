@@ -7,9 +7,12 @@ import { Brain } from '../models/Brain';
 import { Canvas } from '@react-three/fiber';
 import Loader from './Loader';
 import { TypewriterEffect } from '../ui/TypewriterEffect';
+<<<<<<< HEAD
 import { TypewriterEffectTwo } from '../ui/TypewriterEffectTwo';
 import { OrbitControls } from '@react-three/drei';
 
+=======
+>>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
 
 
 
@@ -66,7 +69,11 @@ if (window.innerWidth > 900 && window.innerWidth <= 1000) {
               exit={{ opacity: 1}}
               transition={{ duration: 0.9 ,ease:'easeInOut'}}>
                  
+<<<<<<< HEAD
                  <Canvas className='canvas pc:!h-screen phones:!h-[200px] hover:cursor-grabbing' onMouseEnter={() => setSecretText(true)} gl={{ antialias: false }} dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: !isMobile ? 12: 12 }}>
+=======
+  <Canvas className='canvas pc:!h-screen phones:!h-[200px] ' gl={{ antialias: false }}  dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: !isMobile ? 12: 12 }} >
+>>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
     <ambientLight intensity={0.5} />
     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
     <Suspense fallback={<Loader/>}>
@@ -77,10 +84,30 @@ if (window.innerWidth > 900 && window.innerWidth <= 1000) {
 
 </motion.div>
 
+<<<<<<< HEAD
 <section className='relative phones:w-fit phones:px-10    pc:w-1/3  flex-col  pc:m-auto phones:flex phones:items-left phones:justify-center '> 
         <TypewriterEffect />
         {secretText && <TypewriterEffectTwo />}
           {/* <RevealTitle  /> */}
+=======
+<section className='relative phones:w-fit phones:px-10    pc:w-1/2  flex-col  pc:m-auto phones:flex phones:items-left phones:justify-center '> 
+          <AnimatePresence mode='wait'>
+          <motion.h1
+                        style={{ zIndex: 2 ,opacity,scale}} // Add this line
+                        initial={{ opacity: 0 ,x:10,scale:0.2,rotateX:-10}}
+                        animate={{ opacity: 1 ,x:0 ,scale:1,rotateX:0}}
+                        exit={{ opacity: 0.5}}
+                        transition={{ duration: 0.9 ,ease:'easeInOut'}}
+              className=' text-[2.9rem] xPc:text-[3.2rem] 2Xpc:text-[4rem] phones:text-[2.5rem] phones:mb-10   leading-[1.05em] linetracking-[2px]   pc:text-left  text-white-100  mb-1  font-[500] ' >
+              HUMAN BRAIN
+              <br />
+              <span className='font-[200] '>The ultimate  <br />
+              command center</span>
+            
+            </motion.h1>
+      
+          </AnimatePresence>
+>>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
 
           
           <motion.h1  style={{opacity,scale}} className='pc:text-left phones:text-[13px] pc:mt-10  pc:text-[1.7rem] text-white   phones:mt-1 font-[500]'
