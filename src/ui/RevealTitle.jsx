@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import  cn  from "../util/cn";
 
-export const TextRevealCard = ({
+export const RevealTitle = ({
     text,
     revealText,
     children,
@@ -54,7 +54,7 @@ export const TextRevealCard = ({
             onMouseMove={mouseMoveHandler}
             ref={cardRef}
             className={cn(
-                " tablet:w-[60rem] w-[80rem] m-auto rounded-lg p-8 relative overflow-hidden",
+                " w-[20vw]   rounded-lg  relative overflow-hidden",
                 className
             )}
         >
@@ -62,27 +62,26 @@ export const TextRevealCard = ({
 
             <div className="h-40  relative flex items-center overflow-hidden">
             <motion.div
-                style={{
-                    width: "100%",
-                }}
                 animate={
                     isMouseOver
                         ? {
                                 opacity: 1,
                                 clipPath: `inset(0 ${100 - widthPercentage}% 0 0)`,
                             }
-                        : {
+                        : {     opacity:0,
                                 clipPath: `inset(0 ${100 - widthPercentage}% 0 0)`,
                             }
                 }
                 transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-                className="absolute z-20 rounded  will-change-transform"
+                className="absolute z-20 rounded   will-change-transform"
             >
-               <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-                    <p className=" sm:text-[3rem] xs:text-[20px] tablet:text-[30px] pc:text-5xl py-10 font-bold bg-clip-text text-transparent bg-white">
-                      Niurone | Where mind matters
+               <div className=" overflow-hidden">
+                    <p className="text-[2.9rem] xPc:text-[2.9rem] 2Xpc:text-[3rem] phones:text-[2.5rem] phones:mb-10   leading-[1.05em] linetracking-[2px]   pc:text-left  text-white cursor-pointer  mb-1  font-[500]  bg-clip-text text-transparent bg-white">
+                    The ultimate  <br />
+                     command center
                     </p>
                     <MemoizedStars />
+                 
                 </div>
 
             </motion.div>
@@ -92,22 +91,15 @@ export const TextRevealCard = ({
                     animate={{
                         left: `${widthPercentage}%`,
                         rotate: `${rotateDeg}deg`,
-                        opacity: widthPercentage > 0 ? 1 : 0,
-                    }}
-                    transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-                    className="  bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
-                ></motion.div>
-
-                <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
+                        opacity: widthPercentage > 0 ? 1 : 0, }}
+                    transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }} className="  bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform" ></motion.div>
+                <div className=" overflow-hidden
+                ">
 
                 <motion.p
-                 animate={{
-                    opacity: isMouseOver ? 0 : 1
-                 }}
-                 transition={{ duration: 0.6 }}
-                 className="sm:text-[3rem] xs:text-[30px] tablet:text-[50px]   pc:text-5xl py-10 font-bold bg-clip-text text-transparent bg-white"
-                >
-                      Where mind matters 
+                 animate={{ opacity: isMouseOver ? 0 : 1 }}
+                 transition={{ duration: 0.6 }}    className="text-[2.9rem] xPc:text-[3.2rem] 2Xpc:text-[3rem] phones:text-[2.5rem] phones:mb-10   leading-[1.05em] linetracking-[2px]   pc:text-left  text-white  cursor-pointer mb-1  font-[500]  bg-clip-text text-transparent bg-white" >
+                        HUMAN BRAIN
                             </motion.p>
                     <MemoizedStars />
                 </div>
@@ -141,15 +133,15 @@ const Stars = () => {
     const randomOpacity = () => Math.random();
     const random = () => Math.random();
     return (
-        <div className="absolute inset-0">
-            {[...Array(20)].map((_, i) => (
+        <div className="">
+            {[...Array(10)].map((_, i) => (
                 <motion.span
                     key={`star-${i}`}
                     animate={{
                         top: `calc(${random() * 100}% + ${randomMove()}px)`,
                         left: `calc(${random() * 100}% + ${randomMove()}px)`,
                         opacity: randomOpacity(),
-                       
+                        
                     }}
                     transition={{
                         duration: random() * 10 + 20,
@@ -160,7 +152,7 @@ const Stars = () => {
                         position: "absolute",
                         top: `${random() * 100}%`,
                         left: `${random() * 100}%`,
-                        width: `2px`,
+                        width: `1px`,
                         height: `1px`,
                         backgroundColor: "white",
                         borderRadius: "50%",

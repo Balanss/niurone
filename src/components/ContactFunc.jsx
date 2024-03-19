@@ -26,28 +26,6 @@ export default function ContactFunc({setIsHovering}) {
     const [notARobot, setNotARobot] = useState(false);
    
 
-
-
-
-    const sendToZapier = async payload => {
-      const zapierURL = import.meta.env.VITE_SOME_ZAP_MAIL;
-      try {
-        const response = await fetch(zapierURL, {
-          method: "POST",
-          mode: "cors",
-          body: JSON.stringify(payload),
-        });
-        const resp = await response.json();
-        console.log(resp);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-
-
-
-
-
     function handleMouseEnter() {
       setIsHovering('left');
     }
@@ -57,14 +35,14 @@ export default function ContactFunc({setIsHovering}) {
     }
 
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async(event) => {
       event.preventDefault();
      
 
       if (userEmail !== "" && userName !== "" && selectedCountry !== "" && message !== "" && notARobot) {
         // ... your form submission logic ...
 
-      const leadData ={
+      const data ={
         name: userName,
         email: userEmail,
         phone: userPhone,
@@ -74,10 +52,26 @@ export default function ContactFunc({setIsHovering}) {
         userMessage: userMessage,
       }
 
+
+
       try{
-        sendToZapier(leadData);
+         const response = await fetch(import.meta.env.VITE_SOME_ZAP_MAIL, {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+              'Content-Type': 'application/json',
+            },
+          body: JSON.stringify(data),
+
+      });
+
+      const text = await response.text();
+       console.log(text);
+
+
         toast.success("Email has been sent and we will be contacting you shortly. Thank you!");
-        setIsHovering(false);
+        setTimeout(() => {
+          setIsHovering(false);
         setMessage('')
         setSelectedCountry('')
         setUserName('')
@@ -87,6 +81,7 @@ export default function ContactFunc({setIsHovering}) {
         setUserLocation('')
         setUserMessage('')
         setNotARobot(false);
+        }, 3000);
       } catch (error) {
         toast.error("Error sending email. Please try again.");
         console.log(error.text)
@@ -116,16 +111,16 @@ export default function ContactFunc({setIsHovering}) {
      <section className='pc:flex flex-row gap-5'>
 <div>
                      <label htmlFor="name" className="block text-sm font-medium text-white"><span className='text-red-500'>*</span> Name:</label>
-                     <input type="text" value={userName} id="name" name="name" required className="mt-1 phones:w-[70vw]  block w-full py-2 px-3 border border-gray-300 bg-white text-black rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" onChange={(e) => setUserName(e.target.value)} />
+                     <input type="text" value={userName} id="name" name="name" required className="mt-1 phones:w-[70vw] bg-gray-800 text-white  block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" onChange={(e) => setUserName(e.target.value)} />
                  </div>
                  <div>
                      <label htmlFor="email" className="block text-sm font-medium text-white"> <span className='text-red-500'>*</span> Email:</label>
-                     <input type="email" id="email" value={userEmail} name="email" required className="mt-1 phones:w-[70vw]  block w-full py-2 px-3 border text-black border-gray-300 bg-white  rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  onChange={(e) => { setUserEmail(e.target.value);}} />
+                     <input type="email" id="email" value={userEmail} name="email" required className="mt-1 phones:w-[70vw]  block w-full py-2 px-3 border bg-gray-800 text-white border-gray-300   rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  onChange={(e) => { setUserEmail(e.target.value);}} />
                  </div>
 
                  <div>
                      <label htmlFor="phone" className="block text-sm font-medium text-white">Phone:</label>
-                     <input type="tel" id="phone" value={userPhone} name="phone"  className="phones:w-[70vw] mt-1 block w-full py-2 px-3 border text-black border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  onChange={(e) => setUserPhone(e.target.value)}/>
+                     <input type="tel" id="phone" value={userPhone} name="phone"  className="phones:w-[70vw] mt-1 block w-full py-2 px-3 border border-gray-300 bg-gray-800 text-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  onChange={(e) => setUserPhone(e.target.value)}/>
                  </div>
          </section>
 
@@ -133,13 +128,14 @@ export default function ContactFunc({setIsHovering}) {
 
          <div>
                      <label htmlFor="company" className="block text-sm font-medium text-white">Company:</label>
-                     <input type="text" id="company" value={userCompany} name="company"  className=" phones:w-[70vw] mt-1 block w-full py-2 px-3 border text-black border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  onChange={(e) => setUserCompany(e.target.value)}/>
+                     <input type="text" id="company" value={userCompany} name="company"  className=" phones:w-[70vw] mt-1 block w-full py-2 px-3 border bg-gray-800 text-white border-gray-300  rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"  onChange={(e) => setUserCompany(e.target.value)}/>
                  </div>
                  <div className='phones:w-[70vw]'>
                      <label htmlFor="location" className="block text-sm font-medium text-white" >Location:</label>
                      <Select 
                        options={countries} 
                        onChange={option => setSelectedCountry(option.value)} 
+                       className=''
                      />
                  </div>
 
@@ -148,7 +144,7 @@ export default function ContactFunc({setIsHovering}) {
                  
                  <div className='phones:w-[70vw] box-border '>
                   <label htmlFor="message" className="block text-sm font-medium text-white">Please select one</label>
-                  <select id="messageSelect" className='w-full font-medium p-2 text-black rounded-md ' value={message} placeholder='Please select one' onChange={(e) => setMessage(e.target.value)} >
+                  <select id="messageSelect" className='w-full font-medium p-2 bg-gray-800 text-white rounded-md ' value={message} placeholder='Please select one' onChange={(e) => setMessage(e.target.value)} >
                    <option >Please pick one of the options below</option>
        <option >You  need your business processes to be automated?</option>
        <option >Want to enroll in our partner project for software training ?</option>
@@ -164,7 +160,7 @@ export default function ContactFunc({setIsHovering}) {
                     </select>
                  </div>
 
-                 <textarea  cols="20" rows="6" className="w-full rounded-md p-2 text-black phones:w-[70vw]"  value={userMessage} placeholder='Please feel free to ask any other information and we will get back to you!' onChange={(e) => setUserMessage(e.target.value)}></textarea>
+                 <textarea  cols="20" rows="6" className="w-full rounded-md p-2 bg-gray-800 text-white phones:w-[70vw]"  value={userMessage} placeholder='Please feel free to ask any other information and we will get back to you!' onChange={(e) => setUserMessage(e.target.value)}></textarea>
                  <ReCAPTCHA
   sitekey={import.meta.env.VITE_SOME_KEY_CAP}
   onChange={handleCaptchaResponseChange}

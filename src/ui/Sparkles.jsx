@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 "use client";
 import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
@@ -28,7 +29,7 @@ const SparklesCore = (props) => {
 
   const particlesLoaded = async (container) => {
     if (container) {
-      console.log(container);
+    
       controls.start({
         opacity: 1,
         transition: {
@@ -55,7 +56,7 @@ const SparklesCore = (props) => {
               enable: false,
               zIndex: 1,
             },
-            fpsLimit: 120,
+            fpsLimit: 30,
             interactivity: {
               events: {
                 onClick: {
@@ -64,7 +65,7 @@ const SparklesCore = (props) => {
                 },
                 onHover: {
                   enable: true,
-                  mode: "repulse",
+                  mode: "grab",
                 },
                 resize: true,
               },
@@ -232,7 +233,7 @@ const SparklesCore = (props) => {
                   mode: "delete",
                   value: 0,
                 },
-                value: particleDensity || 10 ,
+                value: particleDensity || 2.5 ,
               },
               opacity: {
                 value: {

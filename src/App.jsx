@@ -30,6 +30,7 @@ const [isLoading, setIsLoading] = useState(true);
   const [bgTheme, setBgTheme] = useState('1');
   const [contactSide, setContactSide] = useState(false);
 
+
 //add scroll to top when refresh
 useEffect(() => {
   if ('scrollRestoration' in history) {
@@ -37,11 +38,6 @@ useEffect(() => {
   }
   window.scrollTo(0, 0);
 }, []);
-
-
-
-
-
 
 useEffect(() => {
   setTimeout(() => {
@@ -71,7 +67,7 @@ const gradients = {
   return (
    
       <BrowserRouter>
-  <motion.div className={`relative inset-0 z-50`} initial={{ opacity: 0.9 }} style={{ backgroundImage: gradients[changeBg] }}
+  <motion.div className={`relative inset-0 z-50`} initial={{ opacity: 0.9 }} style={window.innerWidth < 625?{ backgroundImage: gradients['new'] } : { backgroundImage: gradients['newBg'] }}
     animate={{ opacity: 1 }}
     transition={{ duration: 0.2 ,ease:'easeInOut'}}>
     <Navbar status={status} setStatus={setStatus}/>
@@ -82,7 +78,9 @@ const gradients = {
 
     <section className="relative overflow-hidden" >
       
+      <Suspense fallback={<div>Loading...</div>}>
       <SparklesCore id="sparkles" className="absolute background top-10 hidden  tablet:flex  tablet:right-8 lg:right-20  xl:right-40 bottom-10 z-[-1] w-[10%]" />
+      </Suspense>
       <motion.div style={{ opacity, scale }}>
         <ServiceSuit />
         <MiddleText/>

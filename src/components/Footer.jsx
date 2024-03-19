@@ -31,20 +31,20 @@ export default function Footer() {
      
 
   
-      <div className=' flex gap-y-5 gap-x-3  flex-col md:flex-row  '>
+      <div className=' flex gap-y-5 gap-x-6  flex-col md:flex-row items-center '>
       <section className='flex gap-2 items-center'>
       <img src={email} alt='email' className='w-4 h-4 inline-block '/>
-        <p className='inline-block  text-sm'> niurone@shaananportfolio.com </p>
+        <p className='inline-block  text-cs'> niurone@shaananportfolio.com </p>
       </section>
 
       <section className='flex gap-2 items-center'>
       <img src={number} alt='email' className='w-4 h-4 inline-block '/>
-        <p className='inline-block  text-sm'> +597 8550581 </p>
+        <p className='inline-block  text-xs'> +597 8550581 </p>
       </section>
 
       <section className='flex gap-2 items-center'>
       <img src={pin} alt='email' className='w-4 h-4 inline-block '/>
-        <p className='inline-block  text-sm'> Agilalaan #79, Paramaribo, Suriname  </p>
+        <p className='inline-block  text-xs'> Agilalaan #79, Paramaribo, Suriname  </p>
       </section>
 
       <section className='flex gap-2 items-center hover:scale-[1.1]'>
