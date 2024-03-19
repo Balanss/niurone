@@ -31,11 +31,7 @@ function Contact() {
         <motion.div className=' bg-opacity-50  px-5 pc:p-10 flex flex-col items-start pc:w-[60vw] md:m-auto mb-10 overflow-hidden' >
           <ToastContainer position='bottom-center' />
           
-<<<<<<< HEAD
                       <div className=' relative   '> {title2.map((el, i) => ( 
-=======
-                      <div className=' relative left-3  '> {title2.map((el, i) => ( 
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
           <motion.span className={` relative  ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
@@ -47,11 +43,7 @@ function Contact() {
    
 
           <motion.p 
-<<<<<<< HEAD
             variants={fadeIn("","",0.1,1)}  className='pt-10  phones:relative break-words text-white leading-tight phones:text-lg text-[18px] phones:w-[80vw] w-[60vw]    xs:m-auto  tablet:m-0'>
-=======
-            variants={fadeIn("","",0.1,1)}  className='pt-10  phones:relative  text-white leading-tight phones:text-lg text-[18px] phones:w-[80vw] w-[60vw]   phones:m-auto '>
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
              We invite you to join us on a journey where technology and design converge to create 
 extraordinary possibilities and discover how we can collaboratively shape the future of technology 
 and design. 

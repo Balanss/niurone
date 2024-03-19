@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 /* eslint-disable react/prop-types */
-=======
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
 "use client";
 import React, { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
@@ -32,11 +29,7 @@ const SparklesCore = (props) => {
 
   const particlesLoaded = async (container) => {
     if (container) {
-<<<<<<< HEAD
     
-=======
-      console.log(container);
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
       controls.start({
         opacity: 1,
         transition: {
@@ -63,11 +56,7 @@ const SparklesCore = (props) => {
               enable: false,
               zIndex: 1,
             },
-<<<<<<< HEAD
             fpsLimit: 30,
-=======
-            fpsLimit: 120,
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
             interactivity: {
               events: {
                 onClick: {
@@ -76,11 +65,7 @@ const SparklesCore = (props) => {
                 },
                 onHover: {
                   enable: true,
-<<<<<<< HEAD
                   mode: "grab",
-=======
-                  mode: "repulse",
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
                 },
                 resize: true,
               },
@@ -248,11 +233,7 @@ const SparklesCore = (props) => {
                   mode: "delete",
                   value: 0,
                 },
-<<<<<<< HEAD
                 value: particleDensity || 2.5 ,
-=======
-                value: particleDensity || 10 ,
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
               },
               opacity: {
                 value: {

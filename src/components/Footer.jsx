@@ -31,11 +31,7 @@ export default function Footer() {
      
 
   
-<<<<<<< HEAD
       <div className=' flex gap-y-5 gap-x-6  flex-col md:flex-row items-center '>
-=======
-      <div className=' flex gap-y-5 gap-x-3  flex-col md:flex-row  '>
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
       <section className='flex gap-2 items-center'>
       <img src={email} alt='email' className='w-4 h-4 inline-block '/>
         <p className='inline-block  text-cs'> niurone@shaananportfolio.com </p>

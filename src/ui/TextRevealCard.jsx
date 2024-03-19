@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-=======
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
 "use client";
 import React, { useEffect, useRef, useState, memo } from "react";
 import { motion } from "framer-motion";
@@ -108,11 +105,7 @@ export const TextRevealCard = ({
                     opacity: isMouseOver ? 0 : 1
                  }}
                  transition={{ duration: 0.6 }}
-<<<<<<< HEAD
                  className="sm:text-[3rem] xs:text-[30px] tablet:text-[50px]   pc:text-5xl py-10 font-bold bg-clip-text text-transparent bg-white"
-=======
-                 className="sm:text-[3rem] xs:text-[30px] tablet:text-[30px]  pc:text-5xl py-10 font-bold bg-clip-text text-transparent bg-white"
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
                 >
                       Where mind matters 
                             </motion.p>
@@ -149,22 +142,14 @@ const Stars = () => {
     const random = () => Math.random();
     return (
         <div className="absolute inset-0">
-<<<<<<< HEAD
             {[...Array(20)].map((_, i) => (
-=======
-            {[...Array(140)].map((_, i) => (
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
                 <motion.span
                     key={`star-${i}`}
                     animate={{
                         top: `calc(${random() * 100}% + ${randomMove()}px)`,
                         left: `calc(${random() * 100}% + ${randomMove()}px)`,
                         opacity: randomOpacity(),
-<<<<<<< HEAD
                        
-=======
-                        scale: [1, 1.2, 0],
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
                     }}
                     transition={{
                         duration: random() * 10 + 20,

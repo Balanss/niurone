@@ -5,10 +5,7 @@ import { useTransform, useViewportScroll } from 'framer-motion'
 import { AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 import { TextRevealCard } from '../ui/TextRevealCard';
-<<<<<<< HEAD
 import {style} from '../style'
-=======
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
 
 
 
@@ -27,7 +24,6 @@ export default function MiddleText() {
   return (<> 
   <div className='pc:w-[60vw] pc:m-auto'>
   <AnimatePresence mode='wait'>
-<<<<<<< HEAD
     {mobile && 
        <div className=" overflow-hidden text-center  [mask-image:linear-gradient(to_bottom,transparent,white,transparent)] mb-10">
         {title2.map((el, i) => ( 
@@ -40,9 +36,6 @@ export default function MiddleText() {
         ))}
        </div>}
     {!mobile && <TextRevealCard />}
-=======
-    <TextRevealCard  inView={inView} textRef={textRef}/>
->>>>>>> 444c3643c3bbc3b3377abc10637858042d6d682b
     </AnimatePresence>
   </div>
  </>  )
