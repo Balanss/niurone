@@ -6,7 +6,7 @@ import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 
 export const TypewriterEffectTwo = ({
-  words = [{ text: "Ultimate" },{text: 'command'},{text: 'center'}],
+  words = [{ text: "The" },{ text: "ultimate" },{text: 'command'},{text: 'center'}],
   className,
   cursorClassName,
 }) => {

@@ -41,7 +41,7 @@ const [view, setView] = useState('')
 <motion.div  className='flex  flex-col gap-1   items-start phones:items-center phones:pr-10 phones:pl-5   pc:pl-20 overflow-hidden pb-[100px] rounded-lg pc:w-[60vw] m-auto'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}} > 
 
 
-<div className='text-left w-[65vw]  m-auto'>
+<div className='text-left xs:w-[80vw] pc:w-[65vw] m-auto'>
        {title2.map((el, i) => ( 
           <motion.span className={` relative ml-1 ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
@@ -52,15 +52,17 @@ const [view, setView] = useState('')
         ))}
     </div>
 
- <motion.p ref={textRef}
+        <div className='w-[80vw]'>
+        <motion.p ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
-          transition={{ delay:  0.05 }} className=' w-2/3   phones:w-auto phones:text-left m-auto w-[60vw] pc:text-left leading-8 font-[300]  text-white mt-2'> Seamless intergration of design and technology for you and your customers </motion.p>
+          transition={{ delay:  0.05 }} className='   phones:text-left m-auto pc:text-left leading-8 font-[300]  text-white mt-2'> Seamless intergration of design and technology for you and your customers </motion.p>
+        </div>
 
   <motion.section ref={textRef} initial={{ opacity: 0, y: -50 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }} transition={{ delay: 0.5 }}
     className='flex flex-col'>
-  <div className=' flex flex-col flex-wrap  phones:justify-center justify-start gap-4 mt-5 h-auto pb-10'>
-        <div className=''>
+  <div className=' w-[80vw] flex flex-col flex-wrap  phones:justify-center justify-start gap-4 mt-5 h-auto pb-10'>
+        <div className='flex flex-col items-start'>
           {tech.map((service, index) => {
           if (view === service.number) {
             return (
@@ -73,15 +75,21 @@ const [view, setView] = useState('')
                 </div>
 
                 <motion.div className='text-white phones:text-center  max-w-3xl leading-[30px]'  initial={{opacity: 0, y: 2}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5, ease: "easeOut"}}>
-                    <p className={`${style.heroSubText} !text-[13px] !text-white  phones:text-left phones:p-2 phones:w-[90vw] phones:m-auto ml-[80px]` }>{service.description}</p>
+                    <p className={`${style.heroSubText} !text-[13px] !text-white  phones:text-left phones:p-2 phones:w-[90vw] phones:m-auto ml-[80px]` }>{service.description} </p>
                 </motion.div>
               </motion.div>
             )
           } else {
             return <div key={index}  className='text-white phones:text-center  text-[17px] max-w-3xl leading-[30px] mt-1' >
             <span className='flex  mt-5 gap-3 items-center border-black phones:flex-col'>
-              <p className={`${!view ? 'bg-background opacity-25 bg-cover bg-no-repeat p-2 text-black ' :  " bg-background opacity-25 text-black"} hover:opacity-90 flex flex-end cursor-pointer p-2 hover:bg-primary hover:text-black rounded-br-lg`} onClick={() => setView(service.number)}> {service.number}</p>
-              <p className={`${style.heroSubText} !text-white !pt-2  cursor-pointer`} onClick={() => setView(service.number)}> {service.title} </p>
+              <div className="group cursor-pointer flex items-center pc:items-end gap-2" onClick={() => setView(service.number)}>
+                <p className={`${!view ? 'bg-background opacity-25 bg-cover bg-no-repeat p-2 text-black ' :  " bg-background opacity-25 text-black"} w-[50px] group-hover:opacity-90 flex flex-end p-2 hover:bg-primary hover:text-black rounded-br-lg`}> 
+                  {service.number} 
+                </p>
+                <p className={`${style.heroSubText} !text-white !pt-2`}> 
+                  {service.title} 
+                </p>
+              </div>
             </span>
           </div>
           }

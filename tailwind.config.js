@@ -34,6 +34,7 @@ module.exports = {
         xm: "375px",
         sm: "450px",
         'tablet': '640px',
+        'tabletL': '800px',
         'laptop': '1024px',
         'phones':{'max':'1023px'},
         'pc': '1024px',

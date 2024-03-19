@@ -7,8 +7,9 @@ import { Brain } from '../models/Brain';
 import { Canvas } from '@react-three/fiber';
 import Loader from './Loader';
 import { TypewriterEffect } from '../ui/TypewriterEffect';
-import { RevealTitle } from '../ui/RevealTitle';
 import { TypewriterEffectTwo } from '../ui/TypewriterEffectTwo';
+import { OrbitControls } from '@react-three/drei';
+
 
 
 
@@ -65,12 +66,13 @@ if (window.innerWidth > 900 && window.innerWidth <= 1000) {
               exit={{ opacity: 1}}
               transition={{ duration: 0.9 ,ease:'easeInOut'}}>
                  
-  <Canvas className='canvas pc:!h-screen phones:!h-[200px] '   onMouseEnter={() => setSecretText(true)} gl={{ antialias: false }} dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: !isMobile ? 12: 12 }} >
+                 <Canvas className='canvas pc:!h-screen phones:!h-[200px] hover:cursor-grabbing' onMouseEnter={() => setSecretText(true)} gl={{ antialias: false }} dpr={[0, 0.8]} camera={{ position: [0, 0, 10], fov: !isMobile ? 12: 12 }}>
     <ambientLight intensity={0.5} />
     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
     <Suspense fallback={<Loader/>}>
       <Brain size={size} isMobile={isMobile} sizePc={sizePc} />
     </Suspense>
+   {!isMobile &&  <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />}
   </Canvas>
 
 </motion.div>

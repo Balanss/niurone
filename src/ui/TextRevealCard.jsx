@@ -105,7 +105,7 @@ export const TextRevealCard = ({
                     opacity: isMouseOver ? 0 : 1
                  }}
                  transition={{ duration: 0.6 }}
-                 className="sm:text-[3rem] xs:text-[30px] tablet:text-[30px]  pc:text-5xl py-10 font-bold bg-clip-text text-transparent bg-white"
+                 className="sm:text-[3rem] xs:text-[30px] tablet:text-[50px]   pc:text-5xl py-10 font-bold bg-clip-text text-transparent bg-white"
                 >
                       Where mind matters 
                             </motion.p>
