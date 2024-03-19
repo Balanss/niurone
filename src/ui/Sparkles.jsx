@@ -233,7 +233,7 @@ const SparklesCore = (props) => {
                   mode: "delete",
                   value: 0,
                 },
-                value: particleDensity || 1.5 ,
+                value: particleDensity || 2.5 ,
               },
               opacity: {
                 value: {

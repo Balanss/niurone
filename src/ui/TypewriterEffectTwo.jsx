@@ -5,8 +5,8 @@ import cn from "../util/cn";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 
-export const TypewriterEffect = ({
-  words = [{ text: "HUMAN" },{text: 'BRAIN'}],
+export const TypewriterEffectTwo = ({
+  words = [{ text: "Ultimate" },{text: 'command'},{text: 'center'}],
   className,
   cursorClassName,
 }) => {
@@ -63,7 +63,7 @@ export const TypewriterEffect = ({
   return (
     <div
       className={cn(
-        "text-base phones:text-3xl md:text-3xl lg:text-5xl font-bold text-left",
+        "text-base sm:text-xl md:text-3xl lg:text-5xl  text-left mb-4",
         className
       )}
     >
@@ -71,7 +71,7 @@ export const TypewriterEffect = ({
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, repeatType: "reverse" }}
+        transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
         className={cn(
           "inline-block rounded-sm w-[4px] h-4 md:h-6 lg:h-10 bg-custom",
           cursorClassName
@@ -118,7 +118,7 @@ export const TypewriterEffectSmooth = ({
         transition={{ duration: 2, ease: "linear", delay: 1 }}
       >
         <div
-          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold"
+          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl "
           style={{ whiteSpace: "nowrap" }}
         >
           {renderWords()}

@@ -37,31 +37,35 @@ const title2 = `Why us`.split('')
 
 const [view, setView] = useState('')
   return (
-<motion.div  className='flex  flex-row gap-1  items-center phones:items-center phones:pr-10 phones:pl-5   pc:pl-20 overflow-hidden pb-[100px] rounded-lg pc:w-[60vw] m-auto'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}} >
-  
-  <motion.section ref={textRef} initial={{ opacity: 0, y: -50 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }} transition={{ delay: 0.5 }}
-    className='flex flex-col'>
-  <div className=' flex flex-col flex-wrap  phones:justify-center justify-start gap-4 mt-5 h-auto pb-10'>
+
+<motion.div  className='flex  flex-col gap-1   items-start phones:items-center phones:pr-10 phones:pl-5   pc:pl-20 overflow-hidden pb-[100px] rounded-lg pc:w-[60vw] m-auto'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}} > 
 
 
-  <span className='relative left-5   '> {title2.map((el, i) => ( 
-          <motion.span className={` relative  phones:text-[40px] ${style.heroHeadText} !text-white ml-[1px] `} key={i}  ref={textRef}
+<div className='text-left w-[65vw]  m-auto'>
+       {title2.map((el, i) => ( 
+          <motion.span className={` relative ml-1 ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -10 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
           transition={{ delay: i * 0.05 }}  > 
             {el}{""}
           </motion.span>
-        ))}</span>
+        ))}
+    </div>
 
+ <motion.p ref={textRef}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
+          transition={{ delay:  0.05 }} className=' w-2/3   phones:w-auto phones:text-left m-auto w-[60vw] pc:text-left leading-8 font-[300]  text-white mt-2'> Seamless intergration of design and technology for you and your customers </motion.p>
 
- <h2 className={`${style.heroHeadText} !text-2xl !text-white phones:text-left !font-[300]   `}>Seamless intergration of design and technology for you and your customers </h2>
-
-
-        {tech.map((service, index) => {
+  <motion.section ref={textRef} initial={{ opacity: 0, y: -50 }} animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }} transition={{ delay: 0.5 }}
+    className='flex flex-col'>
+  <div className=' flex flex-col flex-wrap  phones:justify-center justify-start gap-4 mt-5 h-auto pb-10'>
+        <div className=''>
+          {tech.map((service, index) => {
           if (view === service.number) {
             return (
-              <motion.div key={index} className='flex flex-col gap-1 '>
-                <div className='text-white  text-[12px] max-w-3xl leading-[30px]' >
+              <motion.div key={index} className='flex flex-col gap-1  '>
+                <div className='text-white  text-[12px] max-w-3xl leading-[30px] ' >
                   <span className='flex border-t-2 mt-2 phones:justify-center items-center border-white'>
                     <p className={`${view === service.number ? ' bg-background  p-2 text-black ' : "text-black"} flex flex-end  cursor-pointer rounded-br-lg`} onClick={() => setView(view === ''? service.number : '')}>{service.number}</p>
                     <p className={`${style.heroSubText} phones:ml-[12px] ml-[40px] !text-xl !text-white !pt-2 cursor-pointer `} onClick={() => setView(view === ''? service.number : '')}> {service.title} </p>
@@ -81,10 +85,11 @@ const [view, setView] = useState('')
             </span>
           </div>
           }
-        })}
+        })} 
+        </div>
+       
    
 
-    
     
    
    
@@ -93,14 +98,17 @@ const [view, setView] = useState('')
 </motion.section>
 
 
-<div className='phones:hidden hidden xl:block p-10 relative z-[100000]'>
+
+{/* <div className='phones:hidden hidden xl:block p-10 relative right-40  z-[100000]'>
   <LazyLoadImage
     src={logo}
     alt='logo'
     effect='blur'
-    className=''
+    className=' '
   />
-</div>
+</div> */}
+
+
 
 
 </motion.div>

@@ -47,11 +47,7 @@ export default function Title() {
           </motion.span>
         ))}
     </div>
-   
-       {/* <motion.p ref={textRef}
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
-          transition={{ delay:  0.05 }} className='font-semibold  phones:text-left phones:mb-3'> Where technology design is the future. </motion.p> */}
+
 
 <motion.p ref={textRef}
           initial={{ opacity: 0, y: -50 }}

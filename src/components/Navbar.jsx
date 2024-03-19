@@ -20,7 +20,7 @@ export default function Navbar() {
 //bg-[#050816]
  //&nbsp; 
     return (
-        <nav className={`${style.paddingX} w-screen flex items-center py-5 fixed top-0 bg-white backdrop-blur-md  rounded-lg z-[100000]`}>
+        <nav className={`${style.paddingX} w-screen flex items-center py-4 fixed top-0 bg-white backdrop-blur-md  rounded-lg z-[100000]`}>
     <div className='w-full flex items-center justify-between max-w-7xl mx-auto'>
       <Link to='/' className='flex xm:flex-row items-center gap-2 xs:flex-col ' 
       onClick={() => {setActive('');
@@ -29,20 +29,20 @@ export default function Navbar() {
           src={logo}
           alt='logo'
           effect='blur'
-          className='w-16 h-16'
+          className='w-12 h-12'
         />
-        <p className='text-black text-sm flex  cursor-pointer phones:text-xs'>Niurone &nbsp; | Where mind matters</p>
+        <p className='text-black text-xs flex  cursor-pointer phones:text-xs'>Niurone &nbsp; | Where mind matters</p>
         </Link>
         <ul className='list-none phones:hidden sm:flex flex-row gap-10'>
           {navLinks.map((link,index) => (
          <motion.li 
          key={index} 
          transition={{ type: "spring", stiffness: 200, damping: 20 }} 
-         className={`${active === link.title ? "text-primary font-extrabold   underline" : "text-black"}  hover:text-black text-[18px] font-medium cursor-pointer`}
+         className={`${active === link.title ? "text-primary    underline" : "text-black"}  hover:text-black text-xs font-light cursor-pointer`}
          onClick={() => {setActive(link.title)}}
          whileHover={{ scale: 1.1 }}
        >
-         <a className='text-sm' href={`#${link.id}`}> {link.title}</a>
+         <a className='text-xs' href={`#${link.id}`}> {link.title}</a>
        </motion.li>
           ))}
         </ul>

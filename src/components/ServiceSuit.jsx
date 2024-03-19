@@ -141,7 +141,7 @@ const scaleProgress = isMobile
             setModalShow(false);
           }
         }}
-         className='fixed  z-[10000000000000000000000000] top-0 left-0 w-screen pt-10 pb-10 overflow-y-scroll h-screen  bg-black bg-opacity-50 flex items-center justify-center'>
+         className='fixed  z-[1000000000000000000000000000000000] mt-12 top-0 left-0 w-screen pt-10  pb-10 overflow-y-scroll h-screen  bg-black bg-opacity-50 flex items-center justify-center'>
           <div className='bg-wg  p-10 phones:w-[95vw]  w-[50vw] m-auto  rounded-md'>
 {services.map((services,index) => (
   <React.Fragment key={index}>
