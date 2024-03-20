@@ -5,7 +5,7 @@ import { style } from '../style'
 import 'react-vertical-timeline-component/style.min.css'
 import { projects } from '../constants'
 import { SectionWrapper } from '../hoc'
-import {motion , AnimatePresence} from 'framer-motion'
+import {useScroll, useTransform,motion,AnimatePresence,useMotionValue} from 'framer-motion'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useInView } from 'react-intersection-observer';
@@ -117,19 +117,53 @@ return (
   
    const [visibleProject, setVisibleProject] = useState(null);
 
+   const scrollY = useMotionValue(window.scrollY);
+   const opacity = useTransform(scrollY, [4000, 5200], [1, 0.5]);
+   const scale = useTransform(scrollY, [4000, 5200], [1, 0.8]);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
+ 
+   useEffect(() => {
+     const handleScroll = () => {
+       scrollY.set(window.scrollY);
+      
+     };
+ 
+     window.addEventListener('scroll', handleScroll);
+ 
+     // Cleanup the event listener on component unmount
+     return () => {
+       window.removeEventListener('scroll', handleScroll);
+     };
+   }, []);
+
+
+   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1023);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
+
+   const [textRef, inView] = useInView({
+     triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+   });
+
 
    const title2 = `Products`.split('')
 
-   const [textRef, inView] = useInView({
-       triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
-     });
 
    return (
-     <div className='flex justify-center phones:px-[0] pc:flex-row phones:flex-col  items-start gap-[30px]  overflow-hidden tablet:w-[60vw] pc:w-[40vw] m-auto'>
-
-
-<div className='flex flex-col items-start justify-left tablet:px-4 pc:pl-10 xPc:pl-4 '>
-    <section className=' phones:w-[80vw] m-auto   pc:text-center'>
+     <motion.div className='flex justify-center phones:px-[0] pc:flex-row phones:flex-col  items-start gap-[30px]  overflow-hidden tablet:w-[60vw] pc:w-[40vw] m-auto'  style={ isMobile? null : { opacity, scale }} >
+    <div className='flex flex-col items-start justify-left tablet:px-4 pc:pl-10 xPc:pl-4 '>
+    <section className=' phones:w-[80vw] m-auto  pc:text-left'>
       <div className='   py-2 tracking-widest pc:text-left   m-auto'>
            {title2.map((el, i) => ( 
           <motion.span className={` relative   ${style.heroHeadText} !text-white  `} key={i}  ref={textRef}
@@ -160,7 +194,7 @@ return (
   
 
   
-    </div>
+    </motion.div>
     )
 }
 

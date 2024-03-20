@@ -4,7 +4,7 @@ import {style} from '../style'
 import { SectionWrapper } from '../hoc'
 import { useRef } from 'react';
 import { useEffect,useState } from 'react';
-import {useScroll, useTransform,motion,AnimatePresence} from 'framer-motion'
+import {useScroll, useTransform,motion,AnimatePresence,useMotionValue} from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 import {tech} from "../constants/index"
 import logo from '../assets/banner.png'
@@ -15,22 +15,56 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 
+
   function About() {
+
+
+    const scrollY = useMotionValue(window.scrollY);
+    const opacity = useTransform(scrollY, [3000, 4000], [1, 0.5]);
+    const scale = useTransform(scrollY, [2700, 3400], [1, 0.8]);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        scrollY.set(window.scrollY);
+   
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      // Cleanup the event listener on component unmount
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
     const [textRef, inView] = useInView({
       triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
     });
 
 
-const ref =useRef(null);
-const { scrollYProgress } = useScroll({
-  target: ref,
-  offset:['0 5',"1.33 1"],
-});
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 1023);
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      // Cleanup the event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
 
-const scaleProgress= useTransform(scrollYProgress, [0, 1], [0.9, 1]);
-const opacityProgress= useTransform(scrollYProgress, [0, 0.9], [0, 1]);
+
+
+
+
+
+
+
 
 const title2 = `Why us`.split('')
 
@@ -38,12 +72,12 @@ const title2 = `Why us`.split('')
 const [view, setView] = useState('')
   return (
 
-<motion.div  className='flex  flex-col gap-1   items-start phones:items-center phones:pr-10 phones:pl-5    overflow-hidden pb-[100px] rounded-lg pc:w-[60vw] m-auto'   ref={ref} style={{scale:scaleProgress,opacity:opacityProgress}} > 
+<motion.div  className='flex  flex-col gap-1 pc:px-4  items-start phones:items-center phones:pr-10 phones:pl-5    overflow-hidden pb-[100px] rounded-lg pc:w-[40vw] m-auto'     style={ isMobile? null : { opacity, scale }} > 
 
 
 <div className='text-left xs:w-[80vw] tablet:w-[60vw] pc:w-[40vw] m-auto'>
        {title2.map((el, i) => ( 
-          <motion.span className={` relative ml-1 ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
+          <motion.span className={`   ${style.heroHeadText} !text-white `} key={i}  ref={textRef}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
           transition={{ delay: i * 0.05 }}  > 
@@ -104,18 +138,6 @@ const [view, setView] = useState('')
   </div>
 
 </motion.section>
-
-
-
-{/* <div className='phones:hidden hidden xl:block p-10 relative right-40  z-[100000]'>
-  <LazyLoadImage
-    src={logo}
-    alt='logo'
-    effect='blur'
-    className=' '
-  />
-</div> */}
-
 
 
 

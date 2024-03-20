@@ -54,7 +54,7 @@ export const TextRevealCard = ({
             onMouseMove={mouseMoveHandler}
             ref={cardRef}
             className={cn(
-                " tablet:w-[60rem] w-[80rem] phones:m-auto xPc:m-0 rounded-lg p-8 relative overflow-hidden",
+                " tablet:w-[60rem] w-[80rem] phones:m-auto xPc:m-0 rounded-lg py-8 px-4 relative overflow-hidden",
                 className
             )}
         >

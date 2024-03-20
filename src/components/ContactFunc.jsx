@@ -144,7 +144,7 @@ export default function ContactFunc({setIsHovering}) {
                  
                  <div className='w-[50vw] phones:w-[70vw] box-border '>
                   <label htmlFor="message" className="block text-sm font-medium text-white">Please select one</label>
-                  <select id="messageSelect" className='w-full font-medium p-2 bg-gray-800 text-white rounded-md ' value={message} placeholder='Please select one' onChange={(e) => setMessage(e.target.value)} >
+                  <select id="messageSelect" className='w-1/5 font-medium p-2 bg-gray-800 text-white rounded-md ' value={message} placeholder='Please select one' onChange={(e) => setMessage(e.target.value)} >
                    <option >Please pick one of the options below</option>
        <option >You  need your business processes to be automated?</option>
        <option >Want to enroll in our partner project for software training ?</option>
