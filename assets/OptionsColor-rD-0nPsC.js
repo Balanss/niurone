@@ -1,0 +1,1 @@
+import{z as i,o as l}from"./index--AM5w97b.js";class s{constructor(){this.value=""}static create(e,r){const o=new s;return o.load(e),r!==void 0&&(i(r)||l(r)?o.load({value:r}):o.load(r)),o}load(e){(e==null?void 0:e.value)!==void 0&&(this.value=e.value)}}export{s as O};
